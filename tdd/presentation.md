@@ -103,7 +103,7 @@ test-driven _developement_
 
 <!--
     Why Accounting?
-    - a high risky job.
+    - a high risky career.
 
     Practices:
         - A doctor washing hands before a surgery.
