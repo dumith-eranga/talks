@@ -43,6 +43,13 @@ test-driven _developement_
 1. The best architectures, requirements, and designs emerge from self-organizing teams.
 1. At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly.
 
+
+---
+# How to ensure the code is working?
+<!--
+    Test
+-->
+
 ---
 <style scoped>
     img {
@@ -55,23 +62,30 @@ test-driven _developement_
 ![bg contain invert:100%](./images/feedback.png)
 
 ---
-![bg contain invert:100%](./images/timer.png)
-### It worked
-
----
 # Automated Testing
+
+<!--
+    Automate the testing ==> cost of testing is very low
+    Low cost ==> run often ==> faster feedback
+-->
 
 ---
 ![bg contain](./images/testing-pyramid.png)
 
 <!-- 
-    Mars rover - 7 minutes latency in communication (in one direction)
+    Different levels of tests
+    As we go up in the pyramid:
+        - tests get complicated
+        - running cost increases
+        - running time increases
 -->
 
 ---
 ## How fast should it run?
 
 <!--
+    Mars rover - 7 minutes latency in communication (in one direction)
+
     Calculation :
         3000 classes
         10 TCs
@@ -79,6 +93,25 @@ test-driven _developement_
         - 1 second per test
         - 100 ms per test
 
+-->
+
+---
+![bg contain invert:100%](./images/timer.png)
+### It worked
+
+<!--
+    If it runs fast ==> can execute more often without impeding our development speed.
+    If we run tests every 2 minutes, we know that everything we worked on upto the last 2 minutes worked.
+-->
+
+---
+# How to write test effectively ?
+
+<!--
+    Change of mindset.
+
+    Don't write tests - write specifications for the code behaviour
+    e.g.- RSpec, Fitnesse, Jasmine
 -->
 
 ---
@@ -103,12 +136,28 @@ test-driven _developement_
 
 <!--
     Why Accounting?
-    - a high risky career.
+        - a high risky career.
 
     Practices:
         - A doctor washing hands before a surgery.
         - Double entry book keeping.    
 -->
+
+---
+<style scoped>
+    li {
+        font-size : 45px;
+    }
+</style>
+
+# The Rules of TDD
+
+1. rule 1
+1. rule 2
+1. rule 3
+
+<!--
+--->
 
 ---
 # The TDD Practice
@@ -146,36 +195,52 @@ test-driven _developement_
 # Refactor
 
 ---
+# Why don't we practice it ?
+## The Lies
+
+<!--
+    - It increased the development time
+    - It increases the maintenance cost
+-->
+
+---
+# Why don't we practice it ?
+## The Truth
+
+<!--
+    - I do not know how
+    - Management doesn't recognize the value
+    - Slowed-down by a hostile codebase
+-->
+
+
+---
+# Why should we ?
+## The HARD Truth
+
+<!--
+    - Excuses are lies that you tell youself
+    - The professional obligation
+-->
+
+---
 # Kata
 ![bg contain invert:10%](./images/kata.png)
 
 <!--
-Kata = Form 
-A sequences of movements that are put together in an overall pattern.
+    Kata = Form 
+    A sequences of movements that are put together in an overall pattern.
 
-Practice on the job = practice at the fight
+    Practice on the job = practice at the fight
 
-http://codingdojo.org/?KataCatalogue
-https://katas.softwarecraftsmanship.org/
-
+    http://codingdojo.org/?KataCatalogue
+    https://katas.softwarecraftsmanship.org/
 -->
 
 ---
-# Legacy Code
-![bg contain invert:10%](./images/legacy-code.png)
-
+## ... _on to the Dojo_
 <!--
-Legacy:
-Code without tests
+    Hands-on time
+        - Prime Numbers
+        - Roman Numerals
 -->
-
----
-<style scoped>
-    h2 {
-        margin-bottom: 100px;
-    }
-</style>
-## Boy Scout Rule
-
-> Leave things better than you found them.
-- Robert Baden Powell
