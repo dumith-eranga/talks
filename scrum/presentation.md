@@ -94,9 +94,12 @@ https://www.scrum-tips.com/2016/02/17/stacey-complexity-model/
 https://www.compact.nl/articles/accelerating-agile-change-as-enabler-for-digital-transformation/
 
 <!--
-    Agile focuses on value optimization while managin the cost, time and scope
+    Agile focuses on value optimization while managing the cost, time and scope
 
     iterative and incremental development
+
+    Time-boxing
+
 -->
 
 ---
@@ -263,64 +266,6 @@ That is, while there is value in the items on the right, we value the items on t
 ---
 
 <style scoped>
-    a {
-        font-size: 10px;
-        color: grey;
-    }
-    ul {
-        font-size: 32px;
-        list-style-type: none;
-        font-weight: bold;
-    }
-    ul ul, ol {
-        font-weight: normal;
-    }
-    ol {
-        margin: 10px 0 40px 30px;
-    }
-    li {
-        font-size: 25px;
-        margin-bottom: 15px;
-    }
-</style>
-
-![bg left:40% contain invert](./images/involved-commited.jpeg)
-
-
-* Scrum Team
-    1. Scrum Master
-    1. Product Owner
-    1. Development Team
-
-* Stakeholders
-    * Sponsors
-    * Operations
-    * Management
-    * ...
-
-https://medium.com/@SoyakaAI/003-involved-vs-committed-24ef51f32cce
-
-<!---
-    A pig and a chicken are walking down a road. The chicken looks at the pig and says, “Hey why don’t we open a restaurant?” The pig looks back at the chicken and says, “Good idea, what do you want to call it? The chicken thinks about it and says, “Why don’t we call it ‘Ham and Eggs’?” “I don’t think so,” says the pig, “I’d be committed but you’d only be involved.
-
-    Question: In a bacon-and-egg breakfast, what's the difference between the Chicken and the Pig?
-    Answer: The Chicken is involved, but the Pig commits!
-
-    "Chickens" cannot tell the "pigs" how to do their work.
-
-    pigs - internal to the project
-    chickens - external to the project
-
-
-    Scrum Master - manages the process
-    Product Owner - manages the product
-    Who manages the team ?
-
-    Self-organizing team
---->
-
----
-<style scoped>
     ul {
         list-style-type: none;
     }
@@ -329,7 +274,7 @@ https://medium.com/@SoyakaAI/003-involved-vs-committed-24ef51f32cce
     }
 </style>
 
-# Scrum Team
+### Scrum Team
 * is ...
     * cross-functional
     * self-organizing
@@ -353,19 +298,283 @@ https://medium.com/@SoyakaAI/003-involved-vs-committed-24ef51f32cce
 
 ---
 
-## Scrum Master
+<style scoped>
+    a {
+        font-size: 10px;
+        color: grey;
+    }
+    ul {
+        font-size: 32px;
+        list-style-type: none;
+        font-weight: bold;
+    }
+    ul ul, ol {
+        font-weight: normal;
+    }
+    ol {
+        margin: 10px 0 40px 30px;
+    }
+    li {
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+    h2 {
+        position: absolute;
+        left: -5px;
+        top: 15px;
+    }
+</style>
+
+![bg left:40% contain invert](./images/involved-commited.jpeg)
+
+
+## Roles
+<br>
+
+* Scrum Team
+    1. Scrum Master
+    1. Product Owner
+    1. Development Team
+
+* Stakeholders
+    * Sponsors
+    * Management
+    * ...
+
+https://medium.com/@SoyakaAI/003-involved-vs-committed-24ef51f32cce
+
+<!---
+    A pig and a chicken are walking down a road. The chicken looks at the pig and says, “Hey why don’t we open a restaurant?” The pig looks back at the chicken and says, “Good idea, what do you want to call it? The chicken thinks about it and says, “Why don’t we call it ‘Ham and Eggs’?” “I don’t think so,” says the pig, “I’d be committed but you’d only be involved.
+
+    Question: In a bacon-and-egg breakfast, what's the difference between the Chicken and the Pig?
+    Answer: The Chicken is involved, but the Pig commits!
+
+
+
+    "Chickens" cannot tell the "pigs" how to do their work.
+
+    pigs - internal to the project
+    chickens - external to the project
+
+
+    Scrum Master - manages the process
+    Product Owner - manages the product
+    Who manages the team ?
+
+    Self-organizing team
+
+    Scrum Master
+        - A management position
+        - Manage the process
+        - Coach the team on Scrum / Agile
+        - Servent leader
+        - Conduct scrum ceremonies
+        - Build the Scrum artifacts
+        - Address team dynamics
+        - Remove impediments
+            - Technical
+            - External distractions
+
+    Product Owner
+        - Manages the product
+        - Customer's voice
+        - Single point of respinsibility - Single, wringable neck (epitaph)
+        - Translate the clients requirements to workable items
+        - Manages the product backlog
+            - Progressive elaboration
+            - Prioritize / update / discard backlog items
+        - Plan / initiate / close sprints
+        - Specify the acceptance criteria
+        - Accept / reject development work (based on acceptance criteria)
+        - Report project progress to the stakeholders
+
+
+    Who manages the team?
+
+    Development Team
+        Team size : 6 ± 3
+-->
+
+
+---
+<style scoped>
+    a {
+        font-size: 10px;
+        color: grey;
+        bottom :15px;
+        right: 30px;
+        position: absolute;
+    }
+    h2 {
+        position: absolute;
+        left: 30px;
+        top: 15px;
+    }
+</style>
+
+## Events
+
+![bg contain invert hue-rotate:180deg](./images/scrum-events.png)
+
+https://startinfinity.com/product-management-framework/scrum-sprint
+
+
+<!--
+    - Sprint Goal & Timebox cannot change
+    - Sprint ends when the timebox expires
+    - Product owner can cancel a sprint
+    - Max sprint time-box: 4 weeks
+    - No break between sprints
+
+
+    Sprint Planning
+        - Duration: 2hrs per 1 week of sprint work
+        - Inputs:
+            - Product Backlog
+            - Capacity / Velocity
+            - Current Project Status
+            - Constraints
+        - Discuss:
+            - What - pick user stories
+            - How - task breakdown
+            - Definition of Done
+            - Acceptance Criteria
+            - Extimation for work items
+        - Outputs:
+            - Sprint Goal
+            - Sprint Backlog
+        
+        - Participants:
+            - Product Owner
+            - Development Team
+            - Scrum Master
+    
+
+
+    Daily Scrum
+        - Time-box : 15 minutes
+        - Participants:
+            - Development Team (mandatory)
+
+        - Each member mentions:
+            - What was done since last meeting
+            - Plan until the next meeting
+            - Obstacles
+
+
+
+    Sprint Review
+        - Time-box : 1hr per 1 week sprint work
+        - About the Product
+        - For the Stakeholders & the team
+        - Participants:
+            - Development Team
+            - Product Owner
+
+        - Showcase the working product
+        - Present the project progress
+        - Verify increment against "DoD" and Acceptance Criteria
+
+        - Discuss:
+            - what is done what is not
+            - sprint
+            - increment
+            - current business conditions
+
+        Update product backlog
+
+
+
+    Sprint Retrospect
+        - Time-box : 1hr per 1 week sprint work
+        - About the Process
+        - Participants:
+            - Development Team
+            - Scrum Master
+            
+        Discuss:
+            - What went well during the sprint?
+            - What could be improved?
+            - What will we commit to doing in the next sprint? 
+            (team makes actionable commitments)
+
+        Atlasian playbook: https://www.atlassian.com/team-playbook/plays/retrospective
+
+
+
+    Backlog Grooming
+        - Not time-boxed
+        - As and when the team requests
+        - Not exceeding 10% of team's time
+        - Progressive elaboration
+        - Participants:
+            - Product Owner
+            - Development Team
+
+        - Prioritize
+        - Split
+        - Discard
+        - Add
+
+        - Defintion of Ready
+        - Acceptance Criteria
+
+        Vision -> Roadmap Planning -> Release Planning -> Sprint Planning
+
+-->
+
 
 ---
 
-## Product Owner
+## Artifacts
+
+- Product Backlog
+- Sprint Backlog
+- Burn-Down Chart
+- Product Increment
+
+<!--
+    Aditional Artifacts
+        - Product backlog delta report
+        - Impediment list
+        - Product burn-down
+-->
 
 ---
 
-## Development Team
+<style scoped>
+    a {
+        font-size: 10px;
+        color: grey;
+        bottom: 55px;
+        right: 30px;
+        position: absolute;
+    }
+</style>
+
+![bg contain invert hue-rotate:180deg saturate:2](./images/scrum.png)
+
+https://www.visual-paradigm.com/scrum/what-are-scrum-ceremonies/
 
 ---
 
-Vision --> Roadmap Planning -> Release Planning --> Sprint Planning
+<style scoped>
+    a {
+        font-size: 10px;
+        color: grey;
+        top: 30px;
+        right: 30px;
+        position: absolute;
+    }
+</style>
+
+![bg contain invert hue-rotate:200deg saturate:1](./images/scrum.jpg)
+
+https://www.slideshare.net/ACMSoftware/scrum-framework-58695170
+
+---
+
+# Tips
 
 ---
 
@@ -374,7 +583,7 @@ Vision --> Roadmap Planning -> Release Planning --> Sprint Planning
         list-style-type: none;
     }
     li:first-letter {
-        color: cyan;
+        color: red;
     }
 </style>
 
