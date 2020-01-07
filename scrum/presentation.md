@@ -75,6 +75,9 @@ https://www.scrum-tips.com/2016/02/17/stacey-complexity-model/
     defined by values (beliefs & norms)
     guided by principles
     manifested through practices
+
+    Paradigm shift
+    Transformation roadmap
 -->
 
 ---
@@ -96,7 +99,8 @@ https://www.compact.nl/articles/accelerating-agile-change-as-enabler-for-digital
 <!--
     Agile focuses on value optimization while managing the cost, time and scope
 
-    iterative and incremental development
+    iterative and incremental development 
+        - optimize predictability & control risk
 
     Time-boxing
 
@@ -363,17 +367,19 @@ https://medium.com/@SoyakaAI/003-involved-vs-committed-24ef51f32cce
 
     Self-organizing team
 
+
     Scrum Master
         - A management position
         - Manage the process
         - Coach the team on Scrum / Agile
-        - Servent leader
+        - Servent-leader
         - Conduct scrum ceremonies
         - Build the Scrum artifacts
         - Address team dynamics
         - Remove impediments
             - Technical
             - External distractions
+
 
     Product Owner
         - Manages the product
@@ -383,16 +389,28 @@ https://medium.com/@SoyakaAI/003-involved-vs-committed-24ef51f32cce
         - Manages the product backlog
             - Progressive elaboration
             - Prioritize / update / discard backlog items
+            - Optimize the value of the work the development team does
         - Plan / initiate / close sprints
         - Specify the acceptance criteria
         - Accept / reject development work (based on acceptance criteria)
         - Report project progress to the stakeholders
+        - Measure project / release performance
+        - Attributes
+            - empowered
+            - business savvy
+            - persuasive
+            - knowledgeable
+            - available (2 projects at max)
+
 
 
     Who manages the team?
 
     Development Team
         Team size : 6 ± 3
+                    small enough to remain nimble, large enough to complete significant work
+        Register work estimates at the sprint planning
+
 -->
 
 
@@ -422,13 +440,78 @@ https://startinfinity.com/product-management-framework/scrum-sprint
 <!--
     - Sprint Goal & Timebox cannot change
     - Sprint ends when the timebox expires
+    - Cannot be lengthened or shortened
     - Product owner can cancel a sprint
     - Max sprint time-box: 4 weeks
     - No break between sprints
+    - Every event is an opportunity to inspect & adapt
+    - Development team should not be inetrrupted during the sprint
+
+    - As the items get decomposed, the sprint backlog changes and may grow
+    - The Development team works with the Product Owner to add (pull) / remove work to meet the team capacity
+
+
+
+    Product Backlog Grooming
+        - Not time-boxed
+        - Not a designated meeting
+        - As and when the team requests
+        - Not exceeding 10% of team's time
+        - Progressive elaboration
+        - Participants:
+            - Product Owner
+            - Development Team
+
+        - Prioritize
+        - Split
+        - Discard
+        - Add
+
+        - Only one product backlog - even if multiple teams are working on the same product
+
+        - Goals:
+            - identify dependencies / gaps for story prioritization
+            - ensure enough product backlog items for 2+ sprints
+            - endure stories are details enough to det to DoD
+            - ensure first-cut items are ready for planning
+            - familiarize team with PBIs before planning session & raise clarifications
+
+        - User Story definition
+            - Product Owner - business requirements
+            - Development Team - technical details
+
+        - Story level estimations are made
+        - Acceptance Criteria are specified
+        - Defintion of Ready (DoR) is met
+            - descriptive enough for all team members can understand what is to be done
+            - include a clear statement of business value so the PO can prioritize
+            - include any required enabling specs (wireframes etc)
+            - fully meet INVEST criteria for user stories
+            - performance / tracking criteria are defined
+            - free from external dependencies (nothing beyond teams control must be done to complete the work)
+
+        - Vision -> Roadmap Planning -> Release Planning -> Sprint Planning
+        - Vision -> Strategy -> Goal -> Requirements
 
 
     Sprint Planning
         - Duration: 2hrs per 1 week of sprint work
+        
+        - Refine first-cut PBIs and make a commitment
+        - Agree on the sprint goal
+        - Agree on acceptance criteria
+        - Agree on Definition of Done (DoD)
+        - Estimate the work (task level)
+        - Agree on plans for Research Spikes - as detailed as possible
+        - Share meeting minutes
+        - Team owns the session
+
+        - Descope larger items due to not enough capacity & fill the gap with low-priority items
+        - Elaborate / split items
+        - Re-order items
+            - code-reuse
+            - reduce effort for later stories
+            
         - Inputs:
             - Product Backlog
             - Capacity / Velocity
@@ -448,32 +531,61 @@ https://startinfinity.com/product-management-framework/scrum-sprint
             - Product Owner
             - Development Team
             - Scrum Master
+
+
+        Defintion of Done (DoD)
+            - a checklist of minimum required work
+            - effective only when written down
+
+            - increase transpaency
+            - increments delivered are more effective and potentially releasable
+            - commond= agreement among the team on what needs to be done to complete the work
+            - limit the cost of rework once the item has been accepted
     
+
+
+    Sprint Execution
+        - Product owner is involved, others are commited
+        - Update sprint burn-down
+        - Update release burn-down at the end of the sprint
+        - Update scrum board
+
 
 
     Daily Scrum
         - Time-box : 15 minutes
         - Participants:
             - Development Team (mandatory)
+            - Scrum master (optional) - only coach the dev team
 
         - Each member mentions:
             - What was done since last meeting
             - Plan until the next meeting
             - Obstacles
 
+        - update product backlog
+        - update scrum board
+
+
 
 
     Sprint Review
+        Scrum team and stakeholders inspect the outcome of the sprint and figure out what to do in the next sprint.
+
         - Time-box : 1hr per 1 week sprint work
         - About the Product
         - For the Stakeholders & the team
         - Participants:
             - Development Team
             - Product Owner
+            - Stakeholders
+            - Client
 
-        - Showcase the working product
-        - Present the project progress
+        - Showcase the working product (demo)
+            Only fully done stories
+        - Present the project performance (PO)
         - Verify increment against "DoD" and Acceptance Criteria
+        - Validate if sprint product meets sprint goal and DoD
 
         - Discuss:
             - what is done what is not
@@ -481,7 +593,12 @@ https://startinfinity.com/product-management-framework/scrum-sprint
             - increment
             - current business conditions
 
-        Update product backlog
+        - Update product backlog
+        - Update release plan
+        - update release burn-down
+        - Update risk registry
+
+        - if DoD is not met, item does not count towards the "velocity"
 
 
 
@@ -491,6 +608,7 @@ https://startinfinity.com/product-management-framework/scrum-sprint
         - Participants:
             - Development Team
             - Scrum Master
+            - Product Owner (involved)
             
         Discuss:
             - What went well during the sprint?
@@ -498,28 +616,11 @@ https://startinfinity.com/product-management-framework/scrum-sprint
             - What will we commit to doing in the next sprint? 
             (team makes actionable commitments)
 
+        Output:
+            - Retro notes
+            - Action items
+
         Atlasian playbook: https://www.atlassian.com/team-playbook/plays/retrospective
-
-
-
-    Backlog Grooming
-        - Not time-boxed
-        - As and when the team requests
-        - Not exceeding 10% of team's time
-        - Progressive elaboration
-        - Participants:
-            - Product Owner
-            - Development Team
-
-        - Prioritize
-        - Split
-        - Discard
-        - Add
-
-        - Defintion of Ready
-        - Acceptance Criteria
-
-        Vision -> Roadmap Planning -> Release Planning -> Sprint Planning
 
 -->
 
@@ -530,6 +631,7 @@ https://startinfinity.com/product-management-framework/scrum-sprint
 
 - Product Backlog
 - Sprint Backlog
+- Scrum Board
 - Burn-Down Chart
 - Product Increment
 
@@ -574,7 +676,26 @@ https://www.slideshare.net/ACMSoftware/scrum-framework-58695170
 
 ---
 
+# Certification?
+
+---
+
 # Tips
+
+<!--
+
+    Estimation
+        - pick a base story and base size
+        - difference resolution
+            - middle (mean)
+            - highest
+            - majority (mode)
+
+-->
+
+---
+
+Epic, Stories
 
 ---
 
