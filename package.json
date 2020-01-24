@@ -1,0 +1,22 @@
+{
+  "name": "talks",
+  "version": "1.0.0",
+  "description": "Presentation material for talks conducted.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dumith-eranga/talks.git"
+  },
+  "author": "Eranga Jayalatharachchi",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/dumith-eranga/talks/issues"
+  },
+  "homepage": "https://github.com/dumith-eranga/talks#readme",
+  "devDependencies": {
+    "@marp-team/marp-cli": "^0.16.2"
+  }
+}
