@@ -16,6 +16,12 @@ backgroundColor: black
 
 test-driven _developement_
 
+<!--
+    Synopsis:
+    Why is it so hard to test software? Why do we always find bugs in software sooner or later? How can I work more effectively so that my code is bug free? How can I work more efficiently so that I can push out features faster?
+    We are going to discuss about Test-Driven-Development, a technique that can be used to address all the above concerns. Once you understand the fundamentals, we will get our hands dirty by practicing the technique ourselves. 
+-->
+
 ---
 <style scoped>
     li {
