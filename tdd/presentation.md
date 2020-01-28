@@ -18,7 +18,12 @@ test-driven _developement_
 
 <!--
     Synopsis:
-    Why is it so hard to test software? Why do we always find bugs in software sooner or later? How can I work more effectively so that my code is bug free? How can I work more efficiently so that I can push out features faster?
+    
+    Why is it so hard to test software?
+    Why do we always find bugs in software sooner or later?
+    How can I work more effectively so that my code is bug free?
+    How can I work more efficiently so that I can push out features faster?
+
     We are going to discuss about Test-Driven-Development, a technique that can be used to address all the above concerns. Once you understand the fundamentals, we will get our hands dirty by practicing the technique ourselves. 
 -->
 
@@ -160,21 +165,40 @@ Optimism is an occupational hazard of programming; feedback is the treatment.
     }
 </style>
 
-# The Rules of TDD
+# The 2 Rules of TDD
 
-1. rule 1
-1. rule 2
-1. rule 3
+_Kent Beck_
+
+1. Don’t write a line of new code unless you first have a failing automated test
+2. Eliminate duplication
 
 <!--
+    Test-Driven Development By Example
 --->
+
+---
+<style scoped>
+    li {
+        font-size : 40px;
+    }
+</style>
+
+# The 3 Rules of TDD
+
+_Robert C Martin (Uncle Bob)_
+
+1. You are not allowed to write any production code unless it is to make a failing unit test pass.
+1. You are not allowed to write any more of a unit test than is sufficient to fail; and compilation failures are failures.
+1. You are not allowed to write any more production code than is sufficient to pass the one failing unit test.
 
 ---
 # The TDD Practice
 <!--
-    1. Write a (failing) test
+    TDD Cycle
+
+    1. Write a failing test
     2. Make it pass
-    3. Clean-up code
+    3. Make it right
 -->
 
 ---
@@ -186,6 +210,12 @@ Optimism is an occupational hazard of programming; feedback is the treatment.
 
 # Red
 
+1. Write a failing test
+
+<!--
+    - Run the tests to ensure the new test is failing
+-->
+
 ---
 <style scoped>
     h1 {
@@ -194,6 +224,13 @@ Optimism is an occupational hazard of programming; feedback is the treatment.
 </style>
 
 # Green
+
+2. Make it pass
+
+<!--
+    - Write the simplest production code which will satisfy the test
+    - Make all tests pass
+-->
 
 ---
 <style scoped>
@@ -204,13 +241,23 @@ Optimism is an occupational hazard of programming; feedback is the treatment.
 
 # Refactor
 
+3. Make it right
+
+<!--
+    - Remove duplication
+    - Clean-up code
+    - Re-run all tests to verify
+-->
+
 ---
 # Why don't we practice it ?
 ## The Lies
 
 <!--
     - It increased the development time
+    - It is more work
     - It increases the maintenance cost
+    - My code is very straight-forward, so it is not needed.
 -->
 
 ---
