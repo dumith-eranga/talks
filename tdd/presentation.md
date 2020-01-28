@@ -65,6 +65,10 @@ test-driven _developement_
 ![height:600px invert:100%](./images/sdlc.png)
 
 ---
+Optimism is an occupational hazard of programming; feedback is the treatment.
+— Kent Beck
+
+---
 ![bg contain invert:100%](./images/feedback.png)
 
 ---
