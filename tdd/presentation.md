@@ -189,7 +189,7 @@ Optimism is an occupational hazard of programming; feedback is the treatment.
 ---
 <style scoped>
     h1 {
-        color: green !important;
+        color: springgreen !important;
     }
 </style>
 
@@ -198,7 +198,7 @@ Optimism is an occupational hazard of programming; feedback is the treatment.
 ---
 <style scoped>
     h1 {
-        color: purple !important;
+        color: deepskyblue !important;
     }
 </style>
 
