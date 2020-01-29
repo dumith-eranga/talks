@@ -161,24 +161,6 @@ Optimism is an occupational hazard of programming; feedback is the treatment.
 ---
 <style scoped>
     li {
-        font-size : 45px;
-    }
-</style>
-
-# The 2 Rules of TDD
-
-_Kent Beck_
-
-1. Don’t write a line of new code unless you first have a failing automated test
-2. Eliminate duplication
-
-<!--
-    Test-Driven Development By Example
---->
-
----
-<style scoped>
-    li {
         font-size : 40px;
     }
 </style>
@@ -213,6 +195,7 @@ _Robert C Martin (Uncle Bob)_
 1. Write a failing test
 
 <!--
+    - Write a test for the next bit of functionality you want to add
     - Run the tests to ensure the new test is failing
 -->
 
@@ -230,6 +213,8 @@ _Robert C Martin (Uncle Bob)_
 <!--
     - Write the simplest production code which will satisfy the test
     - Make all tests pass
+    
+    - Write the functional code until the test passes
 -->
 
 ---
@@ -244,9 +229,21 @@ _Robert C Martin (Uncle Bob)_
 3. Make it right
 
 <!--
-    - Remove duplication
+    - Refactor both new and old code to make it well structured
+
+    - Eliminate duplication - "Eliminate duplication” is something more than typical Refactoring. It is more about decoupling the tests and production code by removing duplication between them.
     - Clean-up code
     - Re-run all tests to verify
+
+    - neglecting Refactoring phase is the most common cause of bad design and screws up all TDD process -  Martin Fowler.
+-->
+
+---
+
+### an example
+
+<!--
+    Fizz-Buzz
 -->
 
 ---
@@ -300,4 +297,33 @@ _Robert C Martin (Uncle Bob)_
     Hands-on time
         - Prime Numbers
         - Roman Numerals
+-->
+
+<!--
+
+Advanced Topics
+
+Broken Test is for solo programming:
+    How do you leave a programming session when you’re programming alone? Leave the last test broken… When you come back to the code, you then have an obvious place to start. (p.149)
+
+Clean Check-in is for team programming:
+    How do you lave a programming session when you’re programming in a team? Leave all of the tests running.
+
+
+Three techniques for quickly getting to green
+    Fake It
+    Obvious Implementation
+    Triangulation
+
+
+State-ful vs state-less implemtnations
+
+
+Test Doubles
+    Dummy
+    Stub
+    Spy
+    Mock
+    Fake
+
 -->
