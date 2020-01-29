@@ -59,6 +59,7 @@ test-driven _developement_
 # How to ensure the code is working?
 <!--
     Test
+    prove - it is doing what we intended
 -->
 
 ---
@@ -69,6 +70,15 @@ test-driven _developement_
 </style>
 ![height:600px invert:100%](./images/sdlc.png)
 
+<!--
+    software development - broken into phases
+    is phased aproach sufficient?
+
+    I have been programming for long. I can write working code without the need for tests.
+
+    Programmers & pride => arrogance
+-->
+
 ---
 Optimism is an occupational hazard of programming; feedback is the treatment.
 — Kent Beck
@@ -77,11 +87,67 @@ Optimism is an occupational hazard of programming; feedback is the treatment.
 ![bg contain invert:100%](./images/feedback.png)
 
 ---
+
+# What is TDD?
+
+<!--
+    development of the code - driven by tests
+-->
+
+---
+
+# Why is it important?
+
+<!--
+    a shift in the way we think about what we are doing.
+
+    A typical coding session:
+        - writing the code the cleverest way we can to get the work done.
+        - the focus is on the algorithms, techniques and tools
+
+    With TDD:
+        - the focus - what needs to be done - a specification of the behaviour
+        - how to do it
+
+
+    without TDD
+        focus - the right way
+    with TDD
+        focus - the right thing
+
+    With TDD, how to achieve the right way?
+-->
+
+---
+![bg contain invert:100%](./images/feedback.png)
+
+<!--
+    How do we implement the feedback loop?
+
+    1. write / modify the code.
+    1. run it against the specification with some known inputs
+    1. compare the output with the expected behaviour
+
+    We can't wait until the end to get the feedback.
+    We need
+        - as fast as possible
+        - as many times as we need
+
+    Depending on humans to give the feedback is
+        - slow
+        - inconvenient
+        - expensive
+--->
+
+---
 # Automated Testing
 
 <!--
-    Automate the testing ==> cost of testing is very low
-    Low cost ==> run often ==> faster feedback
+    Automate tests
+        - small upfront cost
+        - cost of testing is very low
+        - Low cost ==> run often
+        - fast
 -->
 
 ---
@@ -89,6 +155,12 @@ Optimism is an occupational hazard of programming; feedback is the treatment.
 
 <!-- 
     Different levels of tests
+
+    - test a feature
+    - test collaboration of multiple features to achive a behaviour
+    - test a full workflow
+
+
     As we go up in the pyramid:
         - tests get complicated
         - running cost increases
@@ -98,15 +170,17 @@ Optimism is an occupational hazard of programming; feedback is the treatment.
 ---
 ## How fast should it run?
 
-<!--
-    Mars rover - 7 minutes latency in communication (in one direction)
+120 x 10
 
+<!--
     Calculation :
-        3000 classes
+        120 units
         10 TCs
 
-        - 1 second per test
-        - 100 ms per test
+        - 1 second per test = 1200 seconds = 20 min
+            wait 20 min to know - code change good / bad
+
+        - 10 ms per test = 120 sec = 2 min
 
 -->
 
@@ -115,8 +189,13 @@ Optimism is an occupational hazard of programming; feedback is the treatment.
 ### It worked
 
 <!--
-    If it runs fast ==> can execute more often without impeding our development speed.
+    If it runs fast ==> can execute more often 
+    
+    without impeding our development speed.
+
     If we run tests every 2 minutes, we know that everything we worked on upto the last 2 minutes worked.
+
+    If the last change is not good, how much debugging do we need?
 -->
 
 ---
@@ -139,19 +218,25 @@ Optimism is an occupational hazard of programming; feedback is the treatment.
     h5 {
         margin-top: 80px;
     }
+    h5+h5 {
+        margin-top: 10px;
+    }
     h5 em {
         text-decoration: underline;
         font-style: normal;
     }
 </style>
 
-## Professionals *have* Practices  
+## Professions *have* Practices  
 
+##### Healthcare is a _Profession_
 ##### Accounting is a _Profession_
 
 <!--
-    Why Accounting?
-        - a high risky career.
+
+
+    Why Healthcare / Accounting?
+        - a high risk profession.
 
     Practices:
         - A doctor washing hands before a surgery.
