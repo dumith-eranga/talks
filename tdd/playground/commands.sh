@@ -14,8 +14,6 @@ sudo docker exec -it tddplayground /bin/bash
 
 ## inside the container
 
-    apt update && apt install watch
-
     # navigate to the project directory
     cd /app
 
@@ -29,12 +27,8 @@ sudo docker exec -it tddplayground /bin/bash
     .vendor/bin/codecept run unit
     # or
     # keep the unit tests running
-    watch -n 2 ./vendor/bin/codecept --no-colors run unit
-
-    # while true; do clear; ./vendor/bin/codecept run unit; sleep 2; done
-
-    # chmod +x run-tests-forever.sh
-    # ./run-tests-forever.sh
+    chmod +x run-tests-forever.sh
+    ./run-tests-forever.sh
 
 
 # remove the container
