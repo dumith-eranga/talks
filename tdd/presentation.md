@@ -233,14 +233,15 @@ Optimism is an occupational hazard of programming; feedback is the treatment.
 ##### Accounting is a _Profession_
 
 <!--
-
+    Is programming a profession?
 
     Why Healthcare / Accounting?
         - a high risk profession.
 
     Practices:
         - A doctor washing hands before a surgery.
-        - Double entry book keeping.    
+        - Double entry book keeping.
+
 -->
 
 ---
