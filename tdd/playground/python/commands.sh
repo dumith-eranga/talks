@@ -1,4 +1,7 @@
 #!/bin/bash
+
+echo "run these comands from the playground/python folder"
+
 exit;
 
 # create the container to run the project

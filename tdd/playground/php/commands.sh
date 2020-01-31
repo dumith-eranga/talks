@@ -1,4 +1,7 @@
 #!/bin/bash
+
+echo "run these comands from the playground/php folder"
+
 exit;
 
 #sudo docker run -it --rm --name tddphp php:latest
