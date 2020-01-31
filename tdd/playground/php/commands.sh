@@ -1,16 +1,16 @@
 #!/bin/bash
 exit;
 
-#sudo docker run -it --rm --name tddplayground php:latest
+#sudo docker run -it --rm --name tddphp php:latest
 
 # install dependencies via composer
 sudo docker run --rm --interactive --tty --volume $PWD:/app composer:latest install
 
 # create thr container
-sudo docker run -it --detach --name tddplayground --mount type=bind,source="$(pwd)"/,target=/app php:latest
+sudo docker run -it --detach --name tddphp --mount type=bind,source="$(pwd)"/,target=/app php:latest
 
 # log in to the container 
-sudo docker exec -it tddplayground /bin/bash
+sudo docker exec -it tddphp /bin/bash
 
 ## inside the container
 
@@ -32,5 +32,5 @@ sudo docker exec -it tddplayground /bin/bash
 
 
 # remove the container
-sudo docker kill tddplayground && sudo docker rm tddplayground
+sudo docker kill tddphp && sudo docker rm tddphp
 
