@@ -229,8 +229,8 @@ Optimism is an occupational hazard of programming; feedback is the treatment.
 
 ## Professions *have* Practices  
 
-##### Healthcare is a _Profession_
-##### Accounting is a _Profession_
+##### Healthcare is a _profession_
+##### Accounting is a _profession_
 
 <!--
     Is programming a profession?
@@ -329,7 +329,7 @@ _Robert C Martin (Uncle Bob)_
 ### an example
 
 <!--
-    Fizz-Buzz
+    Fizz-Buzz, the TDD way
 -->
 
 ---
@@ -385,6 +385,7 @@ _Robert C Martin (Uncle Bob)_
         - Roman Numerals
 -->
 
+---
 <!--
 
 Advanced Topics
