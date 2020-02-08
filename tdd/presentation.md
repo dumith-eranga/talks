@@ -386,6 +386,17 @@ _Robert C Martin (Uncle Bob)_
 -->
 
 ---
+<style scoped>
+    a {
+        color: white !important;
+    }
+</style>
+
+![](./images/repo-url.png)
+
+https://bit.ly/389OQR3
+
+---
 <!--
 
 Advanced Topics
