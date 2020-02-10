@@ -385,6 +385,43 @@ _Robert C Martin (Uncle Bob)_
         - Roman Numerals
 -->
 
+---
+### mistakes we made
+
+---
+1. Selecting a Kata that you do not know how to solve
+
+---
+1. Selecting a Kata that you do not know how to solve
+1. Not having a design for the solution
+
+---
+1. Selecting a Kata that you do not know how to solve
+1. Not having a design for the solution
+1. Spending time to read & design the solution during the time allocated for practice
+
+---
+1. Selecting a Kata that you do not know how to solve
+1. Not having a design for the solution
+1. Spending time to read & design the solution during the time allocated for practice
+1. Developing a significant chunk of functinality to statisfy one test
+
+---
+1. Selecting a Kata that you do not know how to solve
+1. Not having a design for the solution
+1. Spending time to read & design the solution during the time allocated for practice
+1. Developing a significant chunk of functinality to statisfy one test
+1. Not doing the simplest thing possible
+
+---
+1. Selecting a Kata that you do not know how to solve
+1. Not having a design for the solution
+1. Spending time to read & design the solution during the time allocated for practice
+1. Developing a significant chunk of functinality to statisfy one test
+1. Not doing the simplest thing possible
+1. Not refactoring
+
+---
 <!--
 
 Advanced Topics
