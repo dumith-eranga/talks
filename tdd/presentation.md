@@ -439,6 +439,9 @@ Three techniques for quickly getting to green
     Triangulation
 
 
+How to write codoe? Write the  test first.
+How to write the test? Write the assertion first. 
+
 State-ful vs state-less implemtnations
 
 
