@@ -14,7 +14,7 @@ backgroundColor: black
 
 # Scrum
 
-what i learned recently
+why | what | how
 
 ---
 
@@ -58,6 +58,7 @@ https://www.scrum-tips.com/2016/02/17/stacey-complexity-model/
     5. Disorder / Confusion
         - Break the big situation into smaller situations that fit to one of the above types.
 -->
+
 ---
 
 ![bg left:30% contain invert hue-rotate:90deg saturate:0.75](./images/three-pillars.jpg)
@@ -71,13 +72,13 @@ https://www.scrum-tips.com/2016/02/17/stacey-complexity-model/
 # Agile
 
 <!--
-    a mindset (attidudes / a way of working)
-    defined by values (beliefs & norms)
-    guided by principles
-    manifested through practices
+    - a mindset (attidudes / a way of working)
+    - defined by values (beliefs & norms)
+    - guided by principles
+    - manifested through practices
 
-    Paradigm shift
-    Transformation roadmap
+    A Paradigm shift
+    Requires a transformation roadmap
 -->
 
 ---
@@ -224,11 +225,12 @@ That is, while there is value in the items on the right, we value the items on t
 # Scrum
 
 <!--
-    a light-weight framework
-    for process excellence & high performance (via collaboration)
-    tells you what and when to do (not how)
-    focus on incremental development via progressive elaboration
-    simple to understand - difficult to master
+    - a light-weight framework
+    - for process excellence & high performance (via collaboration)
+    - tells you what and when to do (not how)
+    - focus on incremental development via progressive elaboration
+
+    - simple to understand - difficult to master
 -->
 
 ---
@@ -287,10 +289,10 @@ That is, while there is value in the items on the right, we value the items on t
 
 
 <!---
-    self-organizing
-        no central management
-        manages its own effort
-    cross-functional
+    1. self-organizing
+        manages its own effort (no central management)
+
+    2. cross-functional
         has all the expetise and competencies needed to get the job done without help from outside the team.
     
     These two characteristics optimize 
@@ -348,71 +350,88 @@ That is, while there is value in the items on the right, we value the items on t
 https://medium.com/@SoyakaAI/003-involved-vs-committed-24ef51f32cce
 
 <!---
-    A pig and a chicken are walking down a road. The chicken looks at the pig and says, “Hey why don’t we open a restaurant?” The pig looks back at the chicken and says, “Good idea, what do you want to call it? The chicken thinks about it and says, “Why don’t we call it ‘Ham and Eggs’?” “I don’t think so,” says the pig, “I’d be committed but you’d only be involved.
-
     Question: In a bacon-and-egg breakfast, what's the difference between the Chicken and the Pig?
     Answer: The Chicken is involved, but the Pig commits!
-
-
+    
+    
+    Pigs     - internal to the project
+    Chickens - external to the project
 
     "Chickens" cannot tell the "pigs" how to do their work.
-
-    pigs - internal to the project
-    chickens - external to the project
 
 
     Scrum Master - manages the process
     Product Owner - manages the product
     Who manages the team ?
-
-    Self-organizing team
-
-
-    Scrum Master
-        - A management position
-        - Manage the process
-        - Coach the team on Scrum / Agile
-        - Servent-leader
-        - Conduct scrum ceremonies
-        - Build the Scrum artifacts
-        - Address team dynamics
-        - Remove impediments
-            - Technical
-            - External distractions
-
-
-    Product Owner
-        - Manages the product
-        - Customer's voice
-        - Single point of respinsibility - Single, wringable neck (epitaph)
-        - Translate the clients requirements to workable items
-        - Manages the product backlog
-            - Progressive elaboration
-            - Prioritize / update / discard backlog items
-            - Optimize the value of the work the development team does
-        - Plan / initiate / close sprints
-        - Specify the acceptance criteria
-        - Accept / reject development work (based on acceptance criteria)
-        - Report project progress to the stakeholders
-        - Measure project / release performance
-        - Attributes
-            - empowered
-            - business savvy
-            - persuasive
-            - knowledgeable
-            - available (2 projects at max)
-
-
-
-    Who manages the team?
-
-    Development Team
-        Team size : 6 ± 3
-                    small enough to remain nimble, large enough to complete significant work
-        Register work estimates at the sprint planning
-
+        Self-organizing team
 -->
 
+---
+### Scrum Master
+
+<!--
+    - A management position
+    - Manage the process
+    - Coach the team on Scrum / Agile
+    - Servent-leader
+    - Conduct scrum ceremonies
+    - Build the Scrum artifacts
+    - Address team dynamics
+    - Remove impediments
+        - Technical
+        - External distractions
+-->
+
+---
+### Product Owner
+
+<!--
+    - Manages the product
+    - Customer's voice
+    - Single point of respinsibility - Single, wringable neck (epitaph)
+    - Translate the clients requirements to workable items
+    - Manages the product backlog
+        - Progressive elaboration
+        - Prioritize / update / discard backlog items
+        - Optimize the value of the work the development team does
+    - Plan / initiate / close sprints
+    - Specify the acceptance criteria
+    - Accept / reject development work (based on acceptance criteria)
+    - Report project progress to the stakeholders
+    - Measure project / release performance
+    - Attributes
+        - empowered
+        - business savvy
+        - persuasive
+        - knowledgeable
+        - available (2 projects at max)
+-->
+
+---
+### Development Team
+
+<!--
+    Team size : 6 ± 3
+                small enough to remain nimble,
+                large enough to complete significant work
+    Register work estimates at the sprint planning
+-->
+
+---
+## Artifacts
+
+- Product Backlog
+- Sprint Backlog
+- Scrum Board
+- Burn-Down Chart
+- Product Increment
+
+<!--
+    Aditional Artifacts
+        - Product backlog delta report
+        - Impediment list
+        - Product burn-down
+-->
 
 ---
 <style scoped>
@@ -436,7 +455,6 @@ https://medium.com/@SoyakaAI/003-involved-vs-committed-24ef51f32cce
 
 https://startinfinity.com/product-management-framework/scrum-sprint
 
-
 <!--
     - Sprint Goal & Timebox cannot change
     - Sprint ends when the timebox expires
@@ -449,201 +467,194 @@ https://startinfinity.com/product-management-framework/scrum-sprint
 
     - As the items get decomposed, the sprint backlog changes and may grow
     - The Development team works with the Product Owner to add (pull) / remove work to meet the team capacity
-
-
-
-    Product Backlog Grooming
-        - Not time-boxed
-        - Not a designated meeting
-        - As and when the team requests
-        - Not exceeding 10% of team's time
-        - Progressive elaboration
-        - Participants:
-            - Product Owner
-            - Development Team
-
-        - Prioritize
-        - Split
-        - Discard
-        - Add
-
-        - Only one product backlog - even if multiple teams are working on the same product
-
-        - Goals:
-            - identify dependencies / gaps for story prioritization
-            - ensure enough product backlog items for 2+ sprints
-            - endure stories are details enough to det to DoD
-            - ensure first-cut items are ready for planning
-            - familiarize team with PBIs before planning session & raise clarifications
-
-        - User Story definition
-            - Product Owner - business requirements
-            - Development Team - technical details
-
-        - Story level estimations are made
-        - Acceptance Criteria are specified
-        - Defintion of Ready (DoR) is met
-            - descriptive enough for all team members can understand what is to be done
-            - include a clear statement of business value so the PO can prioritize
-            - include any required enabling specs (wireframes etc)
-            - fully meet INVEST criteria for user stories
-            - performance / tracking criteria are defined
-            - free from external dependencies (nothing beyond teams control must be done to complete the work)
-
-        - Vision -> Roadmap Planning -> Release Planning -> Sprint Planning
-        - Vision -> Strategy -> Goal -> Requirements
-
-
-    Sprint Planning
-        - Duration: 2hrs per 1 week of sprint work
-        
-        - Refine first-cut PBIs and make a commitment
-        - Agree on the sprint goal
-        - Agree on acceptance criteria
-        - Agree on Definition of Done (DoD)
-        - Estimate the work (task level)
-        - Agree on plans for Research Spikes - as detailed as possible
-        - Share meeting minutes
-        - Team owns the session
-
-        - Descope larger items due to not enough capacity & fill the gap with low-priority items
-        - Elaborate / split items
-        - Re-order items
-            - code-reuse
-            - reduce effort for later stories
-            
-        - Inputs:
-            - Product Backlog
-            - Capacity / Velocity
-            - Current Project Status
-            - Constraints
-        - Discuss:
-            - What - pick user stories
-            - How - task breakdown
-            - Definition of Done
-            - Acceptance Criteria
-            - Extimation for work items
-        - Outputs:
-            - Sprint Goal
-            - Sprint Backlog
-        
-        - Participants:
-            - Product Owner
-            - Development Team
-            - Scrum Master
-
-
-        Defintion of Done (DoD)
-            - a checklist of minimum required work
-            - effective only when written down
-
-            - increase transpaency
-            - increments delivered are more effective and potentially releasable
-            - commond= agreement among the team on what needs to be done to complete the work
-            - limit the cost of rework once the item has been accepted
-    
-
-
-    Sprint Execution
-        - Product owner is involved, others are commited
-        - Update sprint burn-down
-        - Update release burn-down at the end of the sprint
-        - Update scrum board
-
-
-
-    Daily Scrum
-        - Time-box : 15 minutes
-        - Participants:
-            - Development Team (mandatory)
-            - Scrum master (optional) - only coach the dev team
-
-        - Each member mentions:
-            - What was done since last meeting
-            - Plan until the next meeting
-            - Obstacles
-
-        - update product backlog
-        - update scrum board
-
-
-
-
-    Sprint Review
-        Scrum team and stakeholders inspect the outcome of the sprint and figure out what to do in the next sprint.
-
-        - Time-box : 1hr per 1 week sprint work
-        - About the Product
-        - For the Stakeholders & the team
-        - Participants:
-            - Development Team
-            - Product Owner
-            - Stakeholders
-            - Client
-
-        - Showcase the working product (demo)
-            Only fully done stories
-        - Present the project performance (PO)
-        - Verify increment against "DoD" and Acceptance Criteria
-        - Validate if sprint product meets sprint goal and DoD
-
-        - Discuss:
-            - what is done what is not
-            - sprint
-            - increment
-            - current business conditions
-
-        - Update product backlog
-        - Update release plan
-        - update release burn-down
-        - Update risk registry
-
-        - if DoD is not met, item does not count towards the "velocity"
-
-
-
-    Sprint Retrospect
-        - Time-box : 1hr per 1 week sprint work
-        - About the Process
-        - Participants:
-            - Development Team
-            - Scrum Master
-            - Product Owner (involved)
-            
-        Discuss:
-            - What went well during the sprint?
-            - What could be improved?
-            - What will we commit to doing in the next sprint? 
-            (team makes actionable commitments)
-
-        Output:
-            - Retro notes
-            - Action items
-
-        Atlasian playbook: https://www.atlassian.com/team-playbook/plays/retrospective
-
 -->
 
-
 ---
-
-## Artifacts
-
-- Product Backlog
-- Sprint Backlog
-- Scrum Board
-- Burn-Down Chart
-- Product Increment
+### Product Backlog Grooming
 
 <!--
-    Aditional Artifacts
-        - Product backlog delta report
-        - Impediment list
-        - Product burn-down
+    - Not time-boxed
+    - Not a designated meeting
+    - As and when the team requests
+    - Not exceeding 10% of team's time
+    - Progressive elaboration
+    - Participants:
+        - Product Owner
+        - Development Team
+
+    - Prioritize
+    - Split
+    - Discard
+    - Add
+
+    - Only one product backlog - even if multiple teams are working on the same product
+
+    - Goals:
+        - identify dependencies / gaps for story prioritization
+        - ensure enough product backlog items for 2+ sprints
+        - endure stories are details enough to det to DoD
+        - ensure first-cut items are ready for planning
+        - familiarize team with PBIs before planning session & raise clarifications
+
+    - User Story definition
+        - Product Owner - business requirements
+        - Development Team - technical details
+
+    - Story level estimations are made
+    - Acceptance Criteria are specified
+    - Defintion of Ready (DoR) is met
+        - descriptive enough for all team members can understand what is to be done
+        - include a clear statement of business value so the PO can prioritize
+        - include any required enabling specs (wireframes etc)
+        - fully meet INVEST criteria for user stories
+        - performance / tracking criteria are defined
+        - free from external dependencies (nothing beyond teams control must be done to complete the work)
+
+    - Vision -> Roadmap Planning -> Release Planning -> Sprint Planning
+    - Vision -> Strategy -> Goal -> Requirements
+
 -->
 
 ---
+### Sprint Planning
 
+<!--
+    - Duration: 2hrs per 1 week of sprint work
+    
+    - Refine first-cut PBIs and make a commitment
+    - Agree on the sprint goal
+    - Agree on acceptance criteria
+    - Agree on Definition of Done (DoD)
+    - Estimate the work (task level)
+    - Agree on plans for Research Spikes - as detailed as possible
+    - Share meeting minutes
+    - Team owns the session
+
+    - Descope larger items due to not enough capacity & fill the gap with low-priority items
+    - Elaborate / split items
+    - Re-order items
+        - code-reuse
+        - reduce effort for later stories
+        
+    - Inputs:
+        - Product Backlog
+        - Capacity / Velocity
+        - Current Project Status
+        - Constraints
+    - Discuss:
+        - What - pick user stories
+        - How - task breakdown
+        - Definition of Done
+        - Acceptance Criteria
+        - Extimation for work items
+    - Outputs:
+        - Sprint Goal
+        - Sprint Backlog
+    
+    - Participants:
+        - Product Owner
+        - Development Team
+        - Scrum Master
+
+
+    Defintion of Done (DoD)
+        - a checklist of minimum required work
+        - effective only when written down
+
+        - increase transpaency
+        - increments delivered are more effective and potentially releasable
+        - commond= agreement among the team on what needs to be done to complete the work
+        - limit the cost of rework once the item has been accepted
+-->    
+
+---
+### Sprint Execution
+
+<!--
+    - Product owner is involved, others are commited
+    - Update sprint burn-down
+    - Update release burn-down at the end of the sprint
+    - Update scrum board
+--->
+
+---
+### Daily Scrum
+
+<!--
+    - Time-box : 15 minutes
+    - Participants:
+        - Development Team (mandatory)
+        - Scrum master (optional) - only coach the dev team
+
+    - Each member mentions:
+        - What was done since last meeting
+        - Plan until the next meeting
+        - Obstacles
+
+    - update product backlog
+    - update scrum board
+-->
+
+---
+###  Sprint Review
+
+<!--
+    Scrum team and stakeholders inspect the outcome of the sprint and figure out what to do in the next sprint.
+
+    - Time-box : 1hr per 1 week sprint work
+    - About the Product
+    - For the Stakeholders & the team
+    - Participants:
+        - Development Team
+        - Product Owner
+        - Stakeholders
+        - Client
+
+    - Showcase the working product (demo)
+        Only fully done stories
+    - Present the project performance (PO)
+    - Verify increment against "DoD" and Acceptance Criteria
+    - Validate if sprint product meets sprint goal and DoD
+
+    - Discuss:
+        - what is done what is not
+        - sprint
+        - increment
+        - current business conditions
+
+    - Update product backlog
+    - Update release plan
+    - update release burn-down
+    - Update risk registry
+
+    - if DoD is not met, item does not count towards the "velocity"
+-->
+
+---
+### Sprint Retrospect
+
+<!--
+    - Time-box : 1hr per 1 week sprint work
+    - About the Process
+    - Participants:
+        - Development Team
+        - Scrum Master
+        - Product Owner (involved)
+        
+    Discuss:
+        - What went well during the sprint?
+        - What could be improved?
+        - What will we commit to doing in the next sprint? 
+        (team makes actionable commitments)
+
+    Output:
+        - Retro notes
+        - Action items
+
+    Atlasian playbook: https://www.atlassian.com/team-playbook/plays/retrospective
+-->
+
+---
 <style scoped>
     a {
         font-size: 10px;
@@ -658,8 +669,8 @@ https://startinfinity.com/product-management-framework/scrum-sprint
 
 https://www.visual-paradigm.com/scrum/what-are-scrum-ceremonies/
 
----
 
+---
 <style scoped>
     a {
         font-size: 10px;
@@ -674,17 +685,15 @@ https://www.visual-paradigm.com/scrum/what-are-scrum-ceremonies/
 
 https://www.slideshare.net/ACMSoftware/scrum-framework-58695170
 
----
 
+---
 # Certification?
 
 ---
-
 # Tips
 
 <!--
-
-    Estimation
+    An estimation strategy
         - pick a base story and base size
         - difference resolution
             - middle (mean)
@@ -694,11 +703,15 @@ https://www.slideshare.net/ACMSoftware/scrum-framework-58695170
 -->
 
 ---
+# Questions?
 
+---
+# Thank You
+
+---
 Epic, Stories
 
 ---
-
 <style scoped>
     ul {
         list-style-type: none;
