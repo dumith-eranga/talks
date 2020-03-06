@@ -375,6 +375,7 @@ _Robert C Martin (Uncle Bob)_
 
     http://codingdojo.org/?KataCatalogue
     https://katas.softwarecraftsmanship.org/
+    https://www.programmingwithwolfgang.com/tdd-kata/
 -->
 
 ---
