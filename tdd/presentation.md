@@ -389,6 +389,7 @@ _Robert C Martin (Uncle Bob)_
 -->
 
 ---
+
 <style scoped>
     a {
         color: white !important;
@@ -398,6 +399,42 @@ _Robert C Martin (Uncle Bob)_
 ![](./images/repo-url.png)
 
 https://bit.ly/389OQR3
+
+---
+### mistakes we made
+
+---
+1. Selecting a Kata that you do not know how to solve
+
+---
+1. Selecting a Kata that you do not know how to solve
+1. Not having a design for the solution
+
+---
+1. Selecting a Kata that you do not know how to solve
+1. Not having a design for the solution
+1. Spending time to read & design the solution during the time allocated for practice
+
+---
+1. Selecting a Kata that you do not know how to solve
+1. Not having a design for the solution
+1. Spending time to read & design the solution during the time allocated for practice
+1. Developing a significant chunk of functinality to statisfy one test
+
+---
+1. Selecting a Kata that you do not know how to solve
+1. Not having a design for the solution
+1. Spending time to read & design the solution during the time allocated for practice
+1. Developing a significant chunk of functinality to statisfy one test
+1. Not doing the simplest thing possible
+
+---
+1. Selecting a Kata that you do not know how to solve
+1. Not having a design for the solution
+1. Spending time to read & design the solution during the time allocated for practice
+1. Developing a significant chunk of functinality to statisfy one test
+1. Not doing the simplest thing possible
+1. Not refactoring
 
 ---
 <!--
@@ -416,6 +453,9 @@ Three techniques for quickly getting to green
     Obvious Implementation
     Triangulation
 
+
+How to write codoe? Write the  test first.
+How to write the test? Write the assertion first. 
 
 State-ful vs state-less implemtnations
 
