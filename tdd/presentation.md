@@ -116,6 +116,7 @@ Optimism is an occupational hazard of programming; feedback is the treatment.
         focus - the right thing
 
     With TDD, how to achieve the right way?
+        Refactoring phase
 -->
 
 ---
@@ -361,6 +362,8 @@ _Robert C Martin (Uncle Bob)_
 <!--
     - Excuses are lies that you tell youself
     - The professional obligation
+
+    - The true purpose of testing, just like the true purpose of design, is to reduce costs.
 -->
 
 ---
