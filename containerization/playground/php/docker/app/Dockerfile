@@ -1,4 +1,4 @@
-FROM app:base
+FROM app:db
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN echo "date.timezone = Asia/Colombo" >> /etc/php.ini
@@ -18,5 +18,10 @@ RUN mkdir /app
 WORKDIR /app
 
 EXPOSE 8081
-CMD [ "php", "-S", "0.0.0.0:8081", "-t", "/app" ]
+
+ADD ./entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
+
+# CMD [ "php", "-S", "0.0.0.0:8081", "/app/router.php", "-t", "/app" ]
 # CMD [ "/bin/bash" ]
