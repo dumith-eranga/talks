@@ -80,6 +80,20 @@ Many businesses had to change their business rules to accomodate new products an
 
 Unlike with changes to the business requirements coming from GDPR (General Data Protection Regulation) and CCPA (California Consumer Privacy Act), these requirements were sudden and drastic. There were no grace period. The busineses either had to change or die, and some of them actually died.
 
+So, now, this looks like two different ends of the spectrum. On one end, we have software products like operating systems where the releases are predictable, planned and the requirements are fairly stable. On the other end we have highly volatile and dynamic business software that requires fast and frequent changes.
+
+In order to increase reliability, first we need to measure how reliable our product is at the moment. What gets measured gets improved. We measure reliability by counting the number of times our software breaks - by break what I mean is that it does not work as expected or intended.
+
+Let's take a software product as an example.   
+We subject our software product to different circumstances - like different inputs, different resource allocations, different configurations, different number of operations requested (loads) etc. While we count the number of times the software breaks, we also identify the circumstances that leads to them. Then we look at the significance of these breakages and the probability of the circomstances. Based on these criteria we prioritize the identified issues that needed to be fixed in order to achieve the desired reliability level.
+
+The act of subjecting the product to different circumstances **artificially** in **controlled environments** is called **testing**. A single occurance of such an act is called a **test**. The documented procedure of a test is called a **test-case**.
+
+If we want to increase the reliability of cars being manufactures, we subject them to more and more tests covering all imaginable aspects of cars.   
+We can do the same with software products like operating systems because their core functionality is pretty well established - meaning requirements are stable - and we can afford the time due to the planned and sparse release cycles.
+
+What about business software?   
+Can we do the same? Can we do more and more testing without introducing delays in the release cycles? Can we accomodate more testing without ...
 
 
 
