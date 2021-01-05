@@ -98,6 +98,13 @@ Can we do the same? Can we do more and more testing without introducing delays i
 
 
 
+ENGINEERING PRACTICES EMPLOYED
+Unit Testing - 67%
+TDD - 30%
+Page 12, 14th Annual State of Agile Report
+
+
+
 ## Bug
 Automotive Analogy
 - Costly
