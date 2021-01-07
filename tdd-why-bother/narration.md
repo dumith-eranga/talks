@@ -1,4 +1,12 @@
+# Abstract
+
+We all have heard good things about Test Driven Development. TDD, as it is commonly called, is recommended as a good practice for software development. Though it is quite popular internationally, we have not reached enough buy-in locally due to various reasons.
+This session will introduce the concept of TDD, discuss some reasons for its low adaptation, the wrong reasons to practice it, and some side effects or concerns of adapting it. It will try to focus more on some aspects that are not usually discussed under this topic. Most importantly, this webinar will show you some personal reasons why you should practice TDD.
+
+---
+
 # TDD. Why Bother? We have QA!
+# YTDD
 
 <style scoped>
     em {
@@ -104,6 +112,17 @@ TDD - 30%
 Page 12, 14th Annual State of Agile Report
 
 
+## Evolution of testing approach
+No Tests
+Test After
+Test First
+Test Driven
+
+
+## Concerns
+1. It will slow down the development
+2. QAs will lose their jobs
+
 
 ## Bug
 Automotive Analogy
@@ -157,3 +176,7 @@ Testers
 A series of workshops
 
 Help me promote this message
+
+
+
+
