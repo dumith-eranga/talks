@@ -218,15 +218,32 @@ With executable specifications we can simply say, these are the things we provid
 
 The first 3 parameters, the inputs, the "thing" to test and the expected outcomes are known or decided well before an engineer write the code for the business logic. Other parameters like how to run the test and get the outcome can only be know at the end of the coding sesion for the business logic.
 
-Now that we are empowered by executable specifications, we only need to know about the inputs, the expectations, and the "thing" to test. Since these are known before the business logic code is written, we can actually write down the executable specification for the tests even before the business logic is implemented. The effectiveness of this approach comes in due to the fact that we can test the business logic-in-making, every step of the way, iteratively, until we are satisfied with the reliability. We do not need to wait until the logic is completely developed to test it. We can test it whule we are building-up the logic, and until we are satisfied with its reliability.
+Now that we are empowered by executable specifications, we only need to know about the inputs, the expectations, and the "thing" to test. Since these are known before the business logic code is written, we can actually write down the executable specification for the tests even before the business logic is implemented. The effectiveness of this approach comes in due to the fact that we can test the business logic-in-making, every step of the way, iteratively, until we are satisfied with the reliability. We do not need to wait until the logic is completely developed to test it. We can test it while we are building-up the logic, and until we are satisfied with its reliability. If there is an existing part logic that is already satisfying some test, and we change it incorrectly to address another part of the logic, we will know immediately as the relevant tests will start failing.
 
 This is the essense of **Test-First Development** and that is the 3rd step of the evolution.
+
+To summarise, test-first development process has 2 repeatable phases.
+- Phase 1: Write the test - executable specification - for the "thing".
+- Phase 2: Write the logic for the "thing" until all the tests are passing.
 
 ---
 
 So what does **Test-Driven Development** brings-in that we do not have already discussed?
 
 It is only a minor tweak to the process of test-first development. Though the tweak is minor, the effect is huge.
+
+With test-first approach we stop working on a "thing" when we reach the desired level of reliability. With test-driven approach, once we come to that level, we focus on improving the structure of the code. This is the 3rd phase in the test-driven approach and is called  **refactoring**.
+
+By definition, refactoring means changing the structure of the code without changing its functionality. The tests or the executable specifications we wrote at the first phase it what enables us to refactor our code with confidence. If we break something by accident, we will immediately know beacuse the tests will start fail.
+
+Since now we have a indicator telling us whether we are doing the changes the right way and flag them immediately if we don't, we do not really need the debugger. Whatever code we write between two successive executions of the tests are very little and quite fresh in our minds. We do not need a debuger to figure out the issue - we can simply undo and try writing the code again differently.
+
+To summarise, test-driven development process has 3 repeatable phases.
+- Phase 1: Write the test - executable specification - for the "thing".
+- Phase 2: Write the logic for the "thing" until all the tests are passing.
+- Phase 3: Refactor until you are happy with the structure of the code.
+
+
 
 
 
@@ -315,4 +332,12 @@ Help me promote this message
 
 
 
+As you might have noticed, I have only discussed about the case for TDD but not really how to do it.
+This was intentional. TDD is a skill. I do not belive I can teach you the skill of TDD by doing a talk. It is just like subscribing to a postal course for swimming.
 
+The intention of this talk was just to be a precursor to the change we wanted to see in the community - the adoption of TDD. This is merely the first step towards that goal - introducing the mindset shift.
+
+If there is enough interest from the community, we are happy to organise a series of hands-on sessions to help anyone who wants to develop this skill. We will tackle the process of TDD incrementally from the basics to the advance topics like TDD at different layers and all the way upto going full-stack.
+I'm happy to announce that Vetstoria management is happy to fully sponsor this programme as a part of our CSR activities.
+
+You will be receiving an email soon, if not already, with a short form with some survey questions and a field to indicate your interest for the hands-on series.
