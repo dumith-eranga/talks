@@ -127,8 +127,43 @@ Seems like we keep on bumping on to different dark clouds. Is there a way out?
 Yes, there is. To see the solution, we need to change the angle we look at the problem.
 
 So far, we have been trying to look at this concern on increased testing as a resource problem. Let's change the angle and look at it as a strategy problem.
+The solution lies in the right amount of moderation - moderation of tests, that is. Does it mean that we have to decide on what aspects to test and what aspects to ignore? No. Remember, it is not a problem of resources, or numbers to be more specific, in this case - it is a problem of strategy. The solution is not about how much of testing - it is about how and when of testing.
 
 In order to help us understand this further, let's go back to our friend, the industry example of manufacturing cars.
+Let me try to present this as a side-by-side comparison. Also, along the way, I'll build up the volcabulary for the subsequent discussion by naming some technical concepts in the examples.
+
+When the manufacturer want to test a car, do they build expensive machnery to extensively test all aspects of the car once the car is produced? No.
+Similarly, should we write automated tests to extensively test all aspects of the software once the software is built? No.
+
+When the manufacturer builds the parts of the car, they have built the machinery to test the different aspects of the part.
+Similarly, we can write automated tests to test the aspects of a function or a methods we develop as a part of our software.
+Since we are only testing a small unit of the code, let's call these tests **unit tests**.
+
+Once the manufacturer has the parts built to have the desired level of reliability - meaning, tested thoroughly and fixed any issues - they put together different parts to come up with a component, for example an engine or a cooling system. They have built machinery to test the different aspects of such componets. These machines will test whether the different parts interact properly to achieve the desired behaviours from the component.
+Similarly, once our units are tested to confirm to the desired level of reliability, we can connect them together to build components. We have a few different names for them like components, modules, classes or objects depending on some factors like the project structure and development context. Once the components are ready, we can have automated tests to test the behaviours of these components.
+Since these tests are focused on how the units are integrated to achieve the desired behavours, we can call them **integration tests**.
+
+When the manufacturer as the necessary components with the desired reliability, they can put them together to have the complete product - the car. When the car whole, they have machinery that can be used to test the wholistic aspects of the car like the propagation, performance and the look and feel.
+Once we have achieved the desired level of reliability for our components, we can combine them to build the whole software to cater to the business need. We can have automated tests to test the wholistic aspects of the software so see whether it fulfills the business need.
+Since these tests consider the software as a whole, provides inputs at the one end and verify the outcomes at the other end, we can call them **end-to-end tests***
+
+Let's take a step back and look at the overall picture of testing.
+
+We have many parts coming together to form a few components and in turn form one whole - the car.
+We have many functions coming together to form a few components and in turn form one whole - the software.
+
+Many parts have small machinery for doing many tests.
+Many functions have many automated unit unit tests.
+
+A few components have a few machinery testing their behaviour.
+A few components have a few automated integration tests.
+
+One car has some machinery testing the overall vehicle.
+One software has some automated end-to-end tests.
+
+Please note that the words many, a few and some are just relative terms. For one product, "some" could mean ten and for another "some" could mean a thousand.
+This is the concept behind the pyramid of testing.
+
 
 
 ENGINEERING PRACTICES EMPLOYED
