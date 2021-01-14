@@ -2,7 +2,7 @@
 
 We all have heard good things about Test Driven Development. TDD, as it is commonly called, is recommended as a good practice for software development. Though it is quite popular internationally, we do not see enough buy-in locally.
 
-This session will introduce the concept of TDD, discuss some reasons for its low adoption, the wrong reasons to practice it, and some side effects or concerns of adopting it. The session will try to focus more on some aspects that are not usually discussed under this topic. Most importantly, this webinar will show you some personal reasons why you should practice TDD.
+This session will introduce the concept of TDD, discuss some reasons for its low adoption, the wrong reasons to practice it, and some side effects or concerns of adopting it. The session will try to focus more on some aspects that are usually not discussed under this topic. Most importantly, this webinar will show you some personal reasons why you should practice TDD.
 
 ---
 
@@ -81,30 +81,54 @@ _Two_
 How often the requirement for a car changes? Pretty much never. Newer car models may get all the fancy stuff and the luxuries, but, at the end of the day, we buy a car as a mode of transportation.   
 Similarly, how often the requirement for an operating system software changes? Very rarely. Never operating systems may get more and more fancy tools and utilities bundled, but, unless the underlying hardware architectures change, there is very little reason to change the core of an operating system software.
 
+So, I believe it is fair to compare such software with cars and complain about the disparity of reliability and cost of faults.
+
 In contrast, how often a buisness application changes? It could be weeks and even days in some cases.
 
 A very good example everyone of us experienced is what happened when the COVID-19 lockdowns began. Suddenly a lot of busienss software needed to change to accomodate remote communication between people - either via chat or video conferencing. There was an influx of not tech savvy users for many software so the user interfaces have the be more user friendly, intuitive and more fool-proof. After all, when was the last time you refered to a user manual of a product, a software specially, before turning it on?
+
 Some software needed to quickly adapt to work on different hardware, operating systems and screen-sizes.
 Many businesses had to change their business rules to accomodate new products and services, new business models and incentivise their customers in order to keep the businesses afloat. A good example is from one of the leading ecommerce platforms in Sri Lanka, Takas.lk. They had to quickly start selling groceries and greens. A similar thing happened with the popular super-market chains like Cargills and Keells - they had to bring-in the capability to sell via online orders.
 
 Unlike with changes to the business requirements coming from GDPR (General Data Protection Regulation) and CCPA (California Consumer Privacy Act), these requirements were sudden and drastic. There were no grace period. The busineses either had to change or die, and some of them actually died.
 
-So, now, this looks like two different ends of the spectrum. On one end, we have software products like operating systems where the releases are predictable, planned and the requirements are fairly stable. On the other end we have highly volatile and dynamic business software that requires fast and frequent changes.
+So, I believe it is not fair to compare business software with cars and complain about disparity of reliability and cost of faults.
+
+Are we good? Is that all? Does it stop here? Do we have to live with what is given?
+No, we should not just say it is not fair, refuse to do anything about it, and force everyone to live with what is given.
+So, what can we do?
+
+This looks like two different ends of the spectrum. On one end, we have software products like operating systems where the releases are predictable, planned and the requirements are fairly stable. On the other end we have highly volatile and dynamic business software that requires fast and frequent changes. However, regardless of the fact that they are at different ends of the spectrum, people want reliability - the ability to rely on the software they purchase to get the work done properly.
 
 In order to increase reliability, first we need to measure how reliable our product is at the moment. What gets measured gets improved. We measure reliability by counting the number of times our software breaks - by break what I mean is that it does not work as expected or intended.
 
 Let's take a software product as an example.   
-We subject our software product to different circumstances - like different inputs, different resource allocations, different configurations, different number of operations requested (loads) etc. While we count the number of times the software breaks, we also identify the circumstances that leads to them. Then we look at the significance of these breakages and the probability of the circomstances. Based on these criteria we prioritize the identified issues that needed to be fixed in order to achieve the desired reliability level.
+We subject our software product to different circumstances - like different inputs, different resource allocations, different configurations, different number of operations requested (loads) etc. While we count the number of times the software breaks, we also identify the circumstances that leads to them. Then we look at the significance of these breakages and the probability of the circumstances. Based on these criteria we prioritize the identified issues that needed to be fixed in order to achieve the desired reliability level.
 
 The act of subjecting the product to different circumstances **artificially** in **controlled environments** is called **testing**. A single occurance of such an act is called a **test**. The documented procedure of a test is called a **test-case**.
 
-If we want to increase the reliability of cars being manufactures, we subject them to more and more tests covering all imaginable aspects of cars.   
+If we want to increase the reliability of cars being manufactured, we subject them to more and more tests covering all imaginable aspects of cars.   
 We can do the same with software products like operating systems because their core functionality is pretty well established - meaning requirements are stable - and we can afford the time due to the planned and sparse release cycles.
 
 What about business software?   
-Can we do the same? Can we do more and more testing without introducing delays in the release cycles? Can we accomodate more testing without ...
+Can we do the same? Can we do more and more testing without introducing delays in the release cycles? Can we accomodate more testing without needing an ever increasing army of testers to handle the new test-cases coming in. Can we keep on doing it condidering the people related aspects of testing, like human errors, fatigue and job satisfaction.
 
+Yes, we can solve it by outsourcing the testing work. But this approach is just a way to trade in some problems you have for another set of problems. We out-source our concerns about human errors, fatigue and job satisfactions etc. for the need for thorough documentation, management overhead and additional cost. Out-sourcing works, but only at small scale. It is only a temporary solution to a resource problem - not a long term viable strategy for a business.
 
+Luckyly, we have already indentified a different way of sloving the problem - test automation. If we automate the tests - meaning, if we write a nother program to test the software we are building - we have effectively solved the human resource aspect of the problem. If we want to increase the number of tests, we can simply add more automated tests. If the testing process gets longer as we add more and more automated tests, we can simply cut down the time by using more computing resources - either more powerful machines (i.e scalling vertically) or more machines (i.e. scaling horizontally) or both. And compared to human resources, computing resources are dirt cheap these days. Furthermore, the on-demand computing resources providers like AWS and Azure allow you to only pay for the actual usage.
+
+So, is everything good? No, not really. Test automation has its own cost. You will still need people who can look at the test-cases and convert them to program instructions. Noramlly we call them automation engineers. Instead of many testers who work on low cognitive engagements of executing the test-cases manually, we need comparatively less but higher-skilled automation engineers who engage in high cognitive engagement of converting the test-cases into program instructions. Furthermore, just converting is not enough - we need to maintain them. As the software changes over time - remember, this is the key differentiating factor of business software - we need to tweak and change tests we automated. So, not just that we need to maintain the test-cases, we need to maitain the program that tests the software we build. And not everybody can do it. We will need those high-skilled automation engineers for this too.
+
+As we know, in our industry, or any industry for that matter, it takes time to gain the high level of skills. That means there are always a short-supply and a high demand for these skilled individuals. Unless we are able to offer attractive enough compensation, we will not be able to acquire the number of skilled resources we need to handle the need of test automation for our organization.
+
+If we take a step back and look at the overall picture, we have replaced one layer with some problems (like time, human resources) in our process with multiple layers with their own problems posing slightly differently (like technical skills, mainteance cost, cost of aquiring skill).
+
+Seems like we keep on bumping on to different dark clouds. Is there a way out?
+Yes, there is. To see the solution, we need to change the angle we look at the problem.
+
+So far, we have been trying to look at this concern on increased testing as a resource problem. Let's change the angle and look at it as a strategy problem.
+
+In order to help us understand this further, let's go back to our friend, the industry example of manufacturing cars.
 
 
 ENGINEERING PRACTICES EMPLOYED
