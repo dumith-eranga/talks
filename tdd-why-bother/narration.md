@@ -177,7 +177,9 @@ Now that I have built the case for the need of different levels of testing and i
 
 Let's look at the evolution so far.
 
+### No Test
 First, we talked about the instance where we do not have automated testing.
+### Test-After
 Secondly, we talked about writing automated tests once we have the thing to test. There, by "thing" I mean the function, the component or the software - whatever that is relevant at the level of consideration.
 
 As a mean to understand the next phases in the evolution, let's look at ways to fine-tune our strategy and see whether we can do something to actually solve the resource aspect of the original problem of testing.
@@ -243,29 +245,73 @@ To summarise, test-driven development process has 3 repeatable phases.
 - Phase 2: Write the logic for the "thing" until all the tests are passing.
 - Phase 3: Refactor until you are happy with the structure of the code.
 
+---
 
+Alright.
+The basics and the definitions are out of the way.
 
+---
 
+There are lies, damn lies and statistics.
 
+---
 
 ENGINEERING PRACTICES EMPLOYED
 Unit Testing - 67%
 TDD - 30%
 Page 12, 14th Annual State of Agile Report
 
+I recently came across the **14th Annual State of Agile Report**. It has good insights based on some key statistics from surveys. In page 12 of the report, they talk about adoption of different engineering practices. 67% of the people who responsed said they do unit testing but only a 30% of the people are following TDD.
 
-## Evolution of testing approach
-No Tests
-Test After
-Test First
-Test Driven
+What do you think could be the reasons?
+Let me leave it for you to ponder.
 
-## The wrong reasns to adopt
-1. My company needs me to
-2. The shiny thing - makes my CV looks cool
-3. The silver bullet
+---
 
+## The wrong reasons to adopt
+
+We have build the case for the need of TDD and why we should practice it. The way we built the case is though a series of logical reasoning and organizations love it when we think like that.
+
+Here comes the tricky part. Personally, that is a wrong reason to practice TDD.
+
+Am I nuts? Did I just threw away the case we built so far by making a bold and probably a stupid claim.
+Here me out.
+
+### 1. My company needs me to
+The case we built is a perfectly valid reason to practice TDD for an organization. It has all the elements of logic in it. Logics are good for a business process and a conceptual entity like an organization.
+
+-- switch to slide --
+
+Let me ask you, when was the last time you practiced something consistently, day in day out, because it is logical?
+
+
+### 2. Makes my resume looks more attractive
+Another reason would be; If I know TDD, it looks cool on my resume. There is a demand for engineers with TDD experience and I can stand-out from the rest if I have this skill.
+
+-- switch to slide --
+
+This is wrong reason because we are trying to think of TDD as a means to an end. The practice of collecting shiny new things so that I can put them in my resume is so common that it even has a name - resume driven development. A resume-driven developer is someone who is always chasing the new and shiny so that their resume is more attractive to the next potential employer.
+
+An additionl danger of buying into this reason is that, at the first sight of trouble, they will abondon the practice.
+It was just a means to get to a better job. It did not mean that we have to do it always.
+
+
+### 3. The silver bullet
+Another wrong reason would be the misconception people have that TDD will solve all of their problems at development.
+This is wrong becuase, it is a myth and TDD is no silver bullet that can solve all their development problems. 
+
+-- switch to slide --
+
+TDD is only a practice that help you achieve reliability in an efficient and effective manner.
+
+...
+
+
+
+---
 # The problem with the wrong reasons
+
+Those reasons we discussed are valid but the wrong reason 
 We do not practice it right.
 
 Hand washing technique.
