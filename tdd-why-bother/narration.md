@@ -162,7 +162,72 @@ One car has some machinery testing the overall vehicle.
 One software has some automated end-to-end tests.
 
 Please note that the words many, a few and some are just relative terms. For one product, "some" could mean ten and for another "some" could mean a thousand.
-This is the concept behind the pyramid of testing.
+
+Anyway, this many, a few and some concept is the moderation I mentioned earlier that allow us to solve the problem of strategy.
+
+This is the same concept that is illustrated by the pyramid of testing.
+*diagram*
+
+---
+
+Alright.
+Now that I have built the case for the need of different levels of testing and introduced some terms I wanted to use, let me get into the topic of today's session.
+
+---
+
+Let's look at the evolution so far.
+
+First, we talked about the instance where we do not have automated testing.
+Secondly, we talked about writing automated tests once we have the thing to test. There, by "thing" I mean the function, the component or the software - whatever that is relevant at the level of consideration.
+
+As a mean to understand the next phases in the evolution, let's look at ways to fine-tune our strategy and see whether we can do something to actually solve the resource aspect of the original problem of testing.
+
+On one side we have **software engineers** writing **code** to **build** business software. They are **high-skilled** and capable of **high cognitive** engagements. The software is a business **requirement** of the company. The software delivers **functionality**.
+
+On the other side, we have **automation engineers** writing **code** to **test** the business software that the other party develops. They are **high-skilled** and capable of **high cognitive** engagements. The testing program is a business **requirement** of the company. It delivers **reliability**.
+
+Now let's color the common words differently.
+Engineers. Code. High-skilled. High-cognitive. Reqirement.
+Now, we only see the key differences between the two parties.
+
+Can we teach these people some new skills so that they can be interchanged?
+The answer is a obvious yes. In order to survive in this industry, we need to keep learning and developing new skills. So it is just a matter of choosing the skills to develop - not a matter of whether we can.
+
+Let's say we have done it. We have developed the skills we need.
+Let's see how we can rephrase the above two statements I made.
+
+We have **engineers** writing **code** to **build** or **test** the business software. They are **high-skilled** and capable of **high cognitive** engagements. The software and testing program are business **requirements** of the company. They deliver **functionality** and **reliability** respectively.
+
+Now that we figured out we do not need two different types of human resources, let's see whether we can tweak how they work to see whether we can optimize this further.
+
+This time, let's zoom in a bit to focus on a single engineer.
+
+The engineer writes the code to build the "thing" and then write the code to test the "think". Just like before, here the "thing" means either the function, component or the whole depending on the level of consideration.
+
+The engineer needs a design specification for the software code and a test specification for the automated test.
+
+Can we drop some elemets from the list so we have less things to manipulate?
+Yes, we can. We can do it by implementing a concept called **executable specifications**.
+
+Let's apply the concept to the "software" side and the "test" side separtely.
+
+When it is applied to the "software" - we call if **design and architecture**. This is topic requires a deeper discussion sue to the various complexities in the business logics and how we arrive at them. We will be talking more  about this topic in future sessions.
+
+When it is applied to the "test" side, however, things become much simpler to discuss about.
+With executable specifications we can simply say, these are the things we provide as inputs and these are the expected outcomes and this "thing" is what we are testing. We do not need to write a program to say how the test should be run, how to get the outcomes or how to validate them. There are frameworks and tools available to help us with this way of testing so that we only need to write the executable specifications and they do the heavy-lifting.
+
+The first 3 parameters, the inputs, the "thing" to test and the expected outcomes are known or decided well before an engineer write the code for the business logic. Other parameters like how to run the test and get the outcome can only be know at the end of the coding sesion for the business logic.
+
+Now that we are empowered by executable specifications, we only need to know about the inputs, the expectations, and the "thing" to test. Since these are known before the business logic code is written, we can actually write down the executable specification for the tests even before the business logic is implemented. The effectiveness of this approach comes in due to the fact that we can test the business logic-in-making, every step of the way, iteratively, until we are satisfied with the reliability. We do not need to wait until the logic is completely developed to test it. We can test it whule we are building-up the logic, and until we are satisfied with its reliability.
+
+This is the essense of **Test-First Development** and that is the 3rd step of the evolution.
+
+---
+
+So what does **Test-Driven Development** brings-in that we do not have already discussed?
+
+It is only a minor tweak to the process of test-first development. Though the tweak is minor, the effect is huge.
+
 
 
 
