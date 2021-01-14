@@ -357,19 +357,77 @@ Of course, there will be an upfront cost. We will have to invest time and resour
 Once we come out of this intial investment period, there will be a clear ROI. Our development process will become faster and the teams confidence will rise.
 
 ### 2. QAs will lose their jobs
-Another concern, and rightfully concerning, is the future of some job roles. What will happen to QA? And you might also ask, based on the series of reasoning we used to build the case for TDD, what will happen to automation engineers?
+Another concern, and rightfully so, is the future of some job roles. What will happen to QA? And you might also ask, based on the series of reasoning we used to build the case for TDD, what will happen to automation engineers?
 
 There is a fallacy here. The fallacy is that the role of quality asurance and automation engineers is to do the testing of our software. Though we call them quality assurance engineers and automation engineers - what we really meant is quality testers and test program writers.
 
-That is really under-appriciating their roles. For years they have been at the far end of the development process where they were waiting for the load to be delivered. For those who has seen uncle Bob's slide deck for the talks where he mentions TDD, this will remind you that impactful but discussting slide.
+That is really under-appriciating their roles. For years they have been at the far end of the development process where they were waiting for the load to be delivered. For those who has seen uncle Bob's slide deck for the talks where he mention TDD, this will remind you that impactful but discussting slide.
 
-If we actively seek to debunk this way of looking at these people and recognize them for what they really are, we can see their true potential. Quality Assurance, or as how I like to call it, Qulity Engineering is a vast area and testing is a very small aspect of it. Similarly, automation engineers are capable of automating business processes and other aspects and continue to add value to the organization.
+If we actively seek to debunk this way of looking at these people and recognize them for what they really are, we can see their true potential. Quality Assurance, or as how I like to call it, Qulity Engineering is a vast area and testing is a very small aspect of it. We can tak about some of these areas in a future session. Similarly, automation engineers are capable of automating business processes and other aspects and continue to add value to the organization.
 
+### 3. Testers will lose their jobs
+This is going to be tricky to address - What will happen to testers?
+This concern has its merits. Once every one adopts TDD and all the tests are automated, there will be no need for testers. Seems like a certain doom.
+Not necesserily. The testers as we generally known them will cease to exists. That kind of testers were the ones who did the same thing repeatedly day-in, day-out. They were just mechanical workers and ware not really recognized for the true human potential they have.
+
+To understand one way things would change, let's look at a different industry - banking. Up until recent years, in Sri Lanka, we had some people called "tellers". We still do, but it is becoming increasingly less now. With the introduction and the gaining popularity of fully functional **Automated Teller Machines**, ATMS as we commonly call it, **Cash Recycling Machines** as the banks like to call them to distinguish from the older machines that we could only withdraw money from, the role of the "teller" is dissappearing. But did these people lose their jobs? No, not really. They got reassigned to roles where the human innovativeness is more useful and the work is not mechanical. Banks have new roles for developing innovative financial products, improving business processes, and also stratergising and executing new marketing intiatives.
+
+Similarly, the role of testers as mechanical workers will change and they will be assigned to other areas where the human nature is more useful - like exploratory testing.
+
+Also, this is only one side of the picture. On the other side, there will always be new things that require the skills of manual testing. There will be one-off things that needs testing, urgent outsorcing requirements from software companies trying to hit the perfect market timimg and also some things that are not worth the effort of automating the tests for.
 
 
 ---
 
 OK. I'm going to save the best for the last. Before I talk about the right reasons, let me address some reasons why people do not practice TDD.
+
+## Why not practice TDD
+
+### 1. It slows us down
+One reason why we do not practice TDD is the concern about the slowness it brings. We already discussed this and established there is no real basis behind it.
+
+### 2. It does not solve our problems
+Another may argue that although TDD seems good, it does not solve their problems.
+Again, this is an invalid reason not to practice TDD.
+A practice nevers solves a problem. It only improves the process.
+What TDD does is cut down some steps in the develpment process, make it more efficient to iterate, and introduce an effective way to develop software.
+
+### 3. The company management does not want us to
+One frequent response I keep hearing, through out all these years I have been interviewing people for developer positions, is that the company management does not recognize the value and therefore does not allow us to practice TDD.
+
+If we are making that claim, what we failed to realise is that we are hired as professionals and we have a say in this matter.
+
+We, software engineers are very skilled technically but not the greatest communicators. On the flipside, managers are good at communication and can convince you to do things in a certain way that is easy for them. If we make and effort to understand their point of view and present this practice as a process for a winining strategy, I'm sure any manager would like that proposal.
+
+So effectively, we are saying that we are too lazy to empathize with the management and communicate practicing TDD as a winning strategy for them.
+Of course, there can be the extrem cases where that management does not really listen to us. But, who would want to work for such an organization for an extended period of time anyway?
+
+There is another issue about professionalism in this claim and I will discuss this further when I talk about the right reasons to practice TDD. 
+
+
+### 4. The code is not testable
+
+Another common reason people give for not practicing TDD goes like this. You do not know how bad our code is. The previous developer has simply created a whole mess of it. There is nothing I can do. The code is simply untestable.
+
+Again, we are trying to take the easy way out. True, it could be a total mess, but there are ways to untangle it.
+
+I can recommend the techniques that Michael Feathers describe in his book **Working Effectively with Legacy Code**. 
+> On a side note, he has a very good definition what "legacy" means and it does not mean old - the code could be new but still count as legacy.
+
+I can also recommend the book by Martin Fowler and Kent Beck - **Refactoring - Improving the Design of Existing Code**. Furthermore, Fowler has another blog post describing a pattern called **Strangler** that we can use to introduce testability to legacy applications (but not limited to that appplication).
+
+
+
+### 5. Everything is not testable
+
+- It is a problem in Design & Architecture
+    - A Separate Talk
+
+Martin Fowler book
+
+### 6. Do not know how
+
+Ken Beck book
 
 
 ## The Right Reasons
@@ -382,11 +440,7 @@ STUPID --> SOLID
 
 Types of fakes
 
-Everything is not testable
-- refactoring - Martin Fowler
-- Michale Feathers / Kent Beck
-- It is a problem in Design & Architecture
-    - A Separate Talk
+
 
 Story from Automative industry
 - examples of recalls & costs
