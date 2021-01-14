@@ -18,6 +18,16 @@ This session will introduce the concept of TDD, discuss some reasons for its low
 By mid year 2016, I wanted to go shopping for a car.
 At last, I have saved enough money for the down-payment. It is going to be my first car. It has to be a beautiful one. It has to be a good one too as I will be using it for many years to come. It has to be a reliable one - I am clue-less about how a car works and will be totally lost if it breaks-down in the middle of the road.
 
+## Bug
+Automotive Analogy
+- Costly
+- recall
+- problem for the company
+Software
+- Less costly
+- Problem for the User
+
+
 Let's talk a bit more about reliability.
 When I'm buying the car, I expect it to work. I should be able to get in and drive it without any issue. If the tank is full, if I service the care properly, and if I do regular check-ups, I expect my car to run without suddenly breaking-down in the middle of the road.
 
@@ -311,26 +321,58 @@ TDD is only a practice that help you achieve reliability in an efficient and eff
 ---
 # The problem with the wrong reasons
 
-Those reasons we discussed are valid but the wrong reason 
-We do not practice it right.
+Those reasons we discussed are valid but the wrong reasons to practice TDD. The side effect of buying into the wrong reasons is that we do not practice it right.
 
-Hand washing technique.
 To get the right result, we need to practice it the right way, and consistently.
 Consistency will only come if we understand why we are doing it.
 
+-- switch to slide --
+# Hand washing technique
+Let me take and example to make my point.
+How many of you know the proper technique for washing hands.
+
+Before COVID hit, we would see a variation of this poster at any hospital. We have seen it, we knew it. But did we practice it?
+Now that hand-washing has become mandatory after the COVID hit, we see this more often. But do we conciously practice it?
+
+-- switch to slide ---
+## Y
+
+If you only take one thing from this talk. This is it. Let me reiterate it to drive it home.
+
+Consistency will only come if we understand why we are doing it.
+
+
+---
+
+So far we have discussed about the need, the what and the wrong reasons for TDD.
+
+---
 ## Concerns
-1. It will slow down the development
-2. QAs will lose their jobs
+Before I go on to discuss the right reasons, let me quickly touch upon some concerns about TDD.
+
+### 1. It will slow down the development
+One concern we hear often about TDD is that it will slow down the development.
+Yes, but only if by "development" we meant churning out code.
+Of course, there will be an upfront cost. We will have to invest time and resources to set-up the process and technical frameworks in place, train the engineers in both the mindset and the skill and to get the buy-in from the management. Also we will need to go through a grace period of adoption where our output seems to be slow.
+Once we come out of this intial investment period, there will be a clear ROI. Our development process will become faster and the teams confidence will rise.
+
+### 2. QAs will lose their jobs
+Another concern, and rightfully concerning, is the future of some job roles. What will happen to QA? And you might also ask, based on the series of reasoning we used to build the case for TDD, what will happen to automation engineers?
+
+There is a fallacy here. The fallacy is that the role of quality asurance and automation engineers is to do the testing of our software. Though we call them quality assurance engineers and automation engineers - what we really meant is quality testers and test program writers.
+
+That is really under-appriciating their roles. For years they have been at the far end of the development process where they were waiting for the load to be delivered. For those who has seen uncle Bob's slide deck for the talks where he mentions TDD, this will remind you that impactful but discussting slide.
+
+If we actively seek to debunk this way of looking at these people and recognize them for what they really are, we can see their true potential. Quality Assurance, or as how I like to call it, Qulity Engineering is a vast area and testing is a very small aspect of it. Similarly, automation engineers are capable of automating business processes and other aspects and continue to add value to the organization.
 
 
-## Bug
-Automotive Analogy
-- Costly
-- recall
-- problem for the company
-Software
-- Less costly
-- Problem for the User
+
+---
+
+OK. I'm going to save the best for the last. Before I talk about the right reasons, let me address some reasons why people do not practice TDD.
+
+
+## The Right Reasons
 
 Scribe
 
@@ -383,7 +425,9 @@ This was intentional. TDD is a skill. I do not belive I can teach you the skill 
 
 The intention of this talk was just to be a precursor to the change we wanted to see in the community - the adoption of TDD. This is merely the first step towards that goal - introducing the mindset shift.
 
-If there is enough interest from the community, we are happy to organise a series of hands-on sessions to help anyone who wants to develop this skill. We will tackle the process of TDD incrementally from the basics to the advance topics like TDD at different layers and all the way upto going full-stack.
-I'm happy to announce that Vetstoria management is happy to fully sponsor this programme as a part of our CSR activities.
+If there is enough interest from the community, from you all and anyone else you refer to, we are happy to organise a series of hands-on training sessions to help anyone who wants to develop this skill. We will tackle the process of TDD incrementally from the basics to the advance topics like TDD at different layers and all the way upto going full-stack.
+I'm delighted to announce that Vetstoria is willing to fully sponsor this programme as a part of our CSR activities.
 
-You will be receiving an email soon, if not already, with a short form with some survey questions and a field to indicate your interest for the hands-on series.
+You will be receiving an email soon, if not already, with a form that you can fill to express your interest for this trainig programme. Feel free to forward the email to anyone else whoul you think could benefit from the programme.
+
+In addition, you will receive link to fill-out a short survey form to give us your feedback about the session and also mention your key takeaways from the session. For every submission of the form, I will send a response with my intended key take aways of the session so you can compare and watch the recording if you have messed out something.
