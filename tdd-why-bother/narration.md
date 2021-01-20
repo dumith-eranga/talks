@@ -32,12 +32,12 @@ Let's talk a bit more about reliability.
 When I'm buying the car, I expect it to work. I should be able to get in and drive it without any issue. If the tank is full, if I service the care properly, and if I do regular check-ups, I expect my car to run without suddenly breaking-down in the middle of the road.
 
 What would happen if there is a manufacturing defect?
-That is where the manufacturer's waranty comes in. I should be able to turn in the car to the dealership and get a new one without the defect. The additional cost is shared between me and the dealership. I have to take my car there, spend my time on it whereas the dealership has to use their time and resources to doe the exchange.
+That is where the manufacturer's waranty comes in. I should be able to turn in the car to the dealership and get a new one without the defect. The additional cost is shared between me and the dealership. I have to take my car there, spend my time on it whereas the dealership has to use their time and resources to do the exchange.
 
 What happens if the defect is a problem of the design?
 In such a case the manufacturer actually recalls the model from the market.
 
-If the defect is in the design of the car, it is a huge cost to the manufacturer as they have to recall all the cars from the market, dispose them or retro-fit parts. Since they might not have facilities to do the retro-fitting across the world, sometimes they will have to ship the cars back. Furthermore, replacement cars should be issued the customers or they should be refunded.
+If the defect is in the design of the car, it is a huge cost to the manufacturer as they have to recall all the cars from the market, dispose them or retro-fit parts. Since they might not have facilities to do the retro-fitting across the world, sometimes they will have to ship the cars back. Furthermore, replacement cars should be issued to the customers or they should be refunded.
 
 _add examples of recalls_
 
@@ -60,7 +60,7 @@ What happens if there is a design issue or a security vulnerability of the OS?
 Would they recall the OS and issue me a replacemnt OS? Would they issue a refund?
 
 No. They will just send a patch (or an update as they are called to hide the fact). Sending the patch is virtually free for them as it is delivered as a URL (or some download instructions) via the internet. I will have to spend my time and broadband data to download and install the patch.
-This is quite different from the automotive anology where there is a problem in the design of the car. Here the cost is largely on the customer, not the manufacturer.
+This is quite different from the automotive anology where when there is a problem in the design of the car. Here the cost is largely on the customer, not the manufacturer.
 
 Since the cost is very minor to the manufacturer, they are not too much concerned about releasing software with possible issues to the market. "We can do a patch after the release" seems to be the norm. Because the cost of not getting it defectless is not that significant, the software manufacturers may not do adequate testing and cut corners to sell the product prematurely.
 
@@ -98,7 +98,7 @@ In contrast, how often a buisness application changes? It could be weeks and eve
 A very good example everyone of us experienced is what happened when the COVID-19 lockdowns began. Suddenly a lot of busienss software needed to change to accomodate remote communication between people - either via chat or video conferencing. There was an influx of not tech savvy users for many software so the user interfaces have the be more user friendly, intuitive and more fool-proof. After all, when was the last time you refered to a user manual of a product, a software specially, before turning it on?
 
 Some software needed to quickly adapt to work on different hardware, operating systems and screen-sizes.
-Many businesses had to change their business rules to accomodate new products and services, new business models and incentivise their customers in order to keep the businesses afloat. A good example is from one of the leading ecommerce platforms in Sri Lanka, Takas.lk. They had to quickly start selling groceries and greens. A similar thing happened with the popular super-market chains like Cargills and Keells - they had to bring-in the capability to sell via online orders.
+Many businesses had to change their business rules to accomodate new products and services, new business models emerged and they had to incentivise their customers in order to keep the businesses afloat. A good example is from one of the leading e-commerce platforms in Sri Lanka, Takas.lk. They had to quickly start selling groceries and greens. A similar thing happened with the popular super-market chains like Cargills and Keells - they had to bring-in the capability to sell via online orders.
 
 Unlike with changes to the business requirements coming from GDPR (General Data Protection Regulation) and CCPA (California Consumer Privacy Act), these requirements were sudden and drastic. There were no grace period. The busineses either had to change or die, and some of them actually died.
 
@@ -125,9 +125,9 @@ Can we do the same? Can we do more and more testing without introducing delays i
 
 Yes, we can solve it by outsourcing the testing work. But this approach is just a way to trade in some problems you have for another set of problems. We out-source our concerns about human errors, fatigue and job satisfactions etc. for the need for thorough documentation, management overhead and additional cost. Out-sourcing works, but only at small scale. It is only a temporary solution to a resource problem - not a long term viable strategy for a business.
 
-Luckyly, we have already indentified a different way of sloving the problem - test automation. If we automate the tests - meaning, if we write a nother program to test the software we are building - we have effectively solved the human resource aspect of the problem. If we want to increase the number of tests, we can simply add more automated tests. If the testing process gets longer as we add more and more automated tests, we can simply cut down the time by using more computing resources - either more powerful machines (i.e scalling vertically) or more machines (i.e. scaling horizontally) or both. And compared to human resources, computing resources are dirt cheap these days. Furthermore, the on-demand computing resources providers like AWS and Azure allow you to only pay for the actual usage.
+Luckyly, we have already indentified a different way of sloving the problem - test automation. If we automate the tests - meaning, if we write another program to test the software we are building - we have effectively solved the human resource aspect of the problem. If we want to increase the number of tests, we can simply add more automated tests. If the testing process gets longer as we add more and more automated tests, we can simply cut down the time by using more computing resources - either more powerful machines (i.e scalling vertically) or more machines (i.e. scaling horizontally) or both. And compared to human resources, computing resources are dirt cheap these days. Furthermore, the on-demand computing resources providers like AWS and Azure allow you to only pay for the actual usage.
 
-So, is everything good? No, not really. Test automation has its own cost. You will still need people who can look at the test-cases and convert them to program instructions. Noramlly we call them automation engineers. Instead of many testers who work on low cognitive engagements of executing the test-cases manually, we need comparatively less but higher-skilled automation engineers who engage in high cognitive engagement of converting the test-cases into program instructions. Furthermore, just converting is not enough - we need to maintain them. As the software changes over time - remember, this is the key differentiating factor of business software - we need to tweak and change tests we automated. So, not just that we need to maintain the test-cases, we need to maitain the program that tests the software we build. And not everybody can do it. We will need those high-skilled automation engineers for this too.
+So, is everything good? No, not really. Test automation has its own cost. You will still need people who can look at the test-cases and convert them to program instructions. Normally we call them automation engineers. Instead of many testers who work on low cognitive engagements of executing the test-cases manually, we need comparatively less but higher-skilled automation engineers who **engage** in high cognitive engagement of converting the test-cases into program instructions. Furthermore, just converting is not enough - we need to maintain them. As the software changes over time - remember, this is the key differentiating factor of business software - we need to tweak and change tests we automated. So, not just that we need to maintain the test-cases, we need to maitain the program that tests the software we build. And not everybody can do it. We will need those high-skilled automation engineers for this too.
 
 As we know, in our industry, or any industry for that matter, it takes time to gain the high level of skills. That means there are always a short-supply and a high demand for these skilled individuals. Unless we are able to offer attractive enough compensation, we will not be able to acquire the number of skilled resources we need to handle the need of test automation for our organization.
 
@@ -153,8 +153,8 @@ Once the manufacturer has the parts built to have the desired level of reliabili
 Similarly, once our units are tested to confirm to the desired level of reliability, we can connect them together to build components. We have a few different names for them like components, modules, classes or objects depending on some factors like the project structure and development context. Once the components are ready, we can have automated tests to test the behaviours of these components.
 Since these tests are focused on how the units are integrated to achieve the desired behavours, we can call them **integration tests**.
 
-When the manufacturer as the necessary components with the desired reliability, they can put them together to have the complete product - the car. When the car whole, they have machinery that can be used to test the wholistic aspects of the car like the propagation, performance and the look and feel.
-Once we have achieved the desired level of reliability for our components, we can combine them to build the whole software to cater to the business need. We can have automated tests to test the wholistic aspects of the software so see whether it fulfills the business need.
+When the manufacturer has the necessary components with the desired reliability, they can put them together to have the complete product - the car. When the car complete, they have machinery that can be used to test the wholistic aspects of the car like the propagation, performance and the look and feel.
+Once we have achieved the desired level of reliability for our components, we can combine them to build the whole software to cater to the business need. We can have automated tests to test the wholistic aspects of the software to see whether it fulfills the business need.
 Since these tests consider the software as a whole, provides inputs at the one end and verify the outcomes at the other end, we can call them **end-to-end tests***
 
 Let's take a step back and look at the overall picture of testing.
@@ -162,14 +162,14 @@ Let's take a step back and look at the overall picture of testing.
 We have many parts coming together to form a few components and in turn form one whole - the car.
 We have many functions coming together to form a few components and in turn form one whole - the software.
 
-Many parts have small machinery for doing many tests.
-Many functions have many automated unit unit tests.
+Many hardware parts have small machinery for doing many tests.
+Similarly, Many software functions have many automated unit  tests.
 
-A few components have a few machinery testing their behaviour.
-A few components have a few automated integration tests.
+A few hardware components have a few machinery testing their behaviour.
+Similarly, A few software components have a few automated integration tests.
 
 One car has some machinery testing the overall vehicle.
-One software has some automated end-to-end tests.
+Similarly, One software has some automated end-to-end tests.
 
 Please note that the words many, a few and some are just relative terms. For one product, "some" could mean ten and for another "some" could mean a thousand.
 
@@ -203,7 +203,7 @@ Engineers. Code. High-skilled. High-cognitive. Reqirement.
 Now, we only see the key differences between the two parties.
 
 Can we teach these people some new skills so that they can be interchanged?
-The answer is a obvious yes. In order to survive in this industry, we need to keep learning and developing new skills. So it is just a matter of choosing the skills to develop - not a matter of whether we can.
+The answer is an obvious yes. In order to survive in this industry, we need to keep learning and developing new skills. So it is just a matter of choosing the skills to develop - not a matter of whether we can.
 
 Let's say we have done it. We have developed the skills we need.
 Let's see how we can rephrase the above two statements I made.
@@ -214,19 +214,19 @@ Now that we figured out we do not need two different types of human resources, l
 
 This time, let's zoom in a bit to focus on a single engineer.
 
-The engineer writes the code to build the "thing" and then write the code to test the "think". Just like before, here the "thing" means either the function, component or the whole depending on the level of consideration.
+The engineer writes the code to build the "thing" and then write the code to test the "thing". Just like before, here the "thing" means either the function, component or the whole depending on the level of consideration.
 
 The engineer needs a design specification for the software code and a test specification for the automated test.
 
 Can we drop some elemets from the list so we have less things to manipulate?
 Yes, we can. We can do it by implementing a concept called **executable specifications**.
 
-Let's apply the concept to the "software" side and the "test" side separtely.
+Let's apply this concept to the "software" side and the "test" side separtely.
 
-When it is applied to the "software" - we call if **design and architecture**. This is topic requires a deeper discussion sue to the various complexities in the business logics and how we arrive at them. We will be talking more  about this topic in future sessions.
+When it is applied to the "software" - we call if **design and architecture**. This is topic requires a deeper discussion due to the various complexities in the business logics and how we arrive at them. We will be talking more  about this topic in future sessions.
 
 When it is applied to the "test" side, however, things become much simpler to discuss about.
-With executable specifications we can simply say, these are the things we provide as inputs and these are the expected outcomes and this "thing" is what we are testing. We do not need to write a program to say how the test should be run, how to get the outcomes or how to validate them. There are frameworks and tools available to help us with this way of testing so that we only need to write the executable specifications and they do the heavy-lifting.
+With executable specifications we can simply say, these are the things we provide as inputs and these are the expected outcomes and this "thing" is what we are testing. We do not need to write a program to say how the test should be run, how to get the outcomes or how to validate them. There are frameworks and tools available to help us with this way of testing. So we only need to write the executable specifications and these tools do the heavy-lifting.
 
 The first 3 parameters, the inputs, the "thing" to test and the expected outcomes are known or decided well before an engineer write the code for the business logic. Other parameters like how to run the test and get the outcome can only be know at the end of the coding sesion for the business logic.
 
@@ -240,11 +240,11 @@ To summarise, test-first development process has 2 repeatable phases.
 
 ---
 
-So what does **Test-Driven Development** brings-in that we do not have already discussed?
+So what does **Test-Driven Development** brings-in that we have not already discussed?
 
-It is only a minor tweak to the process of test-first development. Though the tweak is minor, the effect is huge.
+It is only a minor tweak to the process of test-first development. Though the tweak is minor, the effect is big.
 
-With test-first approach we stop working on a "thing" when we reach the desired level of reliability. With test-driven approach, once we come to that level, we focus on improving the structure of the code. This is the 3rd phase in the test-driven approach and is called  **refactoring**.
+With test-first approach, we stop working on a "thing" when we reach the desired level of reliability. With test-driven approach, once we come to that level, we focus on improving the structure of the code. This is the 3rd phase in the test-driven approach and is called  **refactoring**.
 
 By definition, refactoring means changing the structure of the code without changing its functionality. The tests or the executable specifications we wrote at the first phase it what enables us to refactor our code with confidence. If we break something by accident, we will immediately know beacuse the tests will start fail.
 
@@ -274,7 +274,7 @@ Page 12, 14th Annual State of Agile Report
 I recently came across the **14th Annual State of Agile Report**. It has good insights based on some key statistics from surveys. In page 12 of the report, they talk about adoption of different engineering practices. 67% of the people who responsed said they do unit testing but only a 30% of the people are following TDD.
 
 What do you think could be the reasons?
-Let me leave it for you to ponder.
+
 
 ---
 
@@ -282,7 +282,7 @@ Let me leave it for you to ponder.
 
 We have build the case for the need of TDD and why we should practice it. The way we built the case is though a series of logical reasoning and organizations love it when we think like that.
 
-Here comes the tricky part. Personally, that is a wrong reason to practice TDD.
+Here comes the tricky part. For me, that is a wrong reason to practice TDD.
 
 Am I nuts? Did I just threw away the case we built so far by making a bold and probably a stupid claim.
 Here me out.
@@ -302,7 +302,7 @@ Another reason would be; If I know TDD, it looks cool on my resume. There is a d
 
 This is wrong reason because we are trying to think of TDD as a means to an end. The practice of collecting shiny new things so that I can put them in my resume is so common that it even has a name - resume driven development. A resume-driven developer is someone who is always chasing the new and shiny so that their resume is more attractive to the next potential employer.
 
-An additionl danger of buying into this reason is that, at the first sight of trouble, they will abondon the practice.
+An additional danger of buying into this reason is that, at the first sight of trouble, they will abondon the practice.
 It was just a means to get to a better job. It did not mean that we have to do it always.
 
 
@@ -361,14 +361,14 @@ Another concern, and rightfully so, is the future of some job roles. What will h
 
 There is a fallacy here. The fallacy is that the role of quality asurance and automation engineers is to do the testing of our software. Though we call them quality assurance engineers and automation engineers - what we really meant is quality testers and test program writers.
 
-That is really under-appriciating their roles. For years they have been at the far end of the development process where they were waiting for the load to be delivered. For those who has seen uncle Bob's slide deck for the talks where he mention TDD, this will remind you that impactful but discussting slide.
+That is really under-appriciating their roles. For years they have been at the far end of the development process where they were waiting for the load to be delivered. For those who has seen uncle Bob's slide deck for the talks where he mention TDD, this will remind you that impactful but disgusting slide.
 
 If we actively seek to debunk this way of looking at these people and recognize them for what they really are, we can see their true potential. Quality Assurance, or as how I like to call it, Qulity Engineering is a vast area and testing is a very small aspect of it. We can tak about some of these areas in a future session. Similarly, automation engineers are capable of automating business processes and other aspects and continue to add value to the organization.
 
 ### 3. Testers will lose their jobs
 This is going to be tricky to address - What will happen to testers?
 This concern has its merits. Once every one adopts TDD and all the tests are automated, there will be no need for testers. Seems like a certain doom.
-Not necesserily. The testers as we generally known them will cease to exists. That kind of testers were the ones who did the same thing repeatedly day-in, day-out. They were just mechanical workers and ware not really recognized for the true human potential they have.
+Not necesserily. The testers as we generally knew, will cease to exists. That kind of testers were the ones who did the same thing repeatedly day-in, day-out. They were just mechanical workers and were not really recognized for the true human potential they have.
 
 To understand one way things would change, let's look at a different industry - banking. Up until recent years, in Sri Lanka, we had some people called "tellers". We still do, but it is becoming increasingly less now. With the introduction and the gaining popularity of fully functional **Automated Teller Machines**, ATMS as we commonly call it, **Cash Recycling Machines** as the banks like to call them to distinguish from the older machines that we could only withdraw money from, the role of the "teller" is dissappearing. But did these people lose their jobs? No, not really. They got reassigned to roles where the human innovativeness is more useful and the work is not mechanical. Banks have new roles for developing innovative financial products, improving business processes, and also stratergising and executing new marketing intiatives.
 
@@ -384,20 +384,20 @@ OK. I'm going to save the best for the last. Before I talk about the right reaso
 ## Why not practice TDD
 
 ### 1. It slows us down
-One reason why we do not practice TDD is the concern about the slowness it brings. We already discussed this and established there is no real basis behind it.
+One reason why we do not practice TDD is the concern about the slowness it brings. We already discussed this and established that there is no real basis behind it.
 
 ### 2. It does not solve our problems
-Another may argue that although TDD seems good, it does not solve their problems.
+Another one may argue that although TDD seems good, it does not solve their problems.
 Again, this is an invalid reason not to practice TDD.
 A practice nevers solves a problem. It only improves the process.
 What TDD does is cut down some steps in the develpment process, make it more efficient to iterate, and introduce an effective way to develop software.
 
 ### 3. The company management does not want us to
-One frequent response I keep hearing, through out all these years I have been interviewing people for developer positions, is that the company management does not recognize the value and therefore does not allow us to practice TDD.
+One frequent response I keep hearing, through out all these years I have been interviewing people for developer positions, is that the company management does not recognize the value and therefore does not allow them to practice TDD.
 
 If we are making that claim, what we failed to realise is that we are hired as professionals and we have a say in this matter.
 
-We, software engineers are very skilled technically but not the greatest communicators. On the flipside, managers are good at communication and can convince you to do things in a certain way that is easy for them. If we make and effort to understand their point of view and present this practice as a process for a winining strategy, I'm sure any manager would like that proposal.
+We, software engineers are very skilled technically but not the greatest communicators. On the flipside, managers are good at communication and can convince you to do things in a certain way that is easy for them. If we make an effort to understand their point of view and present this practice as a process for a winining strategy, I'm sure any manager would like that proposal.
 
 So effectively, we are saying that we are too lazy to empathize with the management and communicate practicing TDD as a winning strategy for them.
 Of course, there can be the extrem cases where that management does not really listen to us. But, who would want to work for such an organization for an extended period of time anyway?
@@ -407,18 +407,20 @@ There is another issue about professionalism in this claim and I will discuss th
 
 ### 4. The code is not testable
 
-Another common reason people give for not practicing TDD goes like this. You do not know how bad our code is. The previous developer has simply created a whole mess of it. There is nothing I can do. The code is simply untestable.
+Another common reason people give for not practicing TDD goes like this. You do not know how bad our code-base is. The previous developer has simply created a mess of it. There is nothing I can do. The code is simply untestable.
 
 Again, we are trying to take the easy way out. True, it could be a total mess, but there are ways to untangle it.
 
 I can recommend the techniques that Michael Feathers describe in his book **Working Effectively with Legacy Code**. 
 > On a side note, he has a very good definition what "legacy" means and it does not mean old - the code could be new but still count as legacy.
 
-I can also recommend the book by Martin Fowler and Kent Beck - **Refactoring - Improving the Design of Existing Code**. Furthermore, Fowler has another blog post describing a pattern called **Strangler** that we can use to introduce testability to legacy applications (but not limited to that appplication).
+I can also recommend the book by Martin Fowler and Kent Beck - **Refactoring - Improving the Design of Existing Code**. Furthermore, Fowler has another blog post describing a pattern called **Strangler** that we can use to introduce testability to legacy applications.
 
 
 
 ### 5. Everything is not testable
+
+"The functionality I am developig is not testable; Therefore, I cannot use TDD" is yet another common reason people give for not practicing.
 
 - It is a problem in Design & Architecture
     - A Separate Talk
