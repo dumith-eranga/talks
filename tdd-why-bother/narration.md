@@ -253,12 +253,92 @@ Another way to look at
 Imge credit: [Mulesoft Blog](https://blogs.mulesoft.com/dev-guides/refactoring-munit-the-mule-testing-framework/)
 
 
-## 2. Evolution of test-based development practices
+## 2. Executable specifications
+
+Improve strategy further
+    - One side
+        - Software Engineers
+        - skilled
+        - write code
+        - build software
+        - address business requirement
+        - deliver functionality
+    - Other side
+        - Automation Engineers
+        - skilled
+        - write code
+        - test software
+        - verify fit to business requirement
+        - deliver reliability
+    - highlight the differences
+        - not much of a difference
+        - can software engineers double as automation engineers (or vice vesa)
+            - if we develop the skill
+
+Zoom in on one engineer
+    - has the skills developed
+    - coding
+        - looks at the design specification
+        - write code
+        - build software
+        - happens first
+    - automation
+        - look at requirement specification
+        - write code
+        - test software
+        - happens second
+
+Further improvements
+    - Writing a lot of code is tedious
+    - Let's simplify
+    - borrow concept from SQL
+        - specify what - not how
+        - **executable specification**
+    - software
+        - business rules are complex
+        - complex specifications
+        - requires deeper discussion on design and architecture
+        - a topic for a different day
+    - testing
+        - testing rules are straight-forward
+        - there are tools to handle the "how" (heavy-lifting)
+        - only need to specify 3 things
+            - what inputs
+            - what to test
+            - what expectations
+        - these can be known / determined before the product code
+            - specfication / requirement documents
+            - no need to wait till the end of coding
+            - can write test before
+
+Benefits
+    - can test the business logic in-making
+    - test iteratively while building the code
+    - change existing code, break behaviour - autmatically flagged by tests
+## 3. Evolution of test-based development practices
 1. No automated tests
+    - army of testers
 2. Test-last (TLD)
+    - different stages
+    - at end of the coding
 3. Test-first (TFD)
+    - executable specification for tests
+    - written before production code
+    - Process
+        - 2 repeatable steps
+            - Step 1: Write the test
+            - Step 2: Write the production code until all the tests are passing
 4. Test-driven (TDD)
-    Phases
+    - What does this bring?
+    - Minor tweak - huge effect
+        - TFD stops when tests are passing
+        - TDD improve code structure (**refactor**)
+            - changing the structure of the code without changing its functionality
+    - 3 repeatable steps
+        - Step 1: Write the test
+        - Step 2: Write the production code until all the tests are passing
+        - Step 3: Refactor until you are happy with the structure of the code
+    
     Red Green Refactor
     Rules
     1. You are not allowed to write any production code unless it is to make a failing unit test pass.
@@ -580,10 +660,8 @@ Do not implement the simplest thing that makes the test pass
     Thorough
     Explicit
 
-
-
-
-Red Green Refactor : https://www.techwell.com/techwell-insights/2018/12/keep-your-code-base-clean-regular-refactoring https://www.techwell.com/sites/default/files/shared/2018-12-12%20DheerendraM%20Keep%20Your%20Code%20Base%20Clean%20with%20Regular%20Refactoring%20image.png
+Red Green Refactor : https://www.techwell.com/techwell-insights/2018/12/keep-your-code-base-clean-regular-refactoring
+https://www.techwell.com/sites/default/files/shared/2018-12-12%20DheerendraM%20Keep%20Your%20Code%20Base%20Clean%20with%20Regular%20Refactoring%20image.png
 Red Green Refactor analogy : https://quii.gitbook.io/learn-go-with-tests/
 
 
@@ -592,88 +670,6 @@ Red Green Refactor analogy : https://quii.gitbook.io/learn-go-with-tests/
 
 
 
-## Narration
-
-
-
-### No Test
-First, we talked about the instance where we do not have automated testing.
-### Test-After
-Secondly, we talked about writing automated tests once we have the thing to test. There, by "thing" I mean the function, the component or the software - whatever that is relevant at the level of consideration.
-
-As a mean to understand the next phases in the evolution, let's look at ways to fine-tune our strategy and see whether we can do something to actually solve the resource aspect of the original problem of testing.
-
-On one side we have **software engineers** writing **code** to **build** business software. They are **high-skilled** and capable of **high cognitive** engagements. The software is a business **requirement** of the company. The software delivers **functionality**.
-
-On the other side, we have **automation engineers** writing **code** to **test** the business software that the other party develops. They are **high-skilled** and capable of **high cognitive** engagements. The testing program is a business **requirement** of the company. It delivers **reliability**.
-
-Now let's color the common words differently.
-Engineers. Code. High-skilled. High-cognitive. Reqirement.
-Now, we only see the key differences between the two parties.
-
-Can we teach these people some new skills so that they can be interchanged?
-The answer is an obvious yes. In order to survive in this industry, we need to keep learning and developing new skills. So it is just a matter of choosing the skills to develop - not a matter of whether we can.
-
-Let's say we have done it. We have developed the skills we need.
-Let's see how we can rephrase the above two statements I made.
-
-We have **engineers** writing **code** to **build** or **test** the business software. They are **high-skilled** and capable of **high cognitive** engagements. The software and testing program are business **requirements** of the company. They deliver **functionality** and **reliability** respectively.
-
-Now that we figured out we do not need two different types of human resources, let's see whether we can tweak how they work to see whether we can optimize this further.
-
-This time, let's zoom in a bit to focus on a single engineer.
-
-The engineer writes the code to build the "thing" and then write the code to test the "thing". Just like before, here the "thing" means either the function, component or the whole depending on the level of consideration.
-
-The engineer needs a design specification for the software code and a test specification for the automated test.
-
-Can we drop some elemets from the list so we have less things to manipulate?
-Yes, we can. We can do it by implementing a concept called **executable specifications**.
-
-Let's apply this concept to the "software" side and the "test" side separtely.
-
-When it is applied to the "software" - we call if **design and architecture**. This is topic requires a deeper discussion due to the various complexities in the business logics and how we arrive at them. We will be talking more  about this topic in future sessions.
-
-When it is applied to the "test" side, however, things become much simpler to discuss about.
-With executable specifications we can simply say, these are the things we provide as inputs and these are the expected outcomes and this "thing" is what we are testing. We do not need to write a program to say how the test should be run, how to get the outcomes or how to validate them. There are frameworks and tools available to help us with this way of testing. So we only need to write the executable specifications and these tools do the heavy-lifting.
-
-The first 3 parameters, the inputs, the "thing" to test and the expected outcomes are known or decided well before an engineer write the code for the business logic. Other parameters like how to run the test and get the outcome can only be know at the end of the coding sesion for the business logic.
-
-Now that we are empowered by executable specifications, we only need to know about the inputs, the expectations, and the "thing" to test. Since these are known before the business logic code is written, we can actually write down the executable specification for the tests even before the business logic is implemented. The effectiveness of this approach comes in due to the fact that we can test the business logic-in-making, every step of the way, iteratively, until we are satisfied with the reliability. We do not need to wait until the logic is completely developed to test it. We can test it while we are building-up the logic, and until we are satisfied with its reliability. If there is an existing part logic that is already satisfying some test, and we change it incorrectly to address another part of the logic, we will know immediately as the relevant tests will start failing.
-
-This is the essense of **Test-First Development** and that is the 3rd step of the evolution.
-
-To summarise, test-first development process has 2 repeatable phases.
-- Phase 1: Write the test - executable specification - for the "thing".
-- Phase 2: Write the logic for the "thing" until all the tests are passing.
-
----
-
-So what does **Test-Driven Development** brings-in that we have not already discussed?
-
-It is only a minor tweak to the process of test-first development. Though the tweak is minor, the effect is big.
-
-With test-first approach, we stop working on a "thing" when we reach the desired level of reliability. With test-driven approach, once we come to that level, we focus on improving the structure of the code. This is the 3rd phase in the test-driven approach and is called  **refactoring**.
-
-By definition, refactoring means changing the structure of the code without changing its functionality. The tests or the executable specifications we wrote at the first phase it what enables us to refactor our code with confidence. If we break something by accident, we will immediately know beacuse the tests will start fail.
-
-Since now we have a indicator telling us whether we are doing the changes the right way and flag them immediately if we don't, we do not really need the debugger. Whatever code we write between two successive executions of the tests are very little and quite fresh in our minds. We do not need a debuger to figure out the issue - we can simply undo and try writing the code again differently.
-
-To summarise, test-driven development process has 3 repeatable phases.
-- Phase 1: Write the test - executable specification - for the "thing".
-- Phase 2: Write the logic for the "thing" until all the tests are passing.
-- Phase 3: Refactor until you are happy with the structure of the code.
-
----
-
-Alright.
-The basics and the definitions are out of the way.
-
----
-
-There are lies, damn lies and statistics.
-
----
 
 ## The Right Reasons
 
