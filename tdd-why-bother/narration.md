@@ -88,14 +88,173 @@ This session will introduce the concept of TDD, discuss some reasons for its low
                     - change or die
 
 - Live with what is given?
-    - 
+    - opposite ends of the spectrum
+        - OS
+            - predictable releases
+            - stable requirements
+            - ample time to test before release
+        - Business software
+            - highly dynamic
+            - fast and frequent changes
+            - time to test before release ?
+
+- People want reliability
+    - the ability to rely on the software they purchase to get the work done properly
+    - cars vs software -> less reliable
+    - how to increase reliability?
+        - measure
+        - improve
+
+- Measure & improve
+    - count No. of times the software breaks (Break : does not work as expected / intended)
+    - process
+        - subject the software to different circumstances
+            - inputs
+            - resource allocations
+            - configurations
+            - number of operations requested (load)
+        - count the numebr of breaks
+        - identify the circumstances that lead to the break
+        - prioritize the issues to be fixed to achieve the desired level of reliability
+
+- Terms
+    - **Testing**: act of subjecting the product to different circumstances *artificially* in *controlled environments*
+    - **Test**: a single occurance of such an act
+    - **Test Case**: documented procedure of a test
+
+- More and more tests needed to ensure reliability
+
+- Timing
+    - Cars / OS
+        - Sparese release cycles
+        - Ample time to plan and test
+    - Business software
+        - Short release cycles
+        - Challanging to plan and test
+
+- Solutions
+    - ever increasing army of testers
+        - human errors
+        - job satisfaction
+        - staff cost
+    - outsourcing
+        - trading some problems for some other
+            - less
+                - human errors
+                - job satisfaction
+            - more
+                - documentation / training
+                - management overhead
+                - cost
+                - service lock-in
+        - only good for
+            - small scale
+            - temporary solution to a resource problem
+        - not a long-term viable strategy
+    - test automation
+        - write another program to test the software we build
+        - increase number of tests -> just add them to automated tests
+        - cut down time needed for testing - use more computing resources
+            - powerful machines (scale vertically)
+            - more machines (scale horizontally)
+            - both
+        - computing resources
+            - dirt cheap compared to human resources
+                - pay per use (per hour / minute)
+            - easier to aquire
+                - available on-demand
+
+- The cost of Test Automation
+    - Automation Engineers : special people to convert test-cases to programs
+        - not everyone can do it
+    - maintain the automated tests
+        - change them as software changes
+    - level of skills needed
+        - takes time to aquire skill
+        - high skill - high compensation
+    - tough not as bad as an army of testers, still a human resource problem
+
+- Bumping into different dark clouds?
+    - Change the angle of looking at the problem
+    - Look at it as a strategy problem
+    - Solution : right amount of moderation for tests
+    - Do we have to decide which aspects to test and which not to?
+        - it is not a numbers problem, it is a strategy problem
+    - Not how much of testing, but when to test.
+
+- To understand - our friend industry example - manufacturing cars
+    - cars
+        - do they
+            - build expensive machinery
+            - test all aspects of the car
+            - once the car is produced
+    - software
+        - should we
+            - write automated tests
+            - test all aspects of software
+            - once software is built
+
+    - parts
+        - car
+            - build a part
+            - machinery to test different aspects
+        - software
+            - write function / method
+            - automated test to test different aspects
+            - we are only testing a small unit of code - **unit tests**
+    - components
+        - cars
+            - once parts reach desired level of reliability
+            - put together parts to come up with a component
+                - engine
+                - cooling system
+            - machinery to test different aspects
+                - interaction and behaviour
+        - software
+            - once units reach desired level of reliability
+            - combine them to build components
+                - classes
+                - modules
+            - automated tests to test different aspects
+                - integration and behaviour
+            - we are testing ingeration of parts - **integration tests**
+    - whole
+        - car
+            - once components reach desired level of reliability
+            - put together components to come up with the car
+            - machinery to test wholistic aspects
+                - performance
+                - look and feel
+        - software
+            - once components reach desired level of reliability
+            - put together components to come up with the software
+            - automated tests to test wholistic aspects
+                - performance
+                - look & feel
+            - we are providing inouts at one end and verifying the outcome at the other end - **end to end tests**
+    
+- Step back & look at the big picture
+    - many units - many tests
+    - some components - some tests
+    - one software - a few tests
+    - many / some / a few is relative
+        - for one software "some" = 100
+        - for another "some" = 10000
+    - concept illustrated by testing pyramid
+
+Test Pyramid
+![](https://martinfowler.com/articles/practical-test-pyramid/testPyramid.png)
+Image credit: [martinfowler.com](https://martinfowler.com/articles/practical-test-pyramid.html)
                     
-
-
+Another way to look at
+- different levels of testing
+- layers of the software
+![](https://blogs.mulesoft.com/wp-content/uploads/2015/07/refactoring-munit-1.jpg)
+Imge credit: [Mulesoft Blog](https://blogs.mulesoft.com/dev-guides/refactoring-munit-the-mule-testing-framework/)
 
 
 ## 2. Evolution of test-based development practices
-1. No tests
+1. No automated tests
 2. Test-last (TLD)
 3. Test-first (TFD)
 4. Test-driven (TDD)
@@ -423,9 +582,7 @@ Do not implement the simplest thing that makes the test pass
 
 
 
-Image credit: https://martinfowler.com/articles/practical-test-pyramid.html
-Testing Pyramid: https://javascriptwebscrapingguy.com/integration-tests-are-good/
-Testing circles: https://blogs.mulesoft.com/dev-guides/refactoring-munit-the-mule-testing-framework/
+
 Red Green Refactor : https://www.techwell.com/techwell-insights/2018/12/keep-your-code-base-clean-regular-refactoring https://www.techwell.com/sites/default/files/shared/2018-12-12%20DheerendraM%20Keep%20Your%20Code%20Base%20Clean%20with%20Regular%20Refactoring%20image.png
 Red Green Refactor analogy : https://quii.gitbook.io/learn-go-with-tests/
 
@@ -438,148 +595,6 @@ Red Green Refactor analogy : https://quii.gitbook.io/learn-go-with-tests/
 ## Narration
 
 
-- Live with what is given?
-    - opposite ends of the spectrum
-        - OS
-            - predictable releases
-            - stable requirements
-            - ample time to test before release
-        - Business software
-            - highly dynamic
-            - fast and frequent changes
-            - time to test before release ?
-
-- People want reliability
-    - the ability to rely on the software they purchase to get the work done properly
-    - cars vs software -> less reliable
-    - how to increase reliability?
-        - measure
-        - improve
-
-- Measure & improve
-    - count No. of times the software breaks (Break : does not work as expected / intended)
-    - process
-        - subject the software to different circumstances
-            - inputs
-            - resource allocations
-            - configurations
-            - number of operations requested (load)
-        - count the numebr of breaks
-        - identify the circumstances that lead to the break
-        - prioritize the issues to be fixed to achieve the desired level of reliability
-
-- Terms
-    - **Testing**: act of subjecting the product to different circumstances *artificially* in *controlled environments*
-    - **Test**: a single occurance of such an act
-    - **Test Case**: documented procedure of a test
-
-- More and more tests needed to ensure reliability
-
-- Timing
-    - Cars / OS
-        - Sparese release cycles
-        - Ample time to plan and test
-    - Business software
-        - Short release cycles
-        - Challanging to plan and test
-
-- Solutions
-    - ever increasing army of testers
-        - human errors
-        - job satisfaction
-        - staff cost
-    - outsourcing
-        - trading some problems for some other
-            - less
-                - human errors
-                - job satisfaction
-            - more
-                - documentation / training
-                - management overhead
-                - cost
-                - service lock-in
-        - only good for
-            - small scale
-            - temporary solution to a resource problem
-        - not a long-term viable strategy
-    - test automation
-        - write another program to test the software we build
-        - increase number of tests -> just add them to automated tests
-        - cut down time needed for testing - use more computing resources
-            - powerful machines (scale vertically)
-            - more machines (scale horizontally)
-            - both
-        - computing resources
-            - dirt cheap compared to human resources
-                - pay per use (per hour / minute)
-            - easier to aquire
-                - available on-demand
-
-- The cost of Test Automation
-    - Automation Engineers : special people to convert test-cases to programs
-        - not everyone can do it
-    - maintain the automated tests
-        - change them as software changes
-    - level of skills needed
-        - takes time to aquire skill
-        - high skill - high compensation
-    - tough not as bad as an army of testers, still a human resource problem
-
-- Bumping into different dark clouds?
-    - Change the angle of looking at the problem
-    - Look at it as a strategy problem
-    - Solution : right amount of moderation for tests
-    - Do we have to decide which aspects to test and which not to?
-        - it is not a numbers problem, it is a strategy problem
-    - Not how much of testing, but when to test.
-
-- To understand - our friend industry example - manufacturing cars
-
-
-When the manufacturer want to test a car, do they build expensive machnery to extensively test all aspects of the car once the car is produced? No.
-Similarly, should we write automated tests to extensively test all aspects of the software once the software is built? No.
-
-When the manufacturer builds the parts of the car, they have built the machinery to test the different aspects of the part.
-Similarly, we can write automated tests to test the aspects of a function or a methods we develop as a part of our software.
-Since we are only testing a small unit of the code, let's call these tests **unit tests**.
-
-Once the manufacturer has the parts built to have the desired level of reliability - meaning, tested thoroughly and fixed any issues - they put together different parts to come up with a component, for example an engine or a cooling system. They have built machinery to test the different aspects of such componets. These machines will test whether the different parts interact properly to achieve the desired behaviours from the component.
-Similarly, once our units are tested to confirm to the desired level of reliability, we can connect them together to build components. We have a few different names for them like components, modules, classes or objects depending on some factors like the project structure and development context. Once the components are ready, we can have automated tests to test the behaviours of these components.
-Since these tests are focused on how the units are integrated to achieve the desired behavours, we can call them **integration tests**.
-
-When the manufacturer has the necessary components with the desired reliability, they can put them together to have the complete product - the car. When the car complete, they have machinery that can be used to test the wholistic aspects of the car like the propagation, performance and the look and feel.
-Once we have achieved the desired level of reliability for our components, we can combine them to build the whole software to cater to the business need. We can have automated tests to test the wholistic aspects of the software to see whether it fulfills the business need.
-Since these tests consider the software as a whole, provides inputs at the one end and verify the outcomes at the other end, we can call them **end-to-end tests***
-
-Let's take a step back and look at the overall picture of testing.
-
-We have many parts coming together to form a few components and in turn form one whole - the car.
-We have many functions coming together to form a few components and in turn form one whole - the software.
-
-Many hardware parts have small machinery for doing many tests.
-Similarly, Many software functions have many automated unit  tests.
-
-A few hardware components have a few machinery testing their behaviour.
-Similarly, A few software components have a few automated integration tests.
-
-One car has some machinery testing the overall vehicle.
-Similarly, One software has some automated end-to-end tests.
-
-Please note that the words many, a few and some are just relative terms. For one product, "some" could mean ten and for another "some" could mean a thousand.
-
-Anyway, this many, a few and some concept is the moderation I mentioned earlier that allow us to solve the problem of strategy.
-
-This is the same concept that is illustrated by the pyramid of testing.
-*diagram*
-
----
-
-Alright.
-Now that I have built the case for the need of different levels of testing and introduced some terms I wanted to use, let me get into the topic of today's session.
-
----
-
-Let's look at the evolution so far.
 
 ### No Test
 First, we talked about the instance where we do not have automated testing.
