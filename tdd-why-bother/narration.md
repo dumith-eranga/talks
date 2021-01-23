@@ -1,23 +1,97 @@
+<style scoped>
+    em { color: red; }
+</style>
+
 # Abstract
 
 We all have heard good things about Test Driven Development. TDD, as it is commonly called, is recommended as a good practice for software development. Though it is quite popular internationally, we do not see enough buy-in locally.
 
 This session will introduce the concept of TDD, discuss some reasons for its low adoption, the wrong reasons to practice it, and some side effects or concerns of adopting it. The session will try to focus more on some aspects that are usually not discussed under this topic. Most importantly, this webinar will show you some personal reasons why you should practice TDD.
 
-# Why should I really care about TDD?
-
-<style scoped>
-    em {
-        color: red;
-    }
-</style>
-
+# Talk
 
 ## 1. The need for automated testing
 
-Around mid 2016, I found myself shopping for a car. This was going to be my first car and 
+- car
+    - ~ mid 2016
+    - shopping for a car
+        - my first car
+        - beautiful
+        - reliable
+            - run smoothly without breaking down in the middle of the road
+                if I 
+                    - service it properly
+                    - follow the maintainece schedule
+    - manufacturing defect
+        - take to dealer
+        - dealer pays and replace the parts
+        - even offer a replacement vehicle
+        - recalls
+        - cost for the company
+        - test extensively to ensure proper function at each stage
+            - design
+            - prototyping
+            - randomm samples after production
 
-It is going to be my first car. It has to be a beautiful one. It has to be a good one too as I will be using it for many years to come. It has to be a reliable one - I am clue-less about how a car works and will be totally lost if it breaks-down in the middle of the road.
+- laptop
+    - last year
+    - shopping for a laptop
+        - form my child's online classes
+        - pay for OS
+        - reliable
+            - run smoothly without crashing or showing errors during lessons
+                if I keep it
+                    - dust free
+                    - enough disk space
+                    - proper power supply
+    - manufacturing defect of OS / security vulnerability
+        - download a patch / system update
+        - cost for vendor is neglegible
+        - cost for me is big
+        - "We can always do a patch after the release"
+
+
+- Cars vs Software disparity
+    - a common comparison
+    - Not fair
+        - general format - Software is inherantly less reliable that their couter part, cars.
+        - not apples-apples comparison
+    - Why not fair
+        - Release cycles
+            - How often a new car model gets released ? - once a year
+            - How often a new OS version gets released ? - once a year or less
+            - How oftern a business software version is released?
+        - Need for change
+            - How often the requirement for a car changes?
+                - pretty much never
+                - may get new looks,  gadgets and luxuries
+                - main goal remains the same - transportation
+                    - unless cars stop going on roads
+            - How often the requirement for an OS changes?
+                - pretty much never
+                - may get new looks, bundled software
+                - main goal remains the same - hardware abstration
+                    - unless underlying hardware architecture changes
+            - How often the requirements for business software change?
+                - months / weeks / days
+                - COVID
+                    - remote collaboration
+                    - audio / video conferencing
+                    - influx of non-tech-savvy users
+                        - userfriendly & intuitive UIs
+                        - foolproofing
+                        - When was the last time you refered to a manual of a software before using it?
+                    - new hardware devices - mobiles / tablets
+                    - new business models
+                        - Cargills / Keells - online ordering
+                    - no grace period like GDPR / CCPA
+                    - change or die
+
+- Live with what is given?
+    - 
+                    
+
+
 
 
 ## 2. Evolution of test-based development practices
@@ -361,121 +435,106 @@ Red Green Refactor analogy : https://quii.gitbook.io/learn-go-with-tests/
 
 
 
+## Narration
 
 
-Let's talk a bit more about reliability.
-When I'm buying the car, I expect it to work. I should be able to get in and drive it without any issue. If the tank is full, if I service the care properly, and if I do regular check-ups, I expect my car to run without suddenly breaking-down in the middle of the road.
+- Live with what is given?
+    - opposite ends of the spectrum
+        - OS
+            - predictable releases
+            - stable requirements
+            - ample time to test before release
+        - Business software
+            - highly dynamic
+            - fast and frequent changes
+            - time to test before release ?
 
-What would happen if there is a manufacturing defect?
-That is where the manufacturer's waranty comes in. I should be able to turn in the car to the dealership and get a new one without the defect. The additional cost is shared between me and the dealership. I have to take my car there, spend my time on it whereas the dealership has to use their time and resources to do the exchange.
+- People want reliability
+    - the ability to rely on the software they purchase to get the work done properly
+    - cars vs software -> less reliable
+    - how to increase reliability?
+        - measure
+        - improve
 
-What happens if the defect is a problem of the design?
-In such a case the manufacturer actually recalls the model from the market.
+- Measure & improve
+    - count No. of times the software breaks (Break : does not work as expected / intended)
+    - process
+        - subject the software to different circumstances
+            - inputs
+            - resource allocations
+            - configurations
+            - number of operations requested (load)
+        - count the numebr of breaks
+        - identify the circumstances that lead to the break
+        - prioritize the issues to be fixed to achieve the desired level of reliability
 
-If the defect is in the design of the car, it is a huge cost to the manufacturer as they have to recall all the cars from the market, dispose them or retro-fit parts. Since they might not have facilities to do the retro-fitting across the world, sometimes they will have to ship the cars back. Furthermore, replacement cars should be issued to the customers or they should be refunded.
+- Terms
+    - **Testing**: act of subjecting the product to different circumstances *artificially* in *controlled environments*
+    - **Test**: a single occurance of such an act
+    - **Test Case**: documented procedure of a test
 
-_add examples of recalls_
+- More and more tests needed to ensure reliability
 
-Due to this massive cost obligation, the car manufacurers very carefully ensure that there are no design problems in their cars. They run extensive tests for the designs, prototypes, and even random samples of the car after manufacuring before they release the car to the market.
+- Timing
+    - Cars / OS
+        - Sparese release cycles
+        - Ample time to plan and test
+    - Business software
+        - Short release cycles
+        - Challanging to plan and test
 
-Let's look at a different product for comparison.
+- Solutions
+    - ever increasing army of testers
+        - human errors
+        - job satisfaction
+        - staff cost
+    - outsourcing
+        - trading some problems for some other
+            - less
+                - human errors
+                - job satisfaction
+            - more
+                - documentation / training
+                - management overhead
+                - cost
+                - service lock-in
+        - only good for
+            - small scale
+            - temporary solution to a resource problem
+        - not a long-term viable strategy
+    - test automation
+        - write another program to test the software we build
+        - increase number of tests -> just add them to automated tests
+        - cut down time needed for testing - use more computing resources
+            - powerful machines (scale vertically)
+            - more machines (scale horizontally)
+            - both
+        - computing resources
+            - dirt cheap compared to human resources
+                - pay per use (per hour / minute)
+            - easier to aquire
+                - available on-demand
 
-This time, I am shopping for a laptop. My son will use this laptop to attend his the online classes conducted by his school as well as private tutors. When buying the laptop, I pay an additional premium to buy the licence for Windows - the operating system for the laptop.
+- The cost of Test Automation
+    - Automation Engineers : special people to convert test-cases to programs
+        - not everyone can do it
+    - maintain the automated tests
+        - change them as software changes
+    - level of skills needed
+        - takes time to aquire skill
+        - high skill - high compensation
+    - tough not as bad as an army of testers, still a human resource problem
 
-> Sorry for picking on Windows. It is a good example as it it the most widely used OS series in the world.
-_statistics_
+- Bumping into different dark clouds?
+    - Change the angle of looking at the problem
+    - Look at it as a strategy problem
+    - Solution : right amount of moderation for tests
+    - Do we have to decide which aspects to test and which not to?
+        - it is not a numbers problem, it is a strategy problem
+    - Not how much of testing, but when to test.
 
-When I buy and install the OS, I expect it to work. I should be able to use the laptop without any issue. If I keep the laptop dust free and with enough spare disk space, I expect the OS to fuction smoothly, without crashing or showing errors in the middle of my son's online lessons.
+- To understand - our friend industry example - manufacturing cars
 
-What happens if there is an OS configuration defect or an installation issue of the laptop?
-This is where the software warranty comes in. I will be able to take it to the shop or the dealer I bought it from and get it fixed. the cost will be shared by both me - my time and resources to get back and the dealer - his time and resources to get it fixed.
-The scenario is very similar to the automotive analogy I describe a few minutes ago.
-
-What happens if there is a design issue or a security vulnerability of the OS?
-Would they recall the OS and issue me a replacemnt OS? Would they issue a refund?
-
-No. They will just send a patch (or an update as they are called to hide the fact). Sending the patch is virtually free for them as it is delivered as a URL (or some download instructions) via the internet. I will have to spend my time and broadband data to download and install the patch.
-This is quite different from the automotive anology where when there is a problem in the design of the car. Here the cost is largely on the customer, not the manufacturer.
-
-Since the cost is very minor to the manufacturer, they are not too much concerned about releasing software with possible issues to the market. "We can do a patch after the release" seems to be the norm. Because the cost of not getting it defectless is not that significant, the software manufacturers may not do adequate testing and cut corners to sell the product prematurely.
-
-In essense, you are penalised for buying defective software wheras it is the manufacturer that gets penalised for selling defective hardware.
-How is this fair?
-
-If you look at the global picture, the software products churn more money than cars.
-_statistics_. So, shouln't we be more careful when relaseing software products? Shouldn't we do even more testing than we do for cars?
-
-This is a good argument people bring-in when they are talking about the inherant lack of reliability in software.
-
-I agree with them, up to this extent.
-Here is the part that I do not agree completely.
-
-This argument gets generalised. It says that the majority of software is like this. They are less reliable than their counterpart example - cars.
-
-You see, this is not really an apples to apples comparison. Software and automotives have drastically different product aspects. Eventhough there are traits that both industries share, there are some significant ones that are not shared. Let me talk about two.
-
-_One_  
-How frequenty car models are released? _statistics_  
-How frequently are OS versions released? _statistics_
-
-Though operating system software can have similar release cycles as cars not many other software categories share the same. So it is not fair to generalise the reliability comparison to the whole software industry.
-
-Why are these frequent releases needed? To answer that, let's look at the second point.
-
-_Two_  
-How often the requirement for a car changes? Pretty much never. Newer car models may get all the fancy stuff and the luxuries, but, at the end of the day, we buy a car as a mode of transportation.   
-Similarly, how often the requirement for an operating system software changes? Very rarely. Never operating systems may get more and more fancy tools and utilities bundled, but, unless the underlying hardware architectures change, there is very little reason to change the core of an operating system software.
-
-So, I believe it is fair to compare such software with cars and complain about the disparity of reliability and cost of faults.
-
-In contrast, how often a buisness application changes? It could be weeks and even days in some cases.
-
-A very good example everyone of us experienced is what happened when the COVID-19 lockdowns began. Suddenly a lot of busienss software needed to change to accomodate remote communication between people - either via chat or video conferencing. There was an influx of not tech savvy users for many software so the user interfaces have the be more user friendly, intuitive and more fool-proof. After all, when was the last time you refered to a user manual of a product, a software specially, before turning it on?
-
-Some software needed to quickly adapt to work on different hardware, operating systems and screen-sizes.
-Many businesses had to change their business rules to accomodate new products and services, new business models emerged and they had to incentivise their customers in order to keep the businesses afloat. A good example is from one of the leading e-commerce platforms in Sri Lanka, Takas.lk. They had to quickly start selling groceries and greens. A similar thing happened with the popular super-market chains like Cargills and Keells - they had to bring-in the capability to sell via online orders.
-
-Unlike with changes to the business requirements coming from GDPR (General Data Protection Regulation) and CCPA (California Consumer Privacy Act), these requirements were sudden and drastic. There were no grace period. The busineses either had to change or die, and some of them actually died.
-
-So, I believe it is not fair to compare business software with cars and complain about disparity of reliability and cost of faults.
-
-Are we good? Is that all? Does it stop here? Do we have to live with what is given?
-No, we should not just say it is not fair, refuse to do anything about it, and force everyone to live with what is given.
-So, what can we do?
-
-This looks like two different ends of the spectrum. On one end, we have software products like operating systems where the releases are predictable, planned and the requirements are fairly stable. On the other end we have highly volatile and dynamic business software that requires fast and frequent changes. However, regardless of the fact that they are at different ends of the spectrum, people want reliability - the ability to rely on the software they purchase to get the work done properly.
-
-In order to increase reliability, first we need to measure how reliable our product is at the moment. What gets measured gets improved. We measure reliability by counting the number of times our software breaks - by break what I mean is that it does not work as expected or intended.
-
-Let's take a software product as an example.   
-We subject our software product to different circumstances - like different inputs, different resource allocations, different configurations, different number of operations requested (loads) etc. While we count the number of times the software breaks, we also identify the circumstances that leads to them. Then we look at the significance of these breakages and the probability of the circumstances. Based on these criteria we prioritize the identified issues that needed to be fixed in order to achieve the desired reliability level.
-
-The act of subjecting the product to different circumstances **artificially** in **controlled environments** is called **testing**. A single occurance of such an act is called a **test**. The documented procedure of a test is called a **test-case**.
-
-If we want to increase the reliability of cars being manufactured, we subject them to more and more tests covering all imaginable aspects of cars.   
-We can do the same with software products like operating systems because their core functionality is pretty well established - meaning requirements are stable - and we can afford the time due to the planned and sparse release cycles.
-
-What about business software?   
-Can we do the same? Can we do more and more testing without introducing delays in the release cycles? Can we accomodate more testing without needing an ever increasing army of testers to handle the new test-cases coming in. Can we keep on doing it condidering the people related aspects of testing, like human errors, fatigue and job satisfaction.
-
-Yes, we can solve it by outsourcing the testing work. But this approach is just a way to trade in some problems you have for another set of problems. We out-source our concerns about human errors, fatigue and job satisfactions etc. for the need for thorough documentation, management overhead and additional cost. Out-sourcing works, but only at small scale. It is only a temporary solution to a resource problem - not a long term viable strategy for a business.
-
-Luckyly, we have already indentified a different way of sloving the problem - test automation. If we automate the tests - meaning, if we write another program to test the software we are building - we have effectively solved the human resource aspect of the problem. If we want to increase the number of tests, we can simply add more automated tests. If the testing process gets longer as we add more and more automated tests, we can simply cut down the time by using more computing resources - either more powerful machines (i.e scalling vertically) or more machines (i.e. scaling horizontally) or both. And compared to human resources, computing resources are dirt cheap these days. Furthermore, the on-demand computing resources providers like AWS and Azure allow you to only pay for the actual usage.
-
-So, is everything good? No, not really. Test automation has its own cost. You will still need people who can look at the test-cases and convert them to program instructions. Normally we call them automation engineers. Instead of many testers who work on low cognitive engagements of executing the test-cases manually, we need comparatively less but higher-skilled automation engineers who **engage** in high cognitive engagement of converting the test-cases into program instructions. Furthermore, just converting is not enough - we need to maintain them. As the software changes over time - remember, this is the key differentiating factor of business software - we need to tweak and change tests we automated. So, not just that we need to maintain the test-cases, we need to maitain the program that tests the software we build. And not everybody can do it. We will need those high-skilled automation engineers for this too.
-
-As we know, in our industry, or any industry for that matter, it takes time to gain the high level of skills. That means there are always a short-supply and a high demand for these skilled individuals. Unless we are able to offer attractive enough compensation, we will not be able to acquire the number of skilled resources we need to handle the need of test automation for our organization.
-
-If we take a step back and look at the overall picture, we have replaced one layer with some problems (like time, human resources) in our process with multiple layers with their own problems posing slightly differently (like technical skills, mainteance cost, cost of aquiring skill).
-
-Seems like we keep on bumping on to different dark clouds. Is there a way out?
-Yes, there is. To see the solution, we need to change the angle we look at the problem.
-
-So far, we have been trying to look at this concern on increased testing as a resource problem. Let's change the angle and look at it as a strategy problem.
-The solution lies in the right amount of moderation - moderation of tests, that is. Does it mean that we have to decide on what aspects to test and what aspects to ignore? No. Remember, it is not a problem of resources, or numbers to be more specific, in this case - it is a problem of strategy. The solution is not about how much of testing - it is about how and when of testing.
-
-In order to help us understand this further, let's go back to our friend, the industry example of manufacturing cars.
-Let me try to present this as a side-by-side comparison. Also, along the way, I'll build up the volcabulary for the subsequent discussion by naming some technical concepts in the examples.
 
 When the manufacturer want to test a car, do they build expensive machnery to extensively test all aspects of the car once the car is produced? No.
 Similarly, should we write automated tests to extensively test all aspects of the software once the software is built? No.
