@@ -2,7 +2,7 @@
     em { color: red; }
 </style>
 
-# 1. The need for automated testing
+# The need for automated testing
 
 - car
     - ~ mid 2016
@@ -246,7 +246,7 @@ Another way to look at
 Imge credit: [Mulesoft Blog](https://blogs.mulesoft.com/dev-guides/refactoring-munit-the-mule-testing-framework/)
 
 
-# 2. Executable specifications
+# Executable specifications
 
 Improve strategy further
     - One side
@@ -309,7 +309,7 @@ Benefits
     - test iteratively while building the code
     - change existing code, break behaviour - autmatically flagged by tests
 
-# 3. Evolution of test-based development practices
+# Evolution of test-based development practices
 1. No automated tests
     - army of testers
 2. Test-last (TLD)
@@ -346,7 +346,51 @@ Benefits
     3. You are not allowed to write any more production code than is sufficient to pass the one failing unit test.
 
 
-# 4. Concerns about TDD
+# Advantages of practicing TDD
+1. Incremental & Iterative Development
+    Similar to SCRUM?
+
+1. Change / Refactoring with confidence
+    https://martinfowler.com/bliki/SelfTestingCode.html
+    “You have self-testing code when you can run a series of automated tests against the code base and be confident that, should the tests pass, your code is free of any substantial defects”.
+2. Emergent design
+    “Hoare principle: “There are two ways to write code: write code so simple there are obviously no bugs in it, or write code so complex that there are no obvious bugs in it.” - The Unicorn Project
+
+    Because you are writing small tests at a time, it forces your code to be more modular (otherwise they’d be hard to test against). TDD helps you learn, understand, and internalise the key principles of good modular design.
+    TDD also forces good architecture. In order to make your code unit-testable, it must be properly modularized. Writing the tests first, various architectural problems tend to surface earlier.
+    It encourages small steps and improves the design because it makes you cut the unnecessary dependencies to facilitate the setup.
+    Testing while writing also forces you to try to make your interfaces clean enough to be tested. It’s sometimes hard to see the advantage of this until you work on a body of code where it wasn’t done, and the only way to exercise and focus on a given piece of code is to run the whole system and set a break-point.
+
+    passing tests is NEVER a key to good quality.  “Quality is made by design, not testing.” - https://medium.com/@charleeli/why-tdd-is-bad-and-how-to-improve-your-process-d4b867274255
+
+    Program testing can be used to show the presence of bugs, but never to show their absence! - Edsger Wybe Dijkstra
+
+
+3. it forces developers to think about what they are going to code and how they are going to code it before they write any functional code.
+    It helps to clarify requirements because you have to figure out concretely what inputs you have to feed and what outputs you expect.
+    “Stupid” mistakes are caught almost immediately. It helps developers find mistakes that would waste everyone’s time if they were found in QA.
+
+4. Documents your code better than documentation (it doesn’t go out of date since you’re running it all the time).
+    Unit tests are especially valuable as a safety net when the code needs to be changed to either add new features or fix an existing bug. Since maintenance accounts for between 60 and 90% of the software life cycle, it’s hard to overstate how the time taken up front to create a decent set of unit tests can pay for itself over and over again over the lifetime of the project.
+    Although it is absolutely necessary, creating tests for failures can be tedious, but it pays off big time in the end.
+
+
+[medium](https://medium.com/javascript-scene/testing-software-what-is-tdd-459b2145405c)
+
+Eliminates fear of change. If a code change introduces a bug, developers are alerted to it quickly, and TDD’s tight feedback loop will quickly notify them when it’s fixed.
+
+A safety net which makes continuous deployment safer. Test failures halt the deployment process, allowing you to fix bugs before customers ever have the chance to see them.
+
+Better code coverage than writing tests after the fact. Because we create code to make a specific test pass, code coverage will be close to 100%.
+
+Faster developer feedback loop. Without TDD, developers must manually test each change to ensure that it works. With TDD, unit tests can run on-change automatically, providing faster feedback during development and debugging sessions.
+
+Interface design aid: Developers often think about the software implementation before thinking about the developer experience of using the software component. TDD flips this around, forcing developers to design the API before working on the implementation.
+
+KISS and YAGNI — “Keep it Simple, Stupid”, and “You Ain’t Gonna Need It” are two overlapping software design principles. KISS means just like what it sounds like it means. Keep things simple. YAGNI means don’t build features and abstractions unless those features serve a specific existing requirement (not a future requirement). TDD helps with that process by forcing you to work in small iterations, tackling one requirement at a time on an as-needed basis.
+
+
+# Concerns about TDD
 
 ## 1. It will slow down the development
 - Only if "development" = churning out code to pass on
@@ -404,6 +448,8 @@ Image credit : [deepsource](https://deepsource.io/blog/exponential-cost-of-fixin
     - don't add tests for the sake of adding tests
 
 ## 4. It is a waste of time
+- Variations
+    - there is no benefit
 - only if you don't use the tests
 
 ### 4.1. Project changes make old tests a waste of effort
@@ -415,230 +461,178 @@ Image credit : [deepsource](https://deepsource.io/blog/exponential-cost-of-fixin
 - early stage tests are much simpler
 - having a lot of e2e tests are harder
 
-### 5.1 Extensive Testing is Boring
+### 5.1 Extensive testing is boring
+- no need for extensive testing at one stage
+- do it incrementally, iteratively
 
 ## 7. TDD locks design
+- writing the code took one hour but fixing the tests took half a day (https://dzone.com/articles/whats-wrong-test-driven)
+- not doing the 3rd step - refactoring
+- proper TDD imptove the design / remove locks
 
-“writing the code took one hour but fixing the tests took half a day”. - https://dzone.com/articles/whats-wrong-test-driven
 
 
-
-# 4. Why people do not practice TDD
+# Why people do not practice TDD
 
 ENGINEERING PRACTICES EMPLOYED
 Unit Testing - 67%
 TDD - 30%
 Page 12, 14th Annual State of Agile Report
 
-The **14th Annual State of Agile Report** has some good insights based on some key statistics from surveys. In page 12 of the report, they talk about adoption of different engineering practices. 67% of the people who responsed to the surveys have said that they do unit testing, but only a 30% of the people said that they practice TDD.
-
 What do you think could be the reasons?
 
 *segue to slido*
 
 
-## 1. It slows us down
-One reason why we do not practice TDD is the concern about the slowness it brings. We already discussed this and established that there is no real basis behind it.
+## 1. Concerns about TDD
+- already discussed and rejected
+- Solition: let go of ungrounded fear, get in the water
 
 ## 2. It does not solve our problems
-Another one may argue that although TDD seems good, it does not solve their problems.
-Again, this is an invalid reason not to practice TDD.
-A practice nevers solves a problem. It only improves the process.
-What TDD does is cut down some steps in the develpment process, make it more efficient to iterate, and introduce an effective way to develop software.
+- A practice nevers solves a problem. It only improves the process.
+- TDD 
+    - cut down some steps in the develpment process,
+    - make it more efficient to iterate
+    - introduce an effective way to develop software
+- Solution: form a habit
 
 ## 3. The company management does not give us the time
-relates to "it slows us down"
-One frequent response I keep hearing, through out all these years I have been interviewing people for developer positions, is that the company management does not recognize the value and therefore does not allow them to practice TDD.
+- Variations
+    - I have an aggressive deadline
+- No. 1 excuse I hear from interview candidates
+- related to "slowness" concern
+- just passing the ball - shunning responsibility
+- hired as professionals - have a say in the matter
+- manager get upper-hand - they can communicate better
+- Solution : present to management as a win-win
 
-If we are making that claim, what we failed to realise is that we are hired as professionals and we have a say in this matter.
+## 4. I am able to write code with very a few bugs, I don’t need testing
+- I don't need seat belts - I can drive without getting into accidents
+- iests are a safety-net
+- tests are not just for you - they are for the team
+- tests will stop someone else accidentally breaking your code
+- Solution : let go of ego - be a team player
 
-We, software engineers are very skilled technically but not the greatest communicators. On the flipside, managers are good at communication and can convince you to do things in a certain way that is easy for them. If we make an effort to understand their point of view and present this practice as a process for a winining strategy, I'm sure any manager would like that proposal.
+## 5. Tests should be written by others - possibly QA
+- Variations
+    - Tests should not be written by the developers who write the code, they should be written by others, possibly QA people
+    - We have a QA department, writing tests is their job
+- It is the developer's job to make sure the code works
+- Would you rather have a executable specification that confirms or do it manually
+- Solution: understand your responsibility
 
-So effectively, we are saying that we are too lazy to empathize with the management and communicate practicing TDD as a winning strategy for them.
-Of course, there can be the extrem cases where that management does not really listen to us. But, who would want to work for such an organization for an extended period of time anyway?
-
-There is another issue about professionalism in this claim and I will discuss this further when I talk about the right reasons to practice TDD. 
-
-## 4. I am able to write code with very a few bugs, I don’t need testing.
-
-## Tests should not be written by the developers who write the code, they should be written by others, possibly QA people.
-
-    “We have a QA department, writing tests is their job”
-    “Setting up the test, potentially with mocks and stubs, can be a lot of extra effort”
-    “There is no benefit”
-    “It’s slow”
-## 5. The code is not testable
-
-Another common reason people give for not practicing TDD goes like this. You do not know how bad our code-base is. The previous developer has simply created a mess of it. There is nothing I can do. The code is simply untestable.
-
-Again, we are trying to take the easy way out. True, it could be a total mess, but there are ways to untangle it.
-
-I can recommend the techniques that Michael Feathers describe in his book **Working Effectively with Legacy Code**. 
-> On a side note, he has a very good definition what "legacy" means and it does not mean old - the code could be new but still count as legacy.
-
-I can also recommend the book by Martin Fowler and Kent Beck - **Refactoring - Improving the Design of Existing Code**. Furthermore, Fowler has another blog post describing a pattern called **Strangler** that we can use to introduce testability to legacy applications.
+## 6. The code is not testable
+- previous developer has created a mess. There is nothing I can do. The code is simply untestable.
+- passing the blame
+- Broken window principle
+    - crime rate goes up in neighhbourhoods with broken windows - looks like nobody cares
+- There are ways to untangle it
+    - **Working Effectively with Legacy Code** - Michael Feathers
+    - **Refactoring - Improving the Design of Existing Code** - Martin Fowler
+    **Strangler** - Martin Fowler
+- Solution : take responsibility
 
 ## 6. Everything is not testable
+- Variations
+    - The functionality I am developig is not testable
+    - Setting up the test, potentially with mocks and stubs, is a lot of extra effort
+    - It is difficult to simulate
+        - 100MB file upload
+- if something is really hard to test, then it is because there’s something wrong.  
+[What Concerns BeginnerTest-Driven Development Practitioners:A Qualitative Analysis of Opinions in an Agile Conference - Aniche et al.](https://www.ime.usp.br/~aniche/files/wbma2011.pdf)
+- a design / architecture problem
+- There are ways to make them testable
+    - MV* patterns (MVP, MVC, MVVM etc.) 
+        - test the UI business logic and drive its design
+    - Mocking frameworks
+        - separate external dependencies (Web, DB, 3rd party components)
+- Solution: focus on design and architecture
 
-"The functionality I am developig is not testable; Therefore, I cannot use TDD" is yet another common reason people give for not practicing.
+## 7. I will write tests at the end
+- Not TDD
+- Will never have time
+- Solution: understand the benefits of TDD
 
-if something is really hard to test, then it is because there’s something wrong.
-What Concerns BeginnerTest-Driven Development Practitioners:A Qualitative Analysis of Opinions in an Agile Conference - Aniche et al. https://www.ime.usp.br/~aniche/files/wbma2011.pdf
+## 8. This is a POC, so no need to write tests
+- PoC becomes final product after a few iterations.
+- Adding tests after is harder - not designed well
+- Solution: insist on TDD
 
-By following MV* patterns (MVP, MVC, MVVM etc.) you can still test the UI business logic and drive its design using TDD.
-Mocking frameworks are there to help you stub/mock external dependencies (Web, DB, 3rd party components) 
+## 9. They take a lot of time to run
+- It is bad code or bad design or both
+- Solution : bring the pain forward
 
-
-- It is a problem in Design & Architecture
-    - A Separate Talk
-
-Martin Fowler book
-
-
-
-## I will write them at the end
-
-## It is the QAs/SDETs job, not mine
-## It is difficult to simulate
-    100MB file upload
-## I have an aggressive deadline
-    cost of bug fix
-## This is a POC, so no need to write tests
-## They take a lot of time to run
+> “If it hurts, do it more frequently, and bring the pain forward” - Jez Humble (The DevOps Handbook)
 ## My clients don’t care
-
+- The tests are not for the client - they are for the development team
+- I don't care what happens to the product or the client in future
+- Solution : be professional, follow a good practice
 ## 8. Do not know how
+- The only valid reason
+- University courses do not teach this skill
+- No professional trining programmes in Sri Lanka
+- Soluton : develop skills
+    - mindset
+    - training
+    - practice
+- Resources
+    - **Test Driven Development by Example** - Kent Beck
+    - Online training courses
 
-Ken Beck book
-
-
-
-Concerns
-1. How do I know I have enough coverage of tests for my code.
-    1. Don't cover the code with the tests - cover the test with code
-    1. [ZOMBIE](https://www.agilealliance.org/resources/sessions/test-driven-development-guided-by-zombies/)
-
-
-
-# 5. The wrong reasons to adopt TDD
+# ]The wrong reasons to adopt TDD
 
 ## 1. My company needs me to
-The case we built is a perfectly valid reason to practice TDD for an organization. It has all the elements of logic in it. Logics are good for a business process and a conceptual entity like an organization.
+- Company insist because they understand the value
+- I don't
 
--- switch to slide --
+## 2. Resume Driven Development
+- makes my resume looks more attractive to potential employers
+- means to an end
+- first sight of difficulty - abandon practice
 
-Let me ask you, when was the last time you practiced something consistently, day in day out, because it is logical?
+## 3. A silver-bullet for technical debt
+- false sense of security
+- TDD can't stop accumilation of hidden technical debt
+- can happen at any stage of TDD   
+(https://www.sealights.io/agile-testing/test-driven-development-and-the-dangers-of-hidden-technical-debt/)
 
-
-## 2. Makes my resume looks more attractive
-Another reason would be; If I know TDD, it looks cool on my resume. There is a demand for engineers with TDD experience and I can stand-out from the rest if I have this skill.
-
--- switch to slide --
-
-This is wrong reason because we are trying to think of TDD as a means to an end. The practice of collecting shiny new things so that I can put them in my resume is so common that it even has a name - resume driven development. A resume-driven developer is someone who is always chasing the new and shiny so that their resume is more attractive to the next potential employer.
-
-An additional danger of buying into this reason is that, at the first sight of trouble, they will abondon the practice.
-It was just a means to get to a better job. It did not mean that we have to do it always.
-
-
-## 3. A Silver Bullet for Technical Debt
-Another wrong reason would be the misconception people have that TDD will solve all of their problems at development.
-This is wrong becuase, it is a myth and TDD is no silver bullet that can solve all their development problems.
-
--- switch to slide --
-
-in every stage of the TDD cycle, hidden technical debt can accumulate. 
-creates a false sense of security, leading teams to thinking they have less technical debt than they actually do. 
-
-https://www.sealights.io/agile-testing/test-driven-development-and-the-dangers-of-hidden-technical-debt/
-
-
-TDD is only a practice that help you achieve reliability in an efficient and effective manner.
-
-## 4. With Test Driven Development I don’t need to spend time on analysis and on designing the architecture.
-
-
+## 4. With TDD, I don’t need to spend time on analysis and on designing the architecture
+- recipe for disaster
+- build-up technical debt fast
 ...
-
 
 ## The problem with the wrong reasons
 
-Those reasons we discussed are valid but the wrong reasons to practice TDD. The side effect of buying into the wrong reasons is that we do not practice it right.
+The effect of buying into the wrong reasons is that we do not practice it right.
 
-To get the right result, we need to practice TDD consistently.
-Consistency only comes if we understand why we are doing it.
+To get the right result, we need to practice TDD consistently.   
+Consistency only comes if we understand why we are doing it.   
 The why has to be emotional - not logical.
 
--- switch to slide --
+*switch to slide*
 ### Hand washing technique
-Let me take and example to make my point.
-How many of you know the proper technique for washing hands.
+- an example to make the point
+- Variation of this poster at any hospital
+    -  We have seen it, we know it. But do we really practice it?
+- Why do the doctors practice it?
+    - hospital demands it?
+    - they were taught to?
+    - looks cool?
+    - solves germ problems?
+- part of their professional code of ethics
 
-We can see a variation of this poster at any hospital. We have seen it, we know it. But do we really practice it?
-Why do the doctors practice it?
-Is it because the hospital wants it?
-Is it because they were taught to?
-Is it because it looks cool?
-Is it because they think it solves all problems?
-Is it just because they understand germs and bacteria and how to avoid them? They might have already wahsed their hands a few minutes ago and have not touched anything afterwards.
-
--- switch to slide ---
+*switch to slide*
 
 If you only take one thing from this talk. This is it.
 
-Without consistency, a practice like TDD will not deliver the right value.
-Consistency only comes if we understand why we are doing it.
+> Without consistency, a practice like TDD will not deliver the right value.   
+Consistency only comes if we understand why we are doing it.   
 The why has to be emotional - not logical.
 
-# 6. The right reasons to adopt TDD
+# The right reasons to adopt TDD
 
 
-# 7. Advantages of practicing TDD
-1. Incremental & Iterative Development
-    Similar to SCRUM?
-
-1. Change / Refactoring with confidence
-    https://martinfowler.com/bliki/SelfTestingCode.html
-    “You have self-testing code when you can run a series of automated tests against the code base and be confident that, should the tests pass, your code is free of any substantial defects”.
-2. Emergent design
-    “Hoare principle: “There are two ways to write code: write code so simple there are obviously no bugs in it, or write code so complex that there are no obvious bugs in it.” - The Unicorn Project
-
-    Because you are writing small tests at a time, it forces your code to be more modular (otherwise they’d be hard to test against). TDD helps you learn, understand, and internalise the key principles of good modular design.
-    TDD also forces good architecture. In order to make your code unit-testable, it must be properly modularized. Writing the tests first, various architectural problems tend to surface earlier.
-    It encourages small steps and improves the design because it makes you cut the unnecessary dependencies to facilitate the setup.
-    Testing while writing also forces you to try to make your interfaces clean enough to be tested. It’s sometimes hard to see the advantage of this until you work on a body of code where it wasn’t done, and the only way to exercise and focus on a given piece of code is to run the whole system and set a break-point.
-
-    passing tests is NEVER a key to good quality.  “Quality is made by design, not testing.” - https://medium.com/@charleeli/why-tdd-is-bad-and-how-to-improve-your-process-d4b867274255
-
-    Program testing can be used to show the presence of bugs, but never to show their absence! - Edsger Wybe Dijkstra
-
-
-3. it forces developers to think about what they are going to code and how they are going to code it before they write any functional code.
-    It helps to clarify requirements because you have to figure out concretely what inputs you have to feed and what outputs you expect.
-    “Stupid” mistakes are caught almost immediately. It helps developers find mistakes that would waste everyone’s time if they were found in QA.
-
-4. Documents your code better than documentation (it doesn’t go out of date since you’re running it all the time).
-    Unit tests are especially valuable as a safety net when the code needs to be changed to either add new features or fix an existing bug. Since maintenance accounts for between 60 and 90% of the software life cycle, it’s hard to overstate how the time taken up front to create a decent set of unit tests can pay for itself over and over again over the lifetime of the project.
-    Although it is absolutely necessary, creating tests for failures can be tedious, but it pays off big time in the end.
-
-
-[medium](https://medium.com/javascript-scene/testing-software-what-is-tdd-459b2145405c)
-
-Eliminates fear of change. If a code change introduces a bug, developers are alerted to it quickly, and TDD’s tight feedback loop will quickly notify them when it’s fixed.
-
-A safety net which makes continuous deployment safer. Test failures halt the deployment process, allowing you to fix bugs before customers ever have the chance to see them.
-
-Better code coverage than writing tests after the fact. Because we create code to make a specific test pass, code coverage will be close to 100%.
-
-Faster developer feedback loop. Without TDD, developers must manually test each change to ensure that it works. With TDD, unit tests can run on-change automatically, providing faster feedback during development and debugging sessions.
-
-Interface design aid: Developers often think about the software implementation before thinking about the developer experience of using the software component. TDD flips this around, forcing developers to design the API before working on the implementation.
-
-KISS and YAGNI — “Keep it Simple, Stupid”, and “You Ain’t Gonna Need It” are two overlapping software design principles. KISS means just like what it sounds like it means. Keep things simple. YAGNI means don’t build features and abstractions unless those features serve a specific existing requirement (not a future requirement). TDD helps with that process by forcing you to work in small iterations, tackling one requirement at a time on an as-needed basis.
-
-
-
-# 8. When not to go for TDD
+#  When not to go for TDD
 1. Experimenting
 2. One-off things
 3. External scope / products
@@ -646,51 +640,63 @@ KISS and YAGNI — “Keep it Simple, Stupid”, and “You Ain’t Gonna Need I
     use characterization tests.
 
 
-# 9. Tread Carefully
-1. It can be easy to get distracted by “fluff” or fancy features in the unit testing framework. We should remember that simple tests are the fastest to create and the easiest to manage.
-2. Like any good technique, unit testing can be carried to an extreme. The biggest benefits come from a moderate effort, with the tests always exercising the code in the simplest way possible.  If you find yourself frequently refactoring your tests, there’s a good chance you’re spending too much time on the test suite.
-s
-3. Unless everyone on the team correctly maintains their tests, the whole system can quickly degrade.
-4. Like any programming, there is a big difference between doing it and doing it well.  Writing good unit tests is an art form. This aspect of TDD is often not discussed, many managers tend to focus on metrics like code coverage; those metrics tell you nothing about the quality of the unit tests.
-5. TDD is not just unit tests
+# Tread Carefully
+- Don't get distracted by fancy features in testing frameworks
+    - simple tests are the fastest to create and easiest to manage
+- Don't go to extremes with unit tests
+    - moderation is key
+    - tests always exercise the code in the simplest way possible
+    - frequently refactoring tests - spending too much time on test suit
+- Unless everyone on the team correctly maintains their tests, the whole system can quickly degrade.
+- Like any programming, there is a big difference between doing it and doing it well.
+    - writing good unit tests is an art.
+    - often not discussed
+    - many managers tend to focus on metrics (like code coverage)
+        - does not tell about the quality of the unit tests
+- TDD is not just unit tests  
     “My test cases are the specification. If all tests are passed, the correctness is guaranteed. ” is not true if you only have unit tests.
-6. Difference between doing it and doing it well.
-7. Don't under-estimate the time investment.
-    The earlier you start the better. Snow-ball effect from Warrne Buffet.
-8. Writing GUI code with TDD is difficult. 
-9. Maintaining tests can be difficult. We need to maintain consistenct. Never allow changes without fixing the test or dropping them.
-10. Mocking hell.
-11. Different speed SLAs for different test levels
-12. Use small iterations. Test and build one requirement at a time.
+- Don't under-estimate the time investment
+    - The earlier you start the better.
+    - Snow-ball effect from Warrne Buffet
+- Writing GUI code with TDD is difficult
+- Maintaining tests can be difficult
+    - We need to maintain consistency
+    - Never allow changes without fixing the test or dropping them
+- Mocking hell.
+- Different speed SLAs for different test levels
+- Use small iterations. Test and build one requirement at a time.
 
 
-# 10. Common mistakes in TDD
+# Common mistakes in TDD
 Aniche et al.
 Most Common Mistakes in Test-Driven Development Practice:
 Results from an Online Survey with Developers
 https://www.researchgate.net/publication/220720049_Most_Common_Mistakes_in_Test-Driven_Development_Practice_Results_from_an_Online_Survey_with_Developers
 
-Do not watch the test fail
-Forget the refactoring step
-Refactor some other piece of code while working on a test
-Use bad test names
-Do not start from the simplest test
-Run only the current failing test
-The need for writing a complex test scenario
-Do not refactor the test code
-Do not implement the simplest thing that makes the test pass
+1. Do not watch the test fail
+2. Forget the refactoring step
+3. Refactor some other piece of code while working on a test
+4. Use bad test names
+5. Do not start from the simplest test
+6. Run only the current failing test
+7. The need for writing a complex test scenario
+8. Do not refactor the test code
+9. Do not implement the simplest thing that makes the test pass
 
 
-## Guidelines for good unit tests - RITE
+# Questions
+1. How do I know I have enough coverage of tests for my code.
+    1. Don't cover the code with the tests - cover the test with code
+    1. [ZOMBIE](https://www.agilealliance.org/resources/sessions/test-driven-development-guided-by-zombies/)
+
+2. How to write good unit tests
+    RITE
     Readable
     Isolated
     Thorough
     Explicit
 
 
-
-
-“If it hurts, do it more frequently, and bring the pain forward” - Jez Humble (The DevOps Handbook)
 
 
 
@@ -707,7 +713,7 @@ Types of fakes
 
 
 
-[Eric Elliott on Medium](https://medium.com/javascript-scene/testing-software-what-is-tdd-459b2145405c)
+Credit : [Eric Elliott](https://medium.com/javascript-scene/testing-software-what-is-tdd-459b2145405c)
 
 | Scientific Method | TDD                 |
 |-------------------|---------------------|
@@ -727,36 +733,6 @@ Accountability / Feedback
 
 Speciality of scribes
 
-Responsibility to self
-
-Education
-- College / University
-    - Course content extracts
-- Corporate Organizations / Training
-
-What will happen to QA
-- Quality Assist
-- Quality Engineering
-
-Testers
-- Scripted
-    - Automated Teller Machines
-- Exploratory
-
-A series of workshops
-
-Help me promote this message
 
 
 
-As you might have noticed, I have only discussed about the case for TDD but not really how to do it.
-This was intentional. TDD is a skill. I do not belive I can teach you the skill of TDD by doing a talk. It is just like subscribing to a postal course for swimming.
-
-The intention of this talk was just to be a precursor to the change we wanted to see in the community - the adoption of TDD. This is merely the first step towards that goal - introducing the mindset shift.
-
-If there is enough interest from the community, from you all and anyone else you refer to, we are happy to organise a series of hands-on training sessions to help anyone who wants to develop this skill. We will tackle the process of TDD incrementally from the basics to the advance topics like TDD at different layers and all the way upto going full-stack.
-I'm delighted to announce that Vetstoria is willing to fully sponsor this programme as a part of our CSR activities.
-
-You will be receiving an email soon, if not already, with a form that you can fill to express your interest for this trainig programme. Feel free to forward the email to anyone else whoul you think could benefit from the programme.
-
-In addition, you will receive link to fill-out a short survey form to give us your feedback about the session and also mention your key takeaways from the session. For every submission of the form, I will send a response with my intended key take aways of the session so you can compare and watch the recording if you have messed out something.
