@@ -347,47 +347,70 @@ Benefits
 
 
 # Advantages of practicing TDD
-1. Incremental & Iterative Development
-    Similar to SCRUM?
+- Incremental & Iterative Development
+    - Look at the steps
+        - iterate between stages
+        - incrementally add code
+    - Similar to SCRUM?
 
-1. Change / Refactoring with confidence
-    https://martinfowler.com/bliki/SelfTestingCode.html
-    “You have self-testing code when you can run a series of automated tests against the code base and be confident that, should the tests pass, your code is free of any substantial defects”.
-2. Emergent design
-    “Hoare principle: “There are two ways to write code: write code so simple there are obviously no bugs in it, or write code so complex that there are no obvious bugs in it.” - The Unicorn Project
+- Change / Refactoring with confidence
+    - self testing code   
+        https://martinfowler.com/bliki/SelfTestingCode.html   
+        “You have self-testing code when you can run a series of automated tests against the code base and be confident that, should the tests pass, your code is free of any substantial defects”.
 
-    Because you are writing small tests at a time, it forces your code to be more modular (otherwise they’d be hard to test against). TDD helps you learn, understand, and internalise the key principles of good modular design.
-    TDD also forces good architecture. In order to make your code unit-testable, it must be properly modularized. Writing the tests first, various architectural problems tend to surface earlier.
-    It encourages small steps and improves the design because it makes you cut the unnecessary dependencies to facilitate the setup.
-    Testing while writing also forces you to try to make your interfaces clean enough to be tested. It’s sometimes hard to see the advantage of this until you work on a body of code where it wasn’t done, and the only way to exercise and focus on a given piece of code is to run the whole system and set a break-point.
-
-    passing tests is NEVER a key to good quality.  “Quality is made by design, not testing.” - https://medium.com/@charleeli/why-tdd-is-bad-and-how-to-improve-your-process-d4b867274255
-
-    Program testing can be used to show the presence of bugs, but never to show their absence! - Edsger Wybe Dijkstra
-
-
-3. it forces developers to think about what they are going to code and how they are going to code it before they write any functional code.
-    It helps to clarify requirements because you have to figure out concretely what inputs you have to feed and what outputs you expect.
-    “Stupid” mistakes are caught almost immediately. It helps developers find mistakes that would waste everyone’s time if they were found in QA.
-
-4. Documents your code better than documentation (it doesn’t go out of date since you’re running it all the time).
-    Unit tests are especially valuable as a safety net when the code needs to be changed to either add new features or fix an existing bug. Since maintenance accounts for between 60 and 90% of the software life cycle, it’s hard to overstate how the time taken up front to create a decent set of unit tests can pay for itself over and over again over the lifetime of the project.
-    Although it is absolutely necessary, creating tests for failures can be tedious, but it pays off big time in the end.
+- Emergent design
+    - The Unicorn Project : Hoare principle   
+        > There are two ways to write code:   
+        write code so simple there are obviously no bugs in it,   
+        or write code so complex that there are no obvious bugs in it.
+    - Write one small test at a time
+        - forces the code to be modular
+            - otherwise hard to test
+    - TDD helps you learn, understand, and internalise the key principles of good modular design
+    - TDD forces good architecture
+        - architectural problems surface earlier
+    - smaller steps
+        - cut unecessary dependencies
+        - improve design
+    - forces (code) interfaces to be clean
 
 
-[medium](https://medium.com/javascript-scene/testing-software-what-is-tdd-459b2145405c)
+- Forces developers to think 
+    - what they are going to code
+    - how they are going to code it
+    - before they write any functional code
 
-Eliminates fear of change. If a code change introduces a bug, developers are alerted to it quickly, and TDD’s tight feedback loop will quickly notify them when it’s fixed.
+- helps to clarify requirements
+    - what inputs
+    - what outputs to expect
+- Stupid mistakes are caught almost immediately
 
-A safety net which makes continuous deployment safer. Test failures halt the deployment process, allowing you to fix bugs before customers ever have the chance to see them.
+- Documents your code better than documentation
+    - it doesn’t go out of date since you’re running it all the time
+    - maintenace - 60% - 90% of lifecycle
+        - TDD delivers a regression test suit with no additional effort
 
-Better code coverage than writing tests after the fact. Because we create code to make a specific test pass, code coverage will be close to 100%.
+- safety net
+    - makes continuous deployment safer. Test failures halt the deployment process
 
-Faster developer feedback loop. Without TDD, developers must manually test each change to ensure that it works. With TDD, unit tests can run on-change automatically, providing faster feedback during development and debugging sessions.
+- Better code coverage than writing tests after the fact.
+    - create code to make a specific test pass
+        -code coverage will be close to 100%
 
-Interface design aid: Developers often think about the software implementation before thinking about the developer experience of using the software component. TDD flips this around, forcing developers to design the API before working on the implementation.
+- Faster developer feedback loop
+    - unit tests can run on-change automatically
 
-KISS and YAGNI — “Keep it Simple, Stupid”, and “You Ain’t Gonna Need It” are two overlapping software design principles. KISS means just like what it sounds like it means. Keep things simple. YAGNI means don’t build features and abstractions unless those features serve a specific existing requirement (not a future requirement). TDD helps with that process by forcing you to work in small iterations, tackling one requirement at a time on an as-needed basis.
+- Interface design aid 
+    - flips the implementation-first thinking to DX-first
+        - force to design the API before working on the implementation
+- KISS : Keep it Simple, Stupid
+
+- YAGNI : You Ain’t Gonna Need It
+    - don’t build features and abstractions unless those features serve a specific existing requirement (not a future requirement
+
+- force you to work in small iterations
+    - one requirement at a time
+    - as-needed basis
 
 
 # Concerns about TDD
@@ -579,7 +602,7 @@ What do you think could be the reasons?
     - **Test Driven Development by Example** - Kent Beck
     - Online training courses
 
-# ]The wrong reasons to adopt TDD
+# The wrong reasons to adopt TDD
 
 ## 1. My company needs me to
 - Company insist because they understand the value
@@ -665,7 +688,12 @@ The why has to be emotional - not logical.
 - Mocking hell.
 - Different speed SLAs for different test levels
 - Use small iterations. Test and build one requirement at a time.
+- Quality vs Tests
+    > Passing tests is NEVER a key to good quality.  Quality is made by design, not testing.  
+    [Charee Li](https://medium.com/@charleeli/why-tdd-is-bad-and-how-to-improve-your-process-d4b867274255)
 
+    > Program testing can be used to show the presence of bugs, but never to show their absence!   
+    Edsger Wybe Dijkstra
 
 # Common mistakes in TDD
 Aniche et al.
