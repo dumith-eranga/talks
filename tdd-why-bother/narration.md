@@ -32,7 +32,32 @@ It is going to be my first car. It has to be a beautiful one. It has to be a goo
     2. You are not allowed to write any more of a unit test than is sufficient to fail; and compilation failures are failures.
     3. You are not allowed to write any more production code than is sufficient to pass the one failing unit test.
 
+
 ## 3. Concerns about TDD
+
+### It is a waste of time
+### I will write them at the end
+### It is the QAs/SDETs job, not mine
+### It is difficult to simulate
+    100MB file upload
+### I have an aggressive deadline
+    cost of bug fix
+### This is a POC, so no need to write tests
+### They take a lot of time to run
+### My clients don’t care
+### TDD is Expensive
+    1. bugs are more expensive
+    2. moderation
+### TDD Will Retard Your Project Launch
+you only need tests if you change something - that is the essense of software
+add tests before the change - it is not TDD, you need additional time to read and understand the code. You might not cover all scenarios with tests
+### You Will Change Your Projects and Old Tests Become Waste
+Tests are a part of code and the code gets thrown away anyway.
+Don;t invest too much in - do simple things first
+### Testing the Means is a lot more Work Than Testing the Outcomes
+### Extensive Testing is Boring
+
+
 ### 1. It will slow down the development
 One concern we hear often about TDD is that it will slow down the development.
 Yes, but only if by "development" we meant churning out code.
@@ -66,38 +91,7 @@ Similarly, the role of testers as mechanical workers will change and they will b
 
 Also, this is only one side of the picture. On the other side, there will always be new things that require the skills of manual testing. There will be one-off things that needs testing, urgent outsorcing requirements from software companies trying to hit the perfect market timimg and also some things that are not worth the effort of automating the tests for.
 
-## Advantages of practicing TDD
-1. Incremental & Iterative Development
-    Similar to SCRUM?
-
-1. Change / Refactoring with confidence
-    https://martinfowler.com/bliki/SelfTestingCode.html
-    “You have self-testing code when you can run a series of automated tests against the code base and be confident that, should the tests pass, your code is free of any substantial defects”.
-2. Emergent design
-    “Hoare principle: “There are two ways to write code: write code so simple there are obviously no bugs in it, or write code so complex that there are no obvious bugs in it.” - The Unicorn Project
-
-    Because you are writing small tests at a time, it forces your code to be more modular (otherwise they’d be hard to test against). TDD helps you learn, understand, and internalise the key principles of good modular design.
-    TDD also forces good architecture. In order to make your code unit-testable, it must be properly modularized. Writing the tests first, various architectural problems tend to surface earlier.
-    It encourages small steps and improves the design because it makes you cut the unnecessary dependencies to facilitate the setup.
-    Testing while writing also forces you to try to make your interfaces clean enough to be tested. It’s sometimes hard to see the advantage of this until you work on a body of code where it wasn’t done, and the only way to exercise and focus on a given piece of code is to run the whole system and set a break-point.
-
-    passing tests is NEVER a key to good quality.  “Quality is made by design, not testing.” - https://medium.com/@charleeli/why-tdd-is-bad-and-how-to-improve-your-process-d4b867274255
-
-    Program testing can be used to show the presence of bugs, but never to show their absence! - Edsger Wybe Dijkstra
-
-
-
-3. it forces developers to think about what they are going to code and how they are going to code it before they write any functional code.
-    It helps to clarify requirements because you have to figure out concretely what inputs you have to feed and what outputs you expect.
-    “Stupid” mistakes are caught almost immediately. It helps developers find mistakes that would waste everyone’s time if they were found in QA.
-
-4. Documents your code better than documentation (it doesn’t go out of date since you’re running it all the time).
-    Unit tests are especially valuable as a safety net when the code needs to be changed to either add new features or fix an existing bug. Since maintenance accounts for between 60 and 90% of the software life cycle, it’s hard to overstate how the time taken up front to create a decent set of unit tests can pay for itself over and over again over the lifetime of the project.
-    Although it is absolutely necessary, creating tests for failures can be tedious, but it pays off big time in the end.
-
-
-
-## 5. Why people do not practice TDD
+## 4. Why people do not practice TDD
 
 ENGINEERING PRACTICES EMPLOYED
 Unit Testing - 67%
@@ -121,6 +115,7 @@ A practice nevers solves a problem. It only improves the process.
 What TDD does is cut down some steps in the develpment process, make it more efficient to iterate, and introduce an effective way to develop software.
 
 ### 3. The company management does not give us the time
+relates to "it slows us down"
 One frequent response I keep hearing, through out all these years I have been interviewing people for developer positions, is that the company management does not recognize the value and therefore does not allow them to practice TDD.
 
 If we are making that claim, what we failed to realise is that we are hired as professionals and we have a say in this matter.
@@ -175,7 +170,17 @@ Martin Fowler book
 
 Ken Beck book
 
-## 6. The wrong reasons to adopt TDD
+
+
+
+Concerns
+1. How do I know I have enough coverage of tests for my code.
+    1. Don't cover the code with the tests - cover the test with code
+    1. [ZOMBIE](https://www.agilealliance.org/resources/sessions/test-driven-development-guided-by-zombies/)
+
+
+
+## 5. The wrong reasons to adopt TDD
 
 
 ### 1. My company needs me to
@@ -245,7 +250,52 @@ If you only take one thing from this talk. This is it.
 Without consistency, a practice like TDD will not deliver the right value.
 Consistency only comes if we understand why we are doing it.
 The why has to be emotional - not logical.
-## 7. The right reasons to adopt TDD
+## 6. The right reasons to adopt TDD
+
+
+## 7. Advantages of practicing TDD
+1. Incremental & Iterative Development
+    Similar to SCRUM?
+
+1. Change / Refactoring with confidence
+    https://martinfowler.com/bliki/SelfTestingCode.html
+    “You have self-testing code when you can run a series of automated tests against the code base and be confident that, should the tests pass, your code is free of any substantial defects”.
+2. Emergent design
+    “Hoare principle: “There are two ways to write code: write code so simple there are obviously no bugs in it, or write code so complex that there are no obvious bugs in it.” - The Unicorn Project
+
+    Because you are writing small tests at a time, it forces your code to be more modular (otherwise they’d be hard to test against). TDD helps you learn, understand, and internalise the key principles of good modular design.
+    TDD also forces good architecture. In order to make your code unit-testable, it must be properly modularized. Writing the tests first, various architectural problems tend to surface earlier.
+    It encourages small steps and improves the design because it makes you cut the unnecessary dependencies to facilitate the setup.
+    Testing while writing also forces you to try to make your interfaces clean enough to be tested. It’s sometimes hard to see the advantage of this until you work on a body of code where it wasn’t done, and the only way to exercise and focus on a given piece of code is to run the whole system and set a break-point.
+
+    passing tests is NEVER a key to good quality.  “Quality is made by design, not testing.” - https://medium.com/@charleeli/why-tdd-is-bad-and-how-to-improve-your-process-d4b867274255
+
+    Program testing can be used to show the presence of bugs, but never to show their absence! - Edsger Wybe Dijkstra
+
+
+3. it forces developers to think about what they are going to code and how they are going to code it before they write any functional code.
+    It helps to clarify requirements because you have to figure out concretely what inputs you have to feed and what outputs you expect.
+    “Stupid” mistakes are caught almost immediately. It helps developers find mistakes that would waste everyone’s time if they were found in QA.
+
+4. Documents your code better than documentation (it doesn’t go out of date since you’re running it all the time).
+    Unit tests are especially valuable as a safety net when the code needs to be changed to either add new features or fix an existing bug. Since maintenance accounts for between 60 and 90% of the software life cycle, it’s hard to overstate how the time taken up front to create a decent set of unit tests can pay for itself over and over again over the lifetime of the project.
+    Although it is absolutely necessary, creating tests for failures can be tedious, but it pays off big time in the end.
+
+
+[medium](https://medium.com/javascript-scene/testing-software-what-is-tdd-459b2145405c)
+
+Eliminates fear of change. If a code change introduces a bug, developers are alerted to it quickly, and TDD’s tight feedback loop will quickly notify them when it’s fixed.
+
+A safety net which makes continuous deployment safer. Test failures halt the deployment process, allowing you to fix bugs before customers ever have the chance to see them.
+
+Better code coverage than writing tests after the fact. Because we create code to make a specific test pass, code coverage will be close to 100%.
+
+Faster developer feedback loop. Without TDD, developers must manually test each change to ensure that it works. With TDD, unit tests can run on-change automatically, providing faster feedback during development and debugging sessions.
+
+Interface design aid: Developers often think about the software implementation before thinking about the developer experience of using the software component. TDD flips this around, forcing developers to design the API before working on the implementation.
+
+KISS and YAGNI — “Keep it Simple, Stupid”, and “You Ain’t Gonna Need It” are two overlapping software design principles. KISS means just like what it sounds like it means. Keep things simple. YAGNI means don’t build features and abstractions unless those features serve a specific existing requirement (not a future requirement). TDD helps with that process by forcing you to work in small iterations, tackling one requirement at a time on an as-needed basis.
+
 
 
 ## 8. When not to go for TDD
@@ -271,7 +321,31 @@ s
 9. Maintaining tests can be difficult. We need to maintain consistenct. Never allow changes without fixing the test or dropping them.
 10. Mocking hell.
 11. Different speed SLAs for different test levels
+12. Use small iterations. Test and build one requirement at a time.
 
+
+### 10. Common mistakes in TDD
+Aniche et al.
+Most Common Mistakes in Test-Driven Development Practice:
+Results from an Online Survey with Developers
+https://www.researchgate.net/publication/220720049_Most_Common_Mistakes_in_Test-Driven_Development_Practice_Results_from_an_Online_Survey_with_Developers
+
+Do not watch the test fail
+Forget the refactoring step
+Refactor some other piece of code while working on a test
+Use bad test names
+Do not start from the simplest test
+Run only the current failing test
+The need for writing a complex test scenario
+Do not refactor the test code
+Do not implement the simplest thing that makes the test pass
+
+
+## Guidelines for good unit tests - RITE
+    Readable
+    Isolated
+    Thorough
+    Explicit
 
 
 
@@ -537,6 +611,16 @@ STUPID --> SOLID
 
 Types of fakes
 
+
+
+[Eric Elliott on Medium](https://medium.com/javascript-scene/testing-software-what-is-tdd-459b2145405c)
+
+| Scientific Method | TDD                 |
+|-------------------|---------------------|
+| Question          | Requirement         |
+| *Prediction*      | *Expected Output*   |
+| Experiment        | Test Assertion      |
+| Subject           | Implementation Code |
 
 
 Story from Automative industry
