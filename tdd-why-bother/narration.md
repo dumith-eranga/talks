@@ -339,8 +339,14 @@ Benefits
         - Step 2: Write the production code until all the tests are passing
         - Step 3: Refactor until you are happy with the structure of the code
     
-    Red Green Refactor
-    Rules
+    ![](https://www.techwell.com/sites/default/files/shared/2018-12-12%20DheerendraM%20Keep%20Your%20Code%20Base%20Clean%20with%20Regular%20Refactoring%20image.png)
+    Image credit [Techwell.com](https://www.techwell.com/techwell-insights/2018/12/keep-your-code-base-clean-regular-refactoring)
+
+    Another way to look at
+    ![](./images/red-green-blue-gophers-smaller.png)
+    Image credit [Densie Yu / Learn Go with Tests](https://quii.gitbook.io/learn-go-with-tests/)
+
+    Rules of TDD - by Robert C. Martin (Uncle Bob)
     1. You are not allowed to write any production code unless it is to make a failing unit test pass.
     2. You are not allowed to write any more of a unit test than is sufficient to fail; and compilation failures are failures.
     3. You are not allowed to write any more production code than is sufficient to pass the one failing unit test.
@@ -348,61 +354,74 @@ Benefits
 
 ## 3. Concerns about TDD
 
-### It is a waste of time
-### I will write them at the end
-### It is the QAs/SDETs job, not mine
-### It is difficult to simulate
-    100MB file upload
-### I have an aggressive deadline
-    cost of bug fix
-### This is a POC, so no need to write tests
-### They take a lot of time to run
-### My clients don’t care
-### TDD is Expensive
-    1. bugs are more expensive
-    2. moderation
-### TDD Will Retard Your Project Launch
-you only need tests if you change something - that is the essense of software
-add tests before the change - it is not TDD, you need additional time to read and understand the code. You might not cover all scenarios with tests
-### You Will Change Your Projects and Old Tests Become Waste
-Tests are a part of code and the code gets thrown away anyway.
-Don;t invest too much in - do simple things first
+### 1. It will slow down the development
+    - Yes, but only if "development" = churning out code.
+    - Up-front cost
+        - set-up the process and technical frameworks
+        - train the engineers - mindset and skills
+        - get the buy-in from the management
+    - Grace period
+        - slow output
+        - only at end
+            - see real ROI
+            - team confidence rise
+#### 1.1 It will retard the project launch
+    - alternative proposed
+        - only need tests if you change something
+        - add tests before the change
+    - change - essense of software
+    - add tests before change - not TDD
+    - need additional time to read and understand the code
+    - might not cover all scenarios with tests
+
+### 2. People will lose their jobs
+    - QA / Automation Engineers
+        - root cause - how we look at these roles
+            - quality testers / test program writers
+        - Do not like name Quality Assurance Engineer
+            - quality assurance is everyone's job
+        - Quality Engineer
+            - enginering quality into software is a special skill
+            - vast area - testing is only a small part
+        - Automation Engineers
+            - lot of application outside test automation
+            - e.g. - business process automation
+    - Testers
+        - certain doom
+        - once everything is automated, nothing to do for testers
+        - Banking - tellers
+            - Smart ATMs / Cash Recycling Machines
+            - "teller" role is dissapearing
+            - nobody lost the job
+                - assigned to other roles - better customer interaction
+        - Other areas
+            - Exploratory testing
+        - Other side of the picture
+            - new things to test manually
+            - urgent outsourcing requirements - to hit market timing
+            - one-off testing that does not require automation
+
+
+
+
+
+### 3. It is a waste of time
+
+### 4. TDD is expensive
+- bugs are more expensive
+![](https://assets.deepsource.io/759b23f/images/blog/cost-of-fixing-bugs/chart.jpg)
+Image credit : [deepsource](https://deepsource.io/blog/exponential-cost-of-fixing-bugs/)
+
+- moderation is the key
+    - don't add tests for the sake of adding tests
+
+### 5. Project changes make old tests a waste of effort
+- Tests are a part of code and the code gets thrown away anyway.
+- Don't invest too much - do simple things first
+
 ### Testing the Means is a lot more Work Than Testing the Outcomes
 ### Extensive Testing is Boring
 
-
-### 1. It will slow down the development
-One concern we hear often about TDD is that it will slow down the development.
-Yes, but only if by "development" we meant churning out code.
-
-Of course, there will be an up-front cost.
-We will have to invest time and resources to :
-1. set-up the process and technical frameworks
-2. train the engineers - mindset and skills
-3. get the buy-in from the management
-
-Furthermore. we will need to go through a grace period of adoption where our output seems to be slow. Only at the end of that we will see the ROI clearly. Our development process will become faster and the team's confidence will rise.
-
-### 2. QAs will lose their jobs
-Another concern is about the future of some job roles. What will happen to QA / Automation engineers?
-
-The root cause of this concern is how we look at these roles. We might call them QA engineers and Automation engineers, but we look at them as quality testers and test program writers. 
-
-I personally do not like the name Quality Assurance Engineer. Quality Assurance is everyones job.
-Instad I like to call them as Quality Engineers because engineering quality into our software is a specialized skill.
-Quality Engineering is a vast area and testing is a very small part of it.
-
-Similarly, automation has a lot of applications outside the domain of test automation. For example, Automation Engineers can add a lot of value to the organization by automating business processes.
-
-### 3. Testers will lose their jobs
-What will happen to testers?
-This concern has its merits. Once every one adopts TDD and all the tests are automated, there will be no need for testers. Seems like a certain doom.
-
-To understand one way things would change, let's look at a different industry - banking. Up until recent years, in Sri Lanka, we had some people called "tellers". We still do, but it is becoming increasingly less now. With the introduction and the gaining popularity of fully functional **Automated Teller Machines**, ATMS as we commonly call it, **Cash Recycling Machines** as the banks like to call them to distinguish from the older machines that we could only withdraw money from, the role of the "teller" is dissappearing. But did these people lose their jobs? No, not really. They got reassigned to roles where the human innovativeness is more useful and the work is not mechanical. Banks have new roles for developing innovative financial products, improving business processes, and also stratergising and executing new marketing intiatives.
-
-Similarly, the role of testers as mechanical workers will change and they will be assigned to other areas where the human nature is more useful - like exploratory testing.
-
-Also, this is only one side of the picture. On the other side, there will always be new things that require the skills of manual testing. There will be one-off things that needs testing, urgent outsorcing requirements from software companies trying to hit the perfect market timimg and also some things that are not worth the effort of automating the tests for.
 
 ## 4. Why people do not practice TDD
 
@@ -478,6 +497,18 @@ Martin Fowler book
 ### 7. TDD locks design
 
 “writing the code took one hour but fixing the tests took half a day”. - https://dzone.com/articles/whats-wrong-test-driven
+
+
+### I will write them at the end
+
+### It is the QAs/SDETs job, not mine
+### It is difficult to simulate
+    100MB file upload
+### I have an aggressive deadline
+    cost of bug fix
+### This is a POC, so no need to write tests
+### They take a lot of time to run
+### My clients don’t care
 
 ### 8. Do not know how
 
@@ -660,9 +691,6 @@ Do not implement the simplest thing that makes the test pass
     Thorough
     Explicit
 
-Red Green Refactor : https://www.techwell.com/techwell-insights/2018/12/keep-your-code-base-clean-regular-refactoring
-https://www.techwell.com/sites/default/files/shared/2018-12-12%20DheerendraM%20Keep%20Your%20Code%20Base%20Clean%20with%20Regular%20Refactoring%20image.png
-Red Green Refactor analogy : https://quii.gitbook.io/learn-go-with-tests/
 
 
 
