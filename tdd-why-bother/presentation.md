@@ -6,24 +6,30 @@ backgroundColor: black
 
 ---
 <style scoped>
-    em {
-        text-decoration: underline;
-        font-style: normal;
+    li {
+        font-size: 30px;
+        list-icon: none;
     }
 </style>
-
-
 
 # TDD
 Why Bother?
 
+<br/><br/>
+- Eranga Jayalatharachchi
 <!--
 
 -->
 
 ---
 
-About Me
+## About Me
+- I Code
+- I Read
+- I Tinker
+---
+
+## TDD?
 
 ---
 
@@ -34,8 +40,11 @@ About Me
 ![height:500px invert:100%](./images/laptop.png)
 
 ---
-
 ## Disparity
+<br><br><br><br><br><br><br>
+
+![bg height:300px invert:100%](./images/car.jpeg)
+![bg height:300px invert:100%](./images/laptop.png)
 
 ---
 
@@ -47,23 +56,21 @@ About Me
 
 ---
 
----
-
-## cost
+## Cost
 
 ---
 
-## Dark Clouds
+![bg height:500px invert](./images/dark-clouds.png)
 
 ---
 <style scoped>
     table * { text-align: left; }
 </style>
 
-| parts          | functions    | unit tests            |
-|----------------|--------------|-----------------------|
-| **components** | **modules**  | **integration tests** |
-| **car**        | **software** | **end-to-end tests**  |
+| parts          | functions    | unit            |
+|----------------|--------------|-----------------|
+| **components** | **modules**  | **integration** |
+| **car**        | **software** | **end-to-end**  |
 
 ---
 <style scoped>
@@ -232,6 +239,9 @@ Credit : [Eric Elliott](https://medium.com/javascript-scene/testing-software-wha
 
 ## Concerns
 
+---
+## Concerns
+
 1. Slow down the development
 2. Job loss
 3. Expensive
@@ -280,8 +290,15 @@ Credit : [Eric Elliott](https://medium.com/javascript-scene/testing-software-wha
 ##### with the wrong reasons
 
 ---
+<style scoped>
+    p { font-size : 20px; }
+</style>
 
-## hand washing
+![bg](#fff)
+![](#000)
+![height:600px](./images/hand-washing-1.png)
+
+Image Credit : [NHS](https://www.hey.nhs.uk/patient-leaflet/hand-hygiene-information/)
 
 ---
 <style scoped>
@@ -291,6 +308,7 @@ Credit : [Eric Elliott](https://medium.com/javascript-scene/testing-software-wha
 3. Right value
 2)  Consistency
 1. Why
+0) Emotion
 
 ---
 

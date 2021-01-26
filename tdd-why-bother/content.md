@@ -2,6 +2,17 @@
     em { color: red; }
 </style>
 
+# About me
+- Name
+- Code
+- Read
+- Tinker
+
+
+# TDD - what does the audience know
+*-- segue to slido --*
+
+
 # The need for automated testing
 
 *-- slide : car --*
@@ -345,6 +356,7 @@ Benefits
 3. Test-first (TFD)
     - executable specification for tests
     - written before production code
+    - *-- slide --*
     - Process
         - 2 repeatable steps
             - Step 1: Write the test
@@ -355,17 +367,26 @@ Benefits
         - TFD stops when tests are passing
         - TDD improve code structure (**refactor**)
             - changing the structure of the code without changing its functionality
+    - *-- slide --*
     - 3 repeatable steps
         - Step 1: Write the test
         - Step 2: Write the production code until all the tests are passing
         - Step 3: Refactor until you are happy with the structure of the code
     
+    *-- slide --*
+
     ![](./images/red-green-refactor.png)
+    
     Image credit [Techwell.com](https://www.techwell.com/techwell-insights/2018/12/keep-your-code-base-clean-regular-refactoring)
+
+    *-- slide --*
 
     Another way to look at
     ![](./images/red-green-blue-gophers-smaller.png)
+
     Image credit [Densie Yu / Learn Go with Tests](https://quii.gitbook.io/learn-go-with-tests/)
+
+    *-- slide --*
 
     Rules of TDD - by Robert C. Martin (Uncle Bob)
     1. You are not allowed to write any production code unless it is to make a failing unit test pass.
@@ -459,6 +480,10 @@ Credit : [Eric Elliott](https://medium.com/javascript-scene/testing-software-wha
 # Concerns about TDD
 
 *-- slide --*
+
+*-- segue to slido --*
+
+*-- slide --*
 ## 1. It will slow down the development
 - Only if "development" = churning out code to pass on
 - Up-front cost
@@ -541,6 +566,8 @@ Image credit : [deepsource](https://deepsource.io/blog/exponential-cost-of-fixin
 
 *-- slide --*
 
+*-- segue to slido --*
+
 # Why people do not practice TDD
 
 ENGINEERING PRACTICES EMPLOYED
@@ -549,8 +576,6 @@ TDD - 30%
 Page 12, 14th Annual State of Agile Report
 
 What do you think could be the reasons?
-
-*segue to slido*
 
 
 *-- slide --*
@@ -706,6 +731,10 @@ Consistency only comes if we understand why we are doing it.
 The why has to be emotional - not logical.
 
 # The right reason to adopt TDD
+
+- Professionalism
+- Ethics
+
 *fill*
 
 Scribe
