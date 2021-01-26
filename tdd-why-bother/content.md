@@ -4,6 +4,8 @@
 
 # The need for automated testing
 
+*-- slide : car --*
+
 - car
     - ~ mid 2016
     - shopping for a car
@@ -25,6 +27,8 @@
             - prototyping
             - randomm samples after production
 
+*-- slide : laptop --*
+
 - laptop
     - last year
     - shopping for a laptop
@@ -42,6 +46,8 @@
         - cost for me is big
         - "We can always do a patch after the release"
 
+
+*-- slide : disparity --*
 
 - Cars vs Software disparity
     - a common comparison
@@ -90,6 +96,8 @@
             - fast and frequent changes
             - time to test before release ?
 
+*-- slide : reliability --*
+
 - People want reliability
     - the ability to rely on the software they purchase to get the work done properly
     - cars vs software -> less reliable
@@ -124,6 +132,8 @@
         - Short release cycles
         - Challanging to plan and test
 
+*-- slide : Testing --*
+
 - Solutions
     - ever increasing army of testers
         - human errors
@@ -156,6 +166,8 @@
             - easier to aquire
                 - available on-demand
 
+*-- slide : cost --*
+
 - The cost of Test Automation
     - Automation Engineers : special people to convert test-cases to programs
         - not everyone can do it
@@ -166,6 +178,8 @@
         - high skill - high compensation
     - tough not as bad as an army of testers, still a human resource problem
 
+*-- slide : dark clouds --*
+
 - Bumping into different dark clouds?
     - Change the angle of looking at the problem
     - Look at it as a strategy problem
@@ -173,6 +187,8 @@
     - Do we have to decide which aspects to test and which not to?
         - it is not a numbers problem, it is a strategy problem
     - Not how much of testing, but when to test.
+
+*-- slide --*
 
 - To understand - our friend industry example - manufacturing cars
     - cars
@@ -185,6 +201,8 @@
             - write automated tests
             - test all aspects of software
             - once software is built
+
+    *-- slide --*
 
     - parts
         - car
@@ -234,18 +252,21 @@
         - for another "some" = 10000
     - concept illustrated by testing pyramid
 
+*-- slide : testing pyramid --*
+
 Testing Pyramid   
-![](https://martinfowler.com/articles/practical-test-pyramid/testPyramid.png)   
+![](./images/testPyramid.png)   
 Image credit: [martinfowler.com](https://martinfowler.com/articles/practical-test-pyramid.html)
                     
 Another way to look at
 - different levels of testing
 - layers of the software
 
-![](https://blogs.mulesoft.com/wp-content/uploads/2015/07/refactoring-munit-1.jpg)   
+![](./images/refactoring-munit-1.jpeg)   
 Imge credit: [Mulesoft Blog](https://blogs.mulesoft.com/dev-guides/refactoring-munit-the-mule-testing-framework/)
 
 
+*-- slide : improve --*
 # Executable specifications
 
 Improve strategy further
@@ -333,7 +354,7 @@ Benefits
         - Step 2: Write the production code until all the tests are passing
         - Step 3: Refactor until you are happy with the structure of the code
     
-    ![](https://www.techwell.com/sites/default/files/shared/2018-12-12%20DheerendraM%20Keep%20Your%20Code%20Base%20Clean%20with%20Regular%20Refactoring%20image.png)
+    ![](./images/red-green-refactor.png)
     Image credit [Techwell.com](https://www.techwell.com/techwell-insights/2018/12/keep-your-code-base-clean-regular-refactoring)
 
     Another way to look at
@@ -474,7 +495,7 @@ Credit : [Eric Elliott](https://medium.com/javascript-scene/testing-software-wha
 
 ## 3. TDD is expensive
 - bugs are more expensive
-![](https://assets.deepsource.io/759b23f/images/blog/cost-of-fixing-bugs/chart.jpg)
+![](./images/chart.jpeg)
 Image credit : [deepsource](https://deepsource.io/blog/exponential-cost-of-fixing-bugs/)
 
 - moderation is the key
