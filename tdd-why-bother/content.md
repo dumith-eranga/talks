@@ -11,6 +11,9 @@
 
 # TDD - what does the audience know
 *-- segue to slido --*
+https://www.sli.do/
+39454
+
 
 
 # The need for automated testing
@@ -376,7 +379,7 @@ Benefits
     *-- slide --*
 
     ![](./images/red-green-refactor.png)
-    
+
     Image credit [Techwell.com](https://www.techwell.com/techwell-insights/2018/12/keep-your-code-base-clean-regular-refactoring)
 
     *-- slide --*
@@ -732,22 +735,31 @@ The why has to be emotional - not logical.
 
 # The right reason to adopt TDD
 
-- Professionalism
-- Ethics
+- Software engineering is a profession.
+    - Something others can't do
+    - Run the world
+    - Power to change the world
+    - Responsibility
 
-*fill*
+- Profession
+    - Practices
+        - Established and accepted procedure of good conduct
+        - Accountability
+    - Code of Ethics
+        - Worthiness
+        - Self-assesment
+        - Emotional
 
-Scribe
+- High risk professions
 
-Double Entry
+- Doctors
+    - Hand-washing
 
-STUPID --> SOLID
-
-Accountability / Feedback
-
-Speciality of scribes
+- Accountants
+    - Double-entry
 
 
+*-- slide --*
 
 #  When not to go for TDD
 1. Experimenting
@@ -756,6 +768,8 @@ Speciality of scribes
 4. Does not understand the existing product.
    - use characterization tests (Michael Feathers)
 
+
+*-- slide --*
 
 # Tread Carefully
 - Don't get distracted by fancy features in testing frameworks
@@ -775,19 +789,25 @@ Speciality of scribes
 - Don't under-estimate the time investment
     - The earlier you start the better.
     - Snow-ball effect from Warrne Buffet
+- *-- slide --*
 - Writing GUI code with TDD is difficult
 - Maintaining tests can be difficult
     - We need to maintain consistency
     - Never allow changes without fixing the test or dropping them
 - Mocking hell.
-- Different speed SLAs for different test levels
-- Use small iterations. Test and build one requirement at a time.
+- Speeds vs frequencies
+    - Different speed SLAs for different test levels
+- Baby steps
+    - Use small iterations. Test and build one requirement at a time.
 - Quality vs Tests
     > Passing tests is NEVER a key to good quality.  Quality is made by design, not testing.  
     [Charee Li](https://medium.com/@charleeli/why-tdd-is-bad-and-how-to-improve-your-process-d4b867274255)
 
     > Program testing can be used to show the presence of bugs, but never to show their absence!   
     Edsger Wybe Dijkstra
+
+
+*-- slide --*
 
 # Common mistakes in TDD
 Aniche et al.
@@ -805,6 +825,8 @@ https://www.researchgate.net/publication/220720049_Most_Common_Mistakes_in_Test-
 8. Do not refactor the test code
 9. Do not implement the simplest thing that makes the test pass
 
+
+*-- slide --*
 
 # Questions
 1. How do I know I have enough coverage of tests for my code.

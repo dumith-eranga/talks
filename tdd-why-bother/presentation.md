@@ -30,6 +30,8 @@ Why Bother?
 ---
 
 ## TDD?
+https://www.sli.do/
+39454
 
 ---
 
@@ -65,12 +67,13 @@ Why Bother?
 ---
 <style scoped>
     table * { text-align: left; }
+    table, th, td { border: 5px solid grey;  padding: 30px;}
 </style>
 
-| parts          | functions    | unit            |
-|----------------|--------------|-----------------|
-| **components** | **modules**  | **integration** |
-| **car**        | **software** | **end-to-end**  |
+| parts          | functions    | unit testing            |
+|----------------|--------------|-------------------------|
+| **components** | **modules**  | **integration testing** |
+| **car**        | **software** | **end-to-end testing**  |
 
 ---
 <style scoped>
@@ -238,6 +241,8 @@ Credit : [Eric Elliott](https://medium.com/javascript-scene/testing-software-wha
 ---
 
 ## Concerns
+https://www.sli.do/
+39454
 
 ---
 ## Concerns
@@ -250,6 +255,8 @@ Credit : [Eric Elliott](https://medium.com/javascript-scene/testing-software-wha
 6. Locks design
 ---
 ## Why not practice
+https://www.sli.do/
+39454
 
 ---
 
@@ -317,38 +324,46 @@ Image Credit : [NHS](https://www.hey.nhs.uk/patient-leaflet/hand-hygiene-informa
 - Ethics
 
 ---
-<style scoped>
-    h2 em {
-        font-size: 50px;
-        color: #aaa !important;
-        font-style: normal;
-    }
-    h5 {
-        margin-top: 80px;
-    }
-    h5+h5 {
-        margin-top: 10px;
-    }
-    h5 em {
-        text-decoration: underline;
-        font-style: normal;
-    }
-</style>
 
-## Professions *have* Practices  
+#  When not to do TDD
+1. Experimenting
+2. One-off things
+3. External scope / products
+4. Does not understand the existing product
 
-##### Healthcare is a _profession_
-##### Accounting is a _profession_
+---
 
-<!--
-    Is programming a profession?
+# Tread Carefully
+- Don't get distracted by frameworks
+- Don't go to extremes with unit tests
+- Maintains the tests
+- Doing it vs doing it well
+- Not just unit tests
+- Time investment
 
-    Why Healthcare / Accounting?
-        - a high risk profession.
+---
 
-    Practices:
-        - A doctor washing hands before a surgery.
-        - Double entry book keeping.
+# Tread Carefully
+- GUI code
+- Maintaining tests can be difficult
+- Mocking hell
+- Speeds vs frequencies
+- Baby steps
+- Quality vs Tests
 
--->
+---
+# Common mistakes
+
+1. Do not watch the test fail
+2. Forget the refactoring step
+3. Refactor other code while writing a test
+4. Use bad test names
+5. Do not start from the simplest test
+6. Run only the current failing test
+7. The need for writing a complex test scenario
+8. Do not refactor the test code
+9. Do not implement the simplest thing
+
+---
+# Questions?
 
