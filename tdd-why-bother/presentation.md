@@ -230,6 +230,75 @@ Credit : [Eric Elliott](https://medium.com/javascript-scene/testing-software-wha
 
 ---
 
+## Concerns
+
+1. Slow down the development
+2. Job loss
+3. Expensive
+4. Waste of time / effort
+5. A lot more work
+6. Locks design
+---
+## Why not practice
+
+---
+
+## Why not practice
+
+1. Concerns about TDD
+2. Does not solve our problems
+3. Management does not give us time
+4. I am a great programmer - I don’t need TDD
+5. Tests should be written by others - possibly QA
+6. The code is not testable
+
+---
+## Why not practice
+
+7. Everything is not testable
+8. I will write tests at the end
+9. This is a POC - no need to write tests
+10. They take a lot of time to run
+11. My clients don’t care
+
+---
+## Why not practice
+12. Do not know how
+
+---
+
+## Wrong Reasons
+
+1. Resume Driven Development
+2. Silver-bullet for technical debt
+3. No analysis / design needed
+4. My company needs me to
+
+---
+
+## The Problem
+##### with the wrong reasons
+
+---
+
+## hand washing
+
+---
+<style scoped>
+    * { font-weight: bold; }
+</style>
+
+3. Right value
+2)  Consistency
+1. Why
+
+---
+
+# Right Reasons
+- Professionalism
+- Ethics
+
+---
 <style scoped>
     h2 em {
         font-size: 50px;

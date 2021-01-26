@@ -458,6 +458,7 @@ Credit : [Eric Elliott](https://medium.com/javascript-scene/testing-software-wha
 
 # Concerns about TDD
 
+*-- slide --*
 ## 1. It will slow down the development
 - Only if "development" = churning out code to pass on
 - Up-front cost
@@ -532,12 +533,13 @@ Image credit : [deepsource](https://deepsource.io/blog/exponential-cost-of-fixin
 - do it incrementally, iteratively
 - on the contrary - it is more 
 
-## 7. TDD locks design
+## 6. TDD locks design
 - writing the code took one hour but fixing the tests took half a day (https://dzone.com/articles/whats-wrong-test-driven)
 - not doing the 3rd step - refactoring
 - proper TDD improve the design / remove locks
 
 
+*-- slide --*
 
 # Why people do not practice TDD
 
@@ -551,6 +553,7 @@ What do you think could be the reasons?
 *segue to slido*
 
 
+*-- slide --*
 ## 1. Concerns about TDD
 - already discussed and rejected
 - Solition: let go of ungrounded fear, get in the water
@@ -578,6 +581,8 @@ What do you think could be the reasons?
 - tests are a safety-net
 - tests are not just for you - they are for the team
 - tests will stop someone else accidentally breaking your code
+- Optimism is an occupational hazard. Feedback is the solution - Kent Beck
+- I'm not a great programmer. I'm a good programmer with great habits - Kent Beck
 - Solution : let go of ego - be a team player
 
 ## 5. Tests should be written by others - possibly QA
@@ -599,7 +604,8 @@ What do you think could be the reasons?
     **Strangler** - Martin Fowler
 - Solution : take responsibility
 
-## 6. Everything is not testable
+*-- slide --*
+## 7. Everything is not testable
 - Variations
     - The functionality I am developig is not testable
     - Setting up the test, potentially with mocks and stubs, is a lot of extra effort
@@ -615,26 +621,29 @@ What do you think could be the reasons?
         - separate external dependencies (Web, DB, 3rd party components)
 - Solution: focus on design and architecture
 
-## 7. I will write tests at the end
+*-- slide --*
+## 8. I will write tests at the end
 - Not TDD
 - Will never have time
 - Solution: understand the benefits of TDD
 
-## 8. This is a POC, so no need to write tests
+## 9. This is a POC, so no need to write tests
 - PoC becomes final product after a few iterations.
 - Adding tests after is harder - not designed well
 - Solution: insist on TDD
 
-## 9. They take a lot of time to run
+## 10. They take a lot of time to run
 - It is bad code or bad design or both
 - Solution : bring the pain forward
 
 > “If it hurts, do it more frequently, and bring the pain forward” - Jez Humble (The DevOps Handbook)
-## My clients don’t care
+## 11. My clients don’t care
 - The tests are not for the client - they are for the development team
 - I don't care what happens to the product or the client in future
 - Solution : be professional, follow a good practice
-## 8. Do not know how
+
+*-- slide --*
+## 12. Do not know how
 - The only valid reason
 - University courses do not teach this skill
 - No professional trining programmes in Sri Lanka
@@ -648,26 +657,26 @@ What do you think could be the reasons?
 
 # The wrong reasons to adopt TDD
 
-## 1. My company needs me to
-- Company insist because they understand the value
-- I don't
-
-## 2. Resume Driven Development
+## 1. Resume Driven Development
 - makes my resume looks more attractive to potential employers
 - means to an end
 - first sight of difficulty - abandon practice
 
-## 3. A silver-bullet for technical debt
+## 2. A silver-bullet for technical debt
 - false sense of security
 - TDD can't stop accumilation of hidden technical debt
 - can happen at any stage of TDD   
 (https://www.sealights.io/agile-testing/test-driven-development-and-the-dangers-of-hidden-technical-debt/)
 
-## 4. With TDD, I don’t need to spend time on analysis and on designing the architecture
+## 3. With TDD, I don’t need to spend time on analysis and on designing the architecture
 - recipe for disaster
 - build-up technical debt fast
-...
 
+## 4. My company needs me to
+- Company insist because they understand the value
+- I don't
+
+*-- slide --*
 ## The problem with the wrong reasons
 
 The effect of buying into the wrong reasons is that we do not practice it right.
@@ -676,7 +685,7 @@ To get the right result, we need to practice TDD consistently.
 Consistency only comes if we understand why we are doing it.   
 The why has to be emotional - not logical.
 
-*switch to slide*
+*-- slide : hand washing --*
 ### Hand washing technique
 - an example to make the point
 - Variation of this poster at any hospital
@@ -688,7 +697,7 @@ The why has to be emotional - not logical.
     - solves germ problems?
 - part of their professional code of ethics
 
-*switch to slide*
+*-- slide --*
 
 If you only take one thing from this talk. This is it.
 
