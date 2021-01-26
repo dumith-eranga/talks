@@ -271,6 +271,7 @@ Imge credit: [Mulesoft Blog](https://blogs.mulesoft.com/dev-guides/refactoring-m
 
 Improve strategy further
 - One side
+    - *-- slide --*
     - Software Engineers
     - skilled
     - write code
@@ -278,6 +279,7 @@ Improve strategy further
     - address business requirement
     - deliver functionality
 - Other side
+    - *-- slide --*
     - Automation Engineers
     - skilled
     - write code
@@ -285,11 +287,13 @@ Improve strategy further
     - verify fit to business requirement
     - deliver reliability
 - highlight the differences
+    - *-- slide --*
     - not much of a difference
     - can software engineers double as automation engineers (or vice vesa)
         - if we develop the skill
 
 Zoom in on one engineer
+- *-- slide : engineer --*
 - has the skills developed
 - coding
     - looks at the design specification
@@ -308,6 +312,7 @@ Further improvements
 - borrow concept from SQL
     - specify what - not how
     - **executable specification**
+    - **-- slide --*
 - software
     - business rules are complex
     - complex specifications
@@ -331,7 +336,8 @@ Benefits
 - change existing code, break behaviour - autmatically flagged by tests
 
 # Evolution of test-based development practices
-1. No automated tests
+*-- slide : evolution --*
+1. No test
     - army of testers
 2. Test-last (TLD)
     - different stages
@@ -366,6 +372,7 @@ Benefits
     2. You are not allowed to write any more of a unit test than is sufficient to fail; and compilation failures are failures.
     3. You are not allowed to write any more production code than is sufficient to pass the one failing unit test.
 
+- *-- slide --*
 # The Scientific Method vs TDD
 
 | Scientific Method | TDD                 |
@@ -378,11 +385,15 @@ Benefits
 Credit : [Eric Elliott](https://medium.com/javascript-scene/testing-software-what-is-tdd-459b2145405c)
 
 # Advantages of practicing TDD
+- *-- slide --*
 - Incremental & Iterative Development
     - Look at the steps
         - iterate between stages
         - incrementally add code
     - As suggested by Agile Software Development methodologies
+    - force you to work in small iterations
+        - one requirement at a time
+        - as-needed basis
 
 - Change / Refactoring with confidence
     - self testing code   
@@ -414,19 +425,22 @@ Credit : [Eric Elliott](https://medium.com/javascript-scene/testing-software-wha
 - helps to clarify requirements
     - what inputs
     - what outputs to expect
-- Stupid mistakes are caught almost immediately
+
+- Faster / smaller feedback loop
+    - Stupid mistakes are caught almost immediately
 
 - Documents your code better than documentation
     - it doesn’t go out of date since you’re running it all the time
     - maintenace - 60% - 90% of lifecycle
         - TDD delivers a regression test suit with no additional effort
 
-- safety net
+- *-- slide --*
+- Safety Net
     - makes continuous deployment safer. Test failures halt the deployment process
 
 - Better code coverage than writing tests after the fact.
     - create code to make a specific test pass
-        -code coverage will be close to 100%
+        - code coverage will be close to 100%
 
 - Faster developer feedback loop
     - unit tests can run on-change automatically
@@ -434,14 +448,12 @@ Credit : [Eric Elliott](https://medium.com/javascript-scene/testing-software-wha
 - Interface design aid 
     - flips the implementation-first thinking to DX-first
         - force to design the API before working on the implementation
+
 - KISS : Keep it Simple, Stupid
 
 - YAGNI : You Ain’t Gonna Need It
     - don’t build features and abstractions unless those features serve a specific existing requirement (not a future requirement
 
-- force you to work in small iterations
-    - one requirement at a time
-    - as-needed basis
 
 
 # Concerns about TDD
