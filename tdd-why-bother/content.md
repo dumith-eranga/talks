@@ -249,65 +249,65 @@ Imge credit: [Mulesoft Blog](https://blogs.mulesoft.com/dev-guides/refactoring-m
 # Executable specifications
 
 Improve strategy further
-    - One side
-        - Software Engineers
-        - skilled
-        - write code
-        - build software
-        - address business requirement
-        - deliver functionality
-    - Other side
-        - Automation Engineers
-        - skilled
-        - write code
-        - test software
-        - verify fit to business requirement
-        - deliver reliability
-    - highlight the differences
-        - not much of a difference
-        - can software engineers double as automation engineers (or vice vesa)
-            - if we develop the skill
+- One side
+    - Software Engineers
+    - skilled
+    - write code
+    - build software
+    - address business requirement
+    - deliver functionality
+- Other side
+    - Automation Engineers
+    - skilled
+    - write code
+    - test software
+    - verify fit to business requirement
+    - deliver reliability
+- highlight the differences
+    - not much of a difference
+    - can software engineers double as automation engineers (or vice vesa)
+        - if we develop the skill
 
 Zoom in on one engineer
-    - has the skills developed
-    - coding
-        - looks at the design specification
-        - write code
-        - build software
-        - happens first
-    - automation
-        - look at requirement specification
-        - write code
-        - test software
-        - happens second
+- has the skills developed
+- coding
+    - looks at the design specification
+    - write code
+    - build software
+    - happens first
+- automation
+    - look at requirement specification
+    - write code
+    - test software
+    - happens second
 
 Further improvements
-    - Writing a lot of code is tedious
-    - Let's simplify
-    - borrow concept from SQL
-        - specify what - not how
-        - **executable specification**
-    - software
-        - business rules are complex
-        - complex specifications
-        - requires deeper discussion on design and architecture
-        - a topic for a different day
-    - testing
-        - testing rules are straight-forward
-        - there are tools to handle the "how" (heavy-lifting)
-        - only need to specify 3 things
-            - what inputs
-            - what to test
-            - what expectations
-        - these can be known / determined before the product code
-            - specfication / requirement documents
-            - no need to wait till the end of coding
-            - can write test before
+- Writing a lot of code is tedious
+- Let's simplify
+- borrow concept from SQL
+    - specify what - not how
+    - **executable specification**
+- software
+    - business rules are complex
+    - complex specifications
+    - requires deeper discussion on design and architecture
+    - a topic for a different day
+- testing
+    - testing rules are straight-forward
+    - there are tools to handle the "how" (heavy-lifting)
+    - only need to specify 3 things
+        - what inputs
+        - what to test
+        - what expectations
+    - these can be known / determined before the product code
+        - specfication / requirement documents
+        - no need to wait till the end of coding
+        - can write test before
 
 Benefits
-    - can test the business logic in-making
-    - test iteratively while building the code
-    - change existing code, break behaviour - autmatically flagged by tests
+- can test the business logic in-making
+- test iteratively while building the code
+- change existing code, break behaviour - autmatically flagged by tests
 
 # Evolution of test-based development practices
 1. No automated tests
@@ -345,13 +345,23 @@ Benefits
     2. You are not allowed to write any more of a unit test than is sufficient to fail; and compilation failures are failures.
     3. You are not allowed to write any more production code than is sufficient to pass the one failing unit test.
 
+# The Scientific Method vs TDD
+
+| Scientific Method | TDD                 |
+|-------------------|---------------------|
+| Question          | Requirement         |
+| Prediction        | Expected Output     |
+| Experiment        | Test Assertion      |
+| Subject           | Implementation Code |
+
+Credit : [Eric Elliott](https://medium.com/javascript-scene/testing-software-what-is-tdd-459b2145405c)
 
 # Advantages of practicing TDD
 - Incremental & Iterative Development
     - Look at the steps
         - iterate between stages
         - incrementally add code
-    - Similar to SCRUM?
+    - As suggested by Agile Software Development methodologies
 
 - Change / Refactoring with confidence
     - self testing code   
@@ -487,11 +497,12 @@ Image credit : [deepsource](https://deepsource.io/blog/exponential-cost-of-fixin
 ### 5.1 Extensive testing is boring
 - no need for extensive testing at one stage
 - do it incrementally, iteratively
+- on the contrary - it is more 
 
 ## 7. TDD locks design
 - writing the code took one hour but fixing the tests took half a day (https://dzone.com/articles/whats-wrong-test-driven)
 - not doing the 3rd step - refactoring
-- proper TDD imptove the design / remove locks
+- proper TDD improve the design / remove locks
 
 
 
@@ -531,7 +542,7 @@ What do you think could be the reasons?
 
 ## 4. I am able to write code with very a few bugs, I don’t need testing
 - I don't need seat belts - I can drive without getting into accidents
-- iests are a safety-net
+- tests are a safety-net
 - tests are not just for you - they are for the team
 - tests will stop someone else accidentally breaking your code
 - Solution : let go of ego - be a team player
@@ -652,7 +663,19 @@ If you only take one thing from this talk. This is it.
 Consistency only comes if we understand why we are doing it.   
 The why has to be emotional - not logical.
 
-# The right reasons to adopt TDD
+# The right reason to adopt TDD
+*fill*
+
+Scribe
+
+Double Entry
+
+STUPID --> SOLID
+
+Accountability / Feedback
+
+Speciality of scribes
+
 
 
 #  When not to go for TDD
@@ -660,7 +683,7 @@ The why has to be emotional - not logical.
 2. One-off things
 3. External scope / products
 4. Does not understand the existing product.
-    use characterization tests.
+   - use characterization tests (Michael Feathers)
 
 
 # Tread Carefully
@@ -723,44 +746,4 @@ https://www.researchgate.net/publication/220720049_Most_Common_Mistakes_in_Test-
     Isolated
     Thorough
     Explicit
-
-
-
-
-
-
-## The Right Reasons
-
-Scribe
-
-Double Entry
-
-STUPID --> SOLID
-
-Types of fakes
-
-
-
-Credit : [Eric Elliott](https://medium.com/javascript-scene/testing-software-what-is-tdd-459b2145405c)
-
-| Scientific Method | TDD                 |
-|-------------------|---------------------|
-| Question          | Requirement         |
-| *Prediction*      | *Expected Output*   |
-| Experiment        | Test Assertion      |
-| Subject           | Implementation Code |
-
-
-Story from Automative industry
-- examples of recalls & costs
-
-TDD is overrated
-- extract from job adverts
-
-Accountability / Feedback
-
-Speciality of scribes
-
-
-
 
