@@ -13,7 +13,7 @@ backgroundColor: black
 </style>
 
 # TDD
-Why Bother?
+ Why TDD is Important
 
 <br/><br/>
 - Eranga Jayalatharachchi
