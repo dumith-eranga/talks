@@ -1,3 +1,4 @@
-Presentation Material for talks conducted.
+# Materials from Talks, Articles, and Posts
 
-1. [Test-Driven Development](./tdd/presentation.md)
+## Talks
+1. [Test-Driven Development](./talks/tdd/presentation.md)
