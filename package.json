@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/dumith-eranga/talks#readme",
   "devDependencies": {
-    "@marp-team/marp-cli": "^0.16.2"
+    "@marp-team/marp-cli": "^2.3.0"
   }
 }
